@@ -1,26 +1,420 @@
 @import "tailwindcss";
+@import "katex/dist/katex.min.css";
 
+/* IntelQA tokens, from the brand guidelines (Phone.dc / Desktop.dc). */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #f3ecdf;
+  --surface: #fbf7ef;
+  --raised: #e9e0cf;
+  --ink: #170f33;
+  --ink2: #4b4466;
+  --ink3: #6e6787;
+  --line: #dcd2bf;
+  --line2: #e9e0cf;
+  --accent: #5b3df5;
+  --on-accent: #ffffff;
+  --accent-tint: #e6e0ff;
+  --accent-text: #3a22c4;
+  --hl: #ffd43b;
+  --hl-tint: #fff1b8;
+  --ok: #18a058;
+  --ok-text: #0f7a3d;
+  --ok-tint: #e3f5ea;
+  --bad: #e5484d;
+  --bad-text: #b42318;
+  --bad-tint: #fde8e7;
+  --flag: #f28c18;
+  --flag-text: #a14a00;
+  --flag-tint: #fff1db;
+  --chip: #170f33;
+  --on-chip: #f3ecdf;
+  --scrim: rgba(18, 11, 46, 0.55);
+  --shadow: 0 1px 0 rgba(23, 15, 51, 0.06), 0 10px 30px -12px rgba(23, 15, 51, 0.22);
+  --logo-ring: #5b3df5;
+  --logo-dot: #5b3df5;
+  --logo-ink: #170f33;
+  color-scheme: light;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root[data-theme="dark"] {
+  --bg: #120b2e;
+  --surface: #1c1442;
+  --raised: #261c55;
+  --ink: #f3ecdf;
+  --ink2: #cfc6e6;
+  --ink3: #9c93bc;
+  --line: #33296b;
+  --line2: #261c55;
+  --accent: #8f7bff;
+  --on-accent: #120b2e;
+  --accent-tint: #2b2170;
+  --accent-text: #bdb1ff;
+  --hl-tint: #3a3214;
+  --ok: #2bc06e;
+  --ok-text: #6ee0a0;
+  --ok-tint: #10301f;
+  --bad: #f2555a;
+  --bad-text: #ff9a9c;
+  --bad-tint: #3a1619;
+  --flag: #f5a040;
+  --flag-text: #ffc27a;
+  --flag-tint: #36260f;
+  --chip: #33296b;
+  --on-chip: #ffffff;
+  --scrim: rgba(0, 0, 0, 0.62);
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.35);
+  --logo-ring: #ffffff;
+  --logo-dot: #ffd43b;
+  --logo-ink: #ffffff;
+  color-scheme: dark;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  :root:not([data-theme="light"]) {
+    --bg: #120b2e;
+    --surface: #1c1442;
+    --raised: #261c55;
+    --ink: #f3ecdf;
+    --ink2: #cfc6e6;
+    --ink3: #9c93bc;
+    --line: #33296b;
+    --line2: #261c55;
+    --accent: #8f7bff;
+    --on-accent: #120b2e;
+    --accent-tint: #2b2170;
+    --accent-text: #bdb1ff;
+    --hl-tint: #3a3214;
+    --ok: #2bc06e;
+    --ok-text: #6ee0a0;
+    --ok-tint: #10301f;
+    --bad: #f2555a;
+    --bad-text: #ff9a9c;
+    --bad-tint: #3a1619;
+    --flag: #f5a040;
+    --flag-text: #ffc27a;
+    --flag-tint: #36260f;
+    --chip: #33296b;
+    --on-chip: #ffffff;
+    --scrim: rgba(0, 0, 0, 0.62);
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.35);
+    --logo-ring: #ffffff;
+    --logo-dot: #ffd43b;
+    --logo-ink: #ffffff;
+    color-scheme: dark;
   }
 }
 
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-raised: var(--raised);
+  --color-ink: var(--ink);
+  --color-ink2: var(--ink2);
+  --color-ink3: var(--ink3);
+  --color-line: var(--line);
+  --color-line2: var(--line2);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
+  --color-accent-tint: var(--accent-tint);
+  --color-accent-text: var(--accent-text);
+  --color-hl: var(--hl);
+  --color-hl-tint: var(--hl-tint);
+  --color-ok: var(--ok);
+  --color-ok-text: var(--ok-text);
+  --color-ok-tint: var(--ok-tint);
+  --color-bad: var(--bad);
+  --color-bad-text: var(--bad-text);
+  --color-bad-tint: var(--bad-tint);
+  --color-flag: var(--flag);
+  --color-flag-text: var(--flag-text);
+  --color-flag-tint: var(--flag-tint);
+  --color-chip: var(--chip);
+  --color-on-chip: var(--on-chip);
+  --color-scrim: var(--scrim);
+  /* Fixed brand colours that don't change with the theme. */
+  --color-violet: #5b3df5;
+  --color-violet-deep: #3a22c4;
+  --color-highlighter: #ffd43b;
+  --color-exam-ink: #170f33;
+  /* Monument-style sections: deep ink-violet "night" and warm "paper". */
+  --color-night: #120b2e;
+  --color-night-2: #1e1450;
+  --color-paper: #f3ecdf;
+  --font-display: var(--font-shoulders), "Arial Narrow", system-ui, sans-serif;
+  --font-serif: var(--font-instrument-serif), Georgia, serif;
+  --font-sans: var(--font-instrument), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+  --shadow-card: var(--shadow);
+}
+
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Headings use the condensed display face: heavy, uppercase, tight (Monument). Utilities can override. */
+@layer components {
+  .font-display {
+    letter-spacing: 0;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 0.95;
+  }
+}
+
+/* Small mono labels: course codes, question numbers, timers. */
+.label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink3);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spin {
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes sheet-in {
+  from {
+    transform: translateY(100%);
+  }
+}
+.sheet-in {
+  animation: sheet-in 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ───────────── Motion system (Monument-style) ───────────── */
+
+:root {
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+/* Giant condensed headline: uppercase, heavy, tight. Size it with text-[…] or clamp(). */
+.display {
+  font-family: var(--font-shoulders), "Arial Narrow", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 0.84;
+  letter-spacing: -0.012em;
+}
+
+/* Editorial statement in the serif. */
+.statement {
+  font-family: var(--font-instrument-serif), Georgia, serif;
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+}
+
+/* Uppercase label set in the display face (buttons, nav, eyebrows). */
+.caps {
+  font-family: var(--font-shoulders), "Arial Narrow", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/*
+ * Word-by-word rise. <RevealText> wraps each word as .rv > .rv-in with --i for its index.
+ * Words sit below a mask and slide up when the parent gets .is-in (on mount or in view).
+ */
+.rv {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+}
+.rv-in {
+  display: inline-block;
+  transform: translate3d(0, 105%, 0) rotate(4deg);
+  transform-origin: 0 100%;
+  transition: transform 0.9s var(--ease-out);
+  transition-delay: calc(var(--i, 0) * 55ms + var(--d, 0ms));
+}
+.is-in .rv-in {
+  transform: none;
+}
+
+/* Block fade-up for anything else that enters with the page or on scroll. */
+.rise {
+  opacity: 0;
+  transform: translate3d(0, 22px, 0);
+  transition:
+    opacity 0.8s var(--ease-out),
+    transform 0.8s var(--ease-out);
+  transition-delay: var(--d, 0ms);
+}
+.is-in .rise,
+.rise.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes side-in {
+  from {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+.side-in {
+  animation: side-in 0.38s var(--ease-out);
+}
+@keyframes side-in-left {
+  from {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+.side-in-left {
+  animation: side-in-left 0.38s var(--ease-out);
+}
+
+/* Landing loader: hidden before paint on return visits; the curtain lifts when done. */
+html[data-iq-skip-loader] .iq-loader {
+  display: none;
+}
+.iq-loader {
+  transition: transform 1s var(--ease-in-out);
+  will-change: transform;
+}
+.iq-loader-fg {
+  transition: opacity 0.35s var(--ease-out);
+}
+.iq-loader-y .iq-loader-fg {
+  opacity: 0;
+}
+.iq-loader.iq-loader-out {
+  transform: translate3d(0, -100%, 0);
+}
+@keyframes loader-logo {
+  from {
+    opacity: 0;
+    filter: blur(8px);
+    letter-spacing: 0.2em;
+  }
+}
+.iq-loader-logo {
+  animation: loader-logo 1.2s var(--ease-out) both;
+}
+
+/* Every in-app page eases in; headings inside it rise word by word. */
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 14px, 0);
+  }
+}
+.page-in {
+  animation: page-in 0.5s var(--ease-out) both;
+}
+
+/* Endless strip of words or logos. Duplicate the content once inside .marquee-track. */
+@keyframes marquee {
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.marquee-track {
+  display: inline-flex;
+  animation: marquee var(--speed, 28s) linear infinite;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Film grain over a section (Nesil Noble). Purely decorative. */
+/* In the components layer so utilities like `fixed` / `absolute` still win. */
+@layer components {
+  .grain {
+    position: relative;
+    isolation: isolate;
+  }
+}
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.09;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1.4 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+/* Thin rule lines that split sections into a grid (Monument mobile). */
+.rules > * + * {
+  border-top: 1px solid currentColor;
+  border-color: color-mix(in srgb, currentColor 22%, transparent);
+}
+
+/* Link underline that draws in on hover. */
+.draw {
+  background: linear-gradient(currentColor, currentColor) 0 100% / 0 1.5px no-repeat;
+  transition: background-size 0.45s var(--ease-out);
+}
+.draw:hover {
+  background-size: 100% 1.5px;
+}
+
+/* Arrow that nudges on hover inside buttons. */
+.nudge svg:last-child {
+  transition: transform 0.35s var(--ease-out);
+}
+.nudge:hover svg:last-child {
+  transform: translateX(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sheet-in,
+  .side-in,
+  .side-in-left,
+  .spin,
+  .page-in,
+  .marquee-track {
+    animation: none;
+  }
+  .rv-in,
+  .rise {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.katex {
+  font-size: 1.05em;
 }

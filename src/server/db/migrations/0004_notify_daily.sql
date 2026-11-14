@@ -1,0 +1,1 @@
+ALTER TABLE "users" ADD COLUMN "notify_daily" boolean DEFAULT true NOT NULL;
