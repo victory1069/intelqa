@@ -40,7 +40,7 @@ function Moderation() {
   return (
     <div className="flex flex-col lg:h-dvh">
       <Header title="Moderation">
-        <div className="flex max-w-full overflow-x-auto rounded-[10px] bg-raised p-[3px]" role="tablist">
+        <div className="no-scrollbar flex max-w-full overflow-x-auto rounded-[10px] bg-raised p-[3px]" role="tablist">
           {([["sessions", `Held sessions ${list.length}`], ["names", `Names ${names.data?.names.length ?? 0}`], ["hidden", `Hidden students ${hidden.data?.students.length ?? 0}`]] as const).map(([k, l]) => (
             <button key={k} role="tab" aria-selected={tab === k} onClick={() => setTab(k)} className={`flex-none rounded-lg px-3 py-1.5 text-[13px] whitespace-nowrap ${tab === k ? "bg-surface font-semibold shadow-card" : "text-ink2"}`}>{l}</button>
           ))}

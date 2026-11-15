@@ -1,5 +1,5 @@
 import { createMiddleware } from "hono/factory";
-import { createRemoteJWKSet, jwtVerify, type JWTPayload } from "jose";
+import { createRemoteJWKSet, decodeProtectedHeader, jwtVerify, type JWTPayload } from "jose";
 import { eq, inArray } from "drizzle-orm";
 import { db, schema } from "../db/client";
 import { env } from "../env";
@@ -32,7 +32,10 @@ async function applyAdminInvite(user: User): Promise<User> {
 }
 
 async function verifySupabaseToken(token: string): Promise<JWTPayload> {
-  if (env.SUPABASE_JWT_SECRET) {
+  // Projects on Supabase's signing keys (ES256/RS256) are checked against the public JWKS. The legacy
+  // shared secret only applies to HS256 tokens, so having it set (Vercel's Supabase integration adds
+  // it) can't reject a valid token.
+  if (env.SUPABASE_JWT_SECRET && decodeProtectedHeader(token).alg === "HS256") {
     const { payload } = await jwtVerify(token, new TextEncoder().encode(env.SUPABASE_JWT_SECRET));
     return payload;
   }

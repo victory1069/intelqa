@@ -94,7 +94,7 @@ function Review() {
   return (
     <Screen>
       <AppBar title="Review" sub={clientId ? title : `${score}/${data.total} correct`} onLead={() => router.back()} />
-      <div className="flex gap-1.5 overflow-x-auto px-5 pb-2.5">
+      <div className="no-scrollbar flex gap-1.5 overflow-x-auto px-5 pb-2.5">
         <Pill on={filter === "missed"} onClick={() => setFilter("missed")}>Wrong &amp; skipped · {missedCount}</Pill>
         <Pill on={filter === "all"} onClick={() => setFilter("all")}>All {data.total}</Pill>
         {flaggedCount > 0 && <Pill on={filter === "flagged"} onClick={() => setFilter("flagged")}>Flagged {flaggedCount}</Pill>}

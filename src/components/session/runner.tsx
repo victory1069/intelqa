@@ -439,7 +439,7 @@ function Navigator({
         <strong className="font-display text-[22px]">Questions</strong>
         {left != null && <span className="font-mono text-sm font-bold">{fmtClock(left)}</span>}
       </div>
-      <div className="flex gap-1.5 overflow-x-auto">
+      <div className="no-scrollbar flex gap-1.5 overflow-x-auto">
         <Pill on={filter === "all"} onClick={() => setFilter("all")}>All {tiles.length}</Pill>
         <Pill on={filter === "open"} onClick={() => setFilter("open")}>Unanswered {openCount}</Pill>
         <Pill on={filter === "flagged"} tone={filter === "flagged" ? undefined : "flag"} onClick={() => setFilter("flagged")}>Flagged {flagCount}</Pill>

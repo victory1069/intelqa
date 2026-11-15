@@ -172,7 +172,7 @@ export default function Ranks() {
         )}
         {tab === "friends" && <Segment value={metric} onChange={setMetric} options={[["xp", "XP"], ["course", `${course?.code ?? "Course"} score`]]} />}
       </Title>
-      <div className="flex gap-2 overflow-x-auto px-5 pt-6">
+      <div className="no-scrollbar flex gap-2 overflow-x-auto px-5 pt-6">
         <Pill on={tab === "course"} onClick={() => pick("course")}>Course</Pill>
         <Pill on={tab === "department"} onClick={() => pick("department")}>Department</Pill>
         <Pill on={tab === "institution"} onClick={() => pick("institution")}>{me?.institution?.shortCode ?? "School"}</Pill>
