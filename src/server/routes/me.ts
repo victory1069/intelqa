@@ -71,6 +71,7 @@ async function profile(user: User) {
     pendingDisplayName: user.pendingDisplayName,
     role: user.role,
     onboarded: user.onboarded,
+    passwordSet: user.passwordSet,
     hiddenFromBoards: user.hiddenFromBoards,
     level: user.level,
     inviteCode: user.inviteCode,
@@ -88,6 +89,16 @@ async function profile(user: User) {
 
 /** GET /me — profile, XP, level, streak, badges. */
 meRoutes.get("/", async (c) => c.json(await profile(c.get("user"))));
+
+/**
+ * POST /me/password — records that the account has a password (after Supabase sets it), or
+ * clears the flag when a reset starts, so the app asks for a new one.
+ */
+meRoutes.post("/password", async (c) => {
+  const { set } = parse(z.object({ set: z.boolean() }), await c.req.json());
+  const [u] = await db.update(users).set({ passwordSet: set }).where(eq(users.id, c.get("user").id)).returning();
+  return c.json(await profile(u));
+});
 
 const ProfileBody = z.object({
   institutionId: z.string().uuid().optional(),

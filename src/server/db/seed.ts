@@ -1,8 +1,10 @@
 /**
- * Local sample data: UNILORIN, 100L courses, checked questions, a published paper per course,
- * and a populated leaderboard. Run with `npm run db:seed`. Safe to re-run (it clears first).
+ * Starting data: UNILORIN, 100L courses, topics, checked questions and a published paper per course.
+ * `npm run db:seed` loads only that: no accounts. It clears the catalogue first, and refuses to run
+ * on a database that already has real accounts.
  *
- * Dev sign-in ids (with DEV_AUTH=1):
+ * `npm run db:seed:demo` (laptop database only) also adds demo accounts and a leaderboard for the
+ * API smoke test. Their ids, for DEV_AUTH=1:
  *   student      00000000-0000-4000-8000-000000000001  Aisha Bello
  *   content admin 00000000-0000-4000-8000-000000000002  Kunle Adebayo (GST 111, GST 112)
  *   super admin  00000000-0000-4000-8000-000000000003  Tochukwu B.
@@ -110,9 +112,23 @@ const STUDENTS = [
   "Kehinde Akanbi", "Chiamaka Nwosu", "Ayomide Fashola", "Yusuf Garba", "Emeka Obi", "Sadiq Bello", "Ngozi Eze", "Aliyu Musa",
 ];
 
+const DEMO = process.argv.includes("--demo");
+
 async function main() {
   const { db, schema: s } = await import("./client");
   const { sql } = await import("drizzle-orm");
+  const { env } = await import("../env");
+
+  // Clearing wipes accounts too, so never on a database where real people have signed up.
+  const [{ n }] = await db.execute<{ n: number }>(sql`select count(*)::int as n from users`);
+  if (Number(n) > 0 && !process.argv.includes("--wipe")) {
+    console.error(`This database has ${n} account(s). Seeding clears everything, including them. Re-run with --wipe if you really mean it.`);
+    process.exit(1);
+  }
+  if (DEMO && !env.DATABASE_LOCAL) {
+    console.error("Demo accounts are for the laptop database only (DATABASE_LOCAL=1).");
+    process.exit(1);
+  }
 
   console.log("Clearing…");
   await db.execute(sql`truncate institutions, users, admin_invites, institution_requests restart identity cascade`);
@@ -158,14 +174,16 @@ async function main() {
     if (c.code !== "GST 112" && c.code !== "BIO 101") await db.insert(s.courseDepartments).values({ courseId: row.id, departmentId: cs });
   }
 
-  console.log("Users…");
-  await db.insert(s.users).values([
-    { id: DEV.student, phone: "2348034127781", firstName: "Aisha", surname: "Bello", displayName: "Aisha Bello", institutionId: uil.id, departmentId: cs, level: 100, onboarded: true, inviteCode: "aisha01" },
-    { id: DEV.content, email: "kunle.adebayo@intelqa.app", firstName: "Kunle", surname: "Adebayo", displayName: "Kunle Adebayo", role: "content_admin", institutionId: uil.id, onboarded: true, inviteCode: "kunle01" },
-    { id: DEV.super, email: "tochukwu@intelqa.app", firstName: "Tochukwu", surname: "B.", displayName: "Tochukwu B.", role: "super_admin", institutionId: uil.id, onboarded: true, inviteCode: "toch001" },
-  ]);
-  await db.insert(s.adminCourses).values([{ userId: DEV.content, courseId: courseIds["GST 111"] }, { userId: DEV.content, courseId: courseIds["GST 112"] }]);
-  await db.insert(s.userCourses).values(["GST 111", "MTH 101", "PHY 101", "CHM 101", "CSC 111"].map((code) => ({ userId: DEV.student, courseId: courseIds[code] })));
+  if (DEMO) {
+    console.log("Demo accounts…");
+    await db.insert(s.users).values([
+      { id: DEV.student, phone: "2348034127781", firstName: "Aisha", surname: "Bello", displayName: "Aisha Bello", institutionId: uil.id, departmentId: cs, level: 100, onboarded: true, inviteCode: "aisha01" },
+      { id: DEV.content, email: "kunle.adebayo@intelqa.app", firstName: "Kunle", surname: "Adebayo", displayName: "Kunle Adebayo", role: "content_admin", institutionId: uil.id, onboarded: true, inviteCode: "kunle01" },
+      { id: DEV.super, email: "tochukwu@intelqa.app", firstName: "Tochukwu", surname: "B.", displayName: "Tochukwu B.", role: "super_admin", institutionId: uil.id, onboarded: true, inviteCode: "toch001" },
+    ]);
+    await db.insert(s.adminCourses).values([{ userId: DEV.content, courseId: courseIds["GST 111"] }, { userId: DEV.content, courseId: courseIds["GST 112"] }]);
+    await db.insert(s.userCourses).values(["GST 111", "MTH 101", "PHY 101", "CHM 101", "CSC 111"].map((code) => ({ userId: DEV.student, courseId: courseIds[code] })));
+  }
 
   console.log("Questions & papers…");
   async function seedCourse(code: string, qs: Q[], session: string, timeLimitMin: number) {
@@ -178,7 +196,7 @@ async function main() {
     }
     const [paper] = await db.insert(s.papers).values({
       courseId, session, semester: 1, examType: "exam", timeLimitMin, optionCount: course.optionCount, negativeMark: course.negativeMark,
-      status: "published", publishedAt: new Date(), publishedBy: DEV.super,
+      status: "published", publishedAt: new Date(), publishedBy: DEMO ? DEV.super : null,
     }).returning();
     let pos = 0;
     for (const [text, options, key, topic, explanation, trap, steps, difficulty] of qs) {
@@ -194,36 +212,38 @@ async function main() {
   await seedCourse("PHY 101", PHY101, "2023/2024", 15);
   await db.insert(s.topics).values(["Atomic structure", "Mole concept", "Chemical bonding"].map((name, i) => ({ courseId: courseIds["CHM 101"], name, position: i })));
 
-  console.log("Leaderboard…");
-  const gst = courseIds["GST 111"];
-  const now = Date.now();
-  const ids: string[] = [];
-  for (let i = 0; i < STUDENTS.length; i++) {
-    const [first, ...rest] = STUDENTS[i].split(" ");
-    const id = `10000000-0000-4000-8000-${String(i + 1).padStart(12, "0")}`;
-    ids.push(id);
-    await db.insert(s.users).values({
-      id, firstName: first, surname: rest.join(" "), displayName: STUDENTS[i], institutionId: uil.id,
-      departmentId: i % 3 === 0 ? deptIds["Mass Communication"] : cs, level: 100, onboarded: true, inviteCode: `s${String(i).padStart(5, "0")}`,
-    });
-    await db.insert(s.userCourses).values({ userId: id, courseId: gst });
-    await db.insert(s.userCourseStats).values({ userId: id, courseId: gst, courseScore: Math.round((95 - i * 1.2) * 10) / 10, rankedAttempts: 3 + (i % 5) });
-    const xp = Math.max(120, 4000 - i * 140);
-    await db.insert(s.xpEvents).values([
-      { userId: id, amount: Math.round(xp * 0.6), reason: "drill", createdAt: new Date(now - (i + 1) * 3_600_000) },
-      { userId: id, amount: Math.round(xp * 0.4), reason: "exam", createdAt: new Date(now - (i + 2) * 5_400_000) },
-    ]);
-    await db.insert(s.userStreaks).values({ userId: id, current: (i % 9) + 1, best: (i % 9) + 4, lastActiveDate: new Date(now + 3_600_000).toISOString().slice(0, 10), totalXp: xp * 3, questionsAnswered: 300 + i * 20, questionsCorrect: 200 + i * 10 });
-  }
+  if (DEMO) {
+    console.log("Leaderboard…");
+    const gst = courseIds["GST 111"];
+    const now = Date.now();
+    const ids: string[] = [];
+    for (let i = 0; i < STUDENTS.length; i++) {
+      const [first, ...rest] = STUDENTS[i].split(" ");
+      const id = `10000000-0000-4000-8000-${String(i + 1).padStart(12, "0")}`;
+      ids.push(id);
+      await db.insert(s.users).values({
+        id, firstName: first, surname: rest.join(" "), displayName: STUDENTS[i], institutionId: uil.id,
+        departmentId: i % 3 === 0 ? deptIds["Mass Communication"] : cs, level: 100, onboarded: true, inviteCode: `s${String(i).padStart(5, "0")}`,
+      });
+      await db.insert(s.userCourses).values({ userId: id, courseId: gst });
+      await db.insert(s.userCourseStats).values({ userId: id, courseId: gst, courseScore: Math.round((95 - i * 1.2) * 10) / 10, rankedAttempts: 3 + (i % 5) });
+      const xp = Math.max(120, 4000 - i * 140);
+      await db.insert(s.xpEvents).values([
+        { userId: id, amount: Math.round(xp * 0.6), reason: "drill", createdAt: new Date(now - (i + 1) * 3_600_000) },
+        { userId: id, amount: Math.round(xp * 0.4), reason: "exam", createdAt: new Date(now - (i + 2) * 5_400_000) },
+      ]);
+      await db.insert(s.userStreaks).values({ userId: id, current: (i % 9) + 1, best: (i % 9) + 4, lastActiveDate: new Date(now + 3_600_000).toISOString().slice(0, 10), totalXp: xp * 3, questionsAnswered: 300 + i * 20, questionsCorrect: 200 + i * 10 });
+    }
 
-  // Aisha: mid-table on GST 111, a 6-day streak, a couple of friends.
-  await db.insert(s.userCourseStats).values({ userId: DEV.student, courseId: gst, courseScore: 74, rankedAttempts: 4 });
-  await db.insert(s.xpEvents).values({ userId: DEV.student, amount: 1240, reason: "week", createdAt: new Date(now - 7_200_000) });
-  const yesterday = new Date(now + 3_600_000 - 864e5).toISOString().slice(0, 10);
-  await db.insert(s.userStreaks).values({ userId: DEV.student, current: 6, best: 11, lastActiveDate: yesterday, freezes: 0, totalXp: 2340, questionsAnswered: 812, questionsCorrect: 577 });
-  await db.insert(s.badgesEarned).values(["clean_sheet", "week_one", "first_blood", "early_bird"].map((badgeKey) => ({ userId: DEV.student, badgeKey })));
-  for (const f of [ids[7], ids[9], ids[8], ids[10]]) {
-    await db.insert(s.friendships).values([{ userId: DEV.student, friendId: f }, { userId: f, friendId: DEV.student }]);
+    // Aisha: mid-table on GST 111, a 6-day streak, a couple of friends.
+    await db.insert(s.userCourseStats).values({ userId: DEV.student, courseId: gst, courseScore: 74, rankedAttempts: 4 });
+    await db.insert(s.xpEvents).values({ userId: DEV.student, amount: 1240, reason: "week", createdAt: new Date(now - 7_200_000) });
+    const yesterday = new Date(now + 3_600_000 - 864e5).toISOString().slice(0, 10);
+    await db.insert(s.userStreaks).values({ userId: DEV.student, current: 6, best: 11, lastActiveDate: yesterday, freezes: 0, totalXp: 2340, questionsAnswered: 812, questionsCorrect: 577 });
+    await db.insert(s.badgesEarned).values(["clean_sheet", "week_one", "first_blood", "early_bird"].map((badgeKey) => ({ userId: DEV.student, badgeKey })));
+    for (const f of [ids[7], ids[9], ids[8], ids[10]]) {
+      await db.insert(s.friendships).values([{ userId: DEV.student, friendId: f }, { userId: f, friendId: DEV.student }]);
+    }
   }
 
   console.log("Daily challenges…");
@@ -231,7 +251,7 @@ async function main() {
   const { lagosDate } = await import("../lib/time");
   for (const code of ["GST 111", "MTH 101", "PHY 101"]) await pickDailyChallenge(courseIds[code], lagosDate());
 
-  console.log("Done. Dev sign-in ids:", DEV);
+  console.log(DEMO ? `Done. Demo account ids: ${JSON.stringify(DEV)}` : "Done. No accounts were created: sign up in the app.");
   process.exit(0);
 }
 

@@ -27,20 +27,35 @@ scripts/                  smoke.mjs (API end-to-end test), make-icons.mjs
 
 Routes stay thin: validate input, call a service, return JSON. Scoring, ranks, extraction and regrading live in `services/`.
 
-## Run it locally (no Supabase needed)
+## Run it locally
 
 ```bash
 npm install
 cp .env.example .env.local     # already set up for local use
 npm run db:local               # Postgres (PGlite) on :5433; leave it running
 npm run db:migrate             # in a second terminal
-npm run db:seed                # UNILORIN, 7 courses, 42 checked questions, a populated board
+npm run db:seed                # UNILORIN, 7 courses, 42 checked questions. No accounts.
 npm run dev                    # http://localhost:3000
 ```
 
-With `DEV_AUTH=1` the sign-in screen shows a "Local dev" panel to sign in as the seeded student (Aisha Bello), content admin (Kunle, GST 111/112) or super admin. This never works in production.
+Signing in needs the Supabase keys in `.env.local` (see **Sign-in** below), even with the laptop database. There are no demo accounts: create your own by signing up.
 
-`node scripts/smoke.mjs` walks the API end to end against the running server (start exam, save, submit, result, review, boards, modes, reports, challenges, admin scoping, key regrade, a paper upload). Re-seed before re-running it; the daily challenge is one per day.
+`node scripts/smoke.mjs` walks the API end to end against the running server (start exam, save, submit, result, review, boards, modes, reports, challenges, admin scoping, key regrade, a paper upload). It uses test accounts, so it only runs on the laptop database: `npm run db:seed:demo` (refused on any other database), `DEV_AUTH=1` in `.env.local`, then the script. The test accounts can only be used through the API, never the sign-in screen. Re-seed before re-running it; the daily challenge is one per day.
+
+### Sign-in
+
+Email first, then:
+
+- **New account**: a 6-digit code is emailed (the same email has a link that works too). After the code, the app asks for a password, then opens setup.
+- **Returning account**: email and password. "Forgot password?" emails a code, then asks for a new password.
+- Any signed-in account without a password is held on "Create a password" until it sets one (`PasswordGate` in `src/components/auth-form.tsx`). `users.password_set` records it; `POST /api/auth/lookup` picks the password or code step.
+- Phone works the same way once an SMS provider is connected in Supabase.
+
+Supabase setup (Dashboard → Authentication):
+
+1. **Email templates**: the default "Magic Link" and "Confirm signup" templates only contain a link. Add the code to both, e.g. `<p>Your IntelQA code: <strong>{{ .Token }}</strong></p>`.
+2. **URL configuration**: Site URL is your app's address. Add `http://localhost:3000/**` (and your live address) under Redirect URLs, so the link in the email opens the app.
+3. **Emails**: the built-in sender allows only a few emails an hour. Set up custom SMTP before launch.
 
 ### Testing admin uploads on your laptop
 
@@ -56,14 +71,14 @@ Everything works without Supabase or an API key:
 
 Try it:
 
-1. Open http://localhost:3000/admin/sign-in and pick **Kunle Adebayo** under "Local testing".
+1. Sign in at http://localhost:3000/admin/sign-in with an admin account (a super admin invites admins from Admin › Admins).
 2. Uploads › New upload. Use a file from `samples/`. The course, session, semester and exam type are filled in from the file name and the paper's header (e.g. "GST 111 … 2019/2020 First Semester Examination"); check them, and pick any it couldn't find:
    - `GST111-2021-2022-typed.docx` → course GST 111, session 2021/2022. Fifteen questions in three layouts, with answers and explanations; four are flagged as repeats of the seeded paper. Approve them, then Publish.
    - `GST112-2022-2023-typed.pdf` with `GST112-2022-2023-answer-key.txt` as the answer key → GST 112, 2022/2023. Ten questions across two PDF pages; keys come from the separate file; each needs an explanation written before approval.
    - `GST111-2019-2020-mixed-formats.pdf` → GST 111, 2019/2020. Twelve questions whose options use letters, roman numerals, numbers, bullets, dashes and no markers; the answers are on the last page as letters, roman numerals, option numbers and words. Every key should come out filled in.
    - `GST111-2020-2021-with-problems.txt` → GST 111, 2020/2021. Deliberate problems: a question with three options and no key, a numbering gap, a question with no key, and one that mentions a diagram.
 3. The upload page shows progress, then **Open review**: the original on the left (typed files show as text with the selected question highlighted), the editable question on the right.
-4. After publishing, sign in as **Aisha Bello** at http://localhost:3000/sign-in: the paper is on GST 111's course page, and her notifications include "New paper".
+4. After publishing, sign in as a student taking GST 111 at http://localhost:3000/sign-in: the paper is on the course page, and their notifications include "New paper".
 
 The same paper (course, session, semester, type) can't be uploaded twice; delete the old upload first.
 
@@ -73,8 +88,8 @@ The same paper (course, session, semester, type) can't be uploaded twice; delete
    - Auth: enable Phone (needs an SMS provider; Supabase supports Twilio, MessageBird, Vonage and Textlocal; Termii would need a custom SMS hook) and Email OTP.
    - Storage: create a private bucket `uploads` and a public bucket `question-images`.
    - Database: use the transaction pooler URL (port 6543) as `DATABASE_URL`, remove `DATABASE_LOCAL`, then `npm run db:migrate`.
-2. **Env vars**: see `.env.example`. Set `ANTHROPIC_API_KEY`, `CRON_SECRET`, and remove both `DEV_AUTH` lines. Make sure `SUPABASE_SERVICE_ROLE_KEY` is set: without it uploads fall back to local disk, which Vercel throws away (the server logs a warning).
-3. **Scheduled jobs** (all need `Authorization: Bearer $CRON_SECRET`; use Supabase pg_cron, Vercel Cron, or a GitHub Action). Lagos is UTC+1 all year, so 8 am Lagos is `0 7 * * *` in UTC cron:
+2. **Env vars**: see `.env.example`. Set `ANTHROPIC_API_KEY`, `CRON_SECRET`, and keep `DEV_AUTH` off. Make sure `SUPABASE_SERVICE_ROLE_KEY` is set: without it uploads fall back to local disk, which Vercel throws away (the server logs a warning).
+3. **Scheduled jobs** (all need `Authorization: Bearer $CRON_SECRET`; `vercel.json` schedules all three on Vercel, which sends the secret itself; elsewhere use Supabase pg_cron or a GitHub Action. Each job also answers GET). Lagos is UTC+1 all year, so 8 am Lagos is `0 7 * * *` in UTC cron:
    - `POST /api/jobs/daily` just after midnight Lagos time: streaks and freezes, daily challenges (the pop quizzes), weekly rank snapshots, expired sessions.
    - `POST /api/jobs/morning` (or GET, for Vercel Cron) at 8 am Lagos time: pushes "Your GST 111 pop quiz is ready" to every student who hasn't played today's yet. It also creates today's quizzes if the midnight job missed, and it's safe to run twice: no student is told twice in one day. Students can turn it off in Settings.
    - `POST /api/jobs/evening` at 8 pm Lagos time: streak reminders for students who haven't practised today.
@@ -119,4 +134,4 @@ Admins set them under **Admin → Practice tests**: pick a course, a size (5 to 
 
 ## Not built yet
 
-- Tests beyond the API smoke script (`node scripts/smoke.mjs` with the dev server running and a fresh `npm run db:seed`).
+- Tests beyond the API smoke script (`node scripts/smoke.mjs` with the dev server running and a fresh `npm run db:seed:demo` on the laptop database).

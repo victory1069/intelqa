@@ -25,6 +25,8 @@ export type Me = {
   pendingDisplayName: string | null;
   role: "student" | "content_admin" | "super_admin";
   onboarded: boolean;
+  /** False until the account has a password; older cached profiles may not have it. */
+  passwordSet?: boolean;
   hiddenFromBoards: boolean;
   /** Course codes whose sessions were held for fair-play review (E13). */
   heldIn?: string[];

@@ -108,6 +108,8 @@ export const users = pgTable("users", {
   departmentId: uuid("department_id").references(() => departments.id),
   level: integer("level"),
   onboarded: boolean("onboarded").notNull().default(false),
+  /** True once the account has a password. New accounts (and password resets) are sent to "Create a password". */
+  passwordSet: boolean("password_set").notNull().default(false),
   hiddenFromBoards: boolean("hidden_from_boards").notNull().default(false),
   suspended: boolean("suspended").notNull().default(false),
   suspendReason: text("suspend_reason"),

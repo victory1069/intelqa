@@ -1,5 +1,5 @@
 "use client";
-import { supabase, DEV_AUTH } from "./supabase";
+import { supabase } from "./supabase";
 
 export class ApiError extends Error {
   constructor(
@@ -12,20 +12,7 @@ export class ApiError extends Error {
   }
 }
 
-export const DEV_USER_KEY = "iq-dev-user";
-
-export function devUser(): string | null {
-  if (!DEV_AUTH || typeof window === "undefined") return null;
-  try {
-    return localStorage.getItem(DEV_USER_KEY);
-  } catch {
-    return null;
-  }
-}
-
 export async function authHeaders(): Promise<Record<string, string>> {
-  const dev = devUser();
-  if (dev) return { "x-dev-user": dev };
   const sb = supabase();
   if (!sb) return {};
   const { data } = await sb.auth.getSession();

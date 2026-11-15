@@ -1,10 +1,9 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useAuth } from "@/lib/auth";
 import { takeNext } from "@/lib/next-url";
-import { DEV_AUTH, supabase } from "@/lib/supabase";
-import { Banner } from "@/components/ui/kit";
+import { AuthForm } from "@/components/auth-form";
 import { Button } from "@/components/ui/button";
 import { Icon } from "@/components/ui/icon";
 import { Logo, Mark } from "@/components/ui/logo";
@@ -12,66 +11,15 @@ import { Loader } from "@/components/motion/loader";
 import { Marquee, RevealText, Rise } from "@/components/motion/reveal";
 import { InkText, LagosClock, Spine, useLandingFx } from "@/components/motion/landing";
 
-const DEV_ADMINS = [
-  { id: "00000000-0000-4000-8000-000000000002", name: "Kunle Adebayo", role: "Content admin · GST 111/112" },
-  { id: "00000000-0000-4000-8000-000000000003", name: "Tochukwu B.", role: "Super admin" },
-];
-
-/** "0803 412 7781", "+234 803…", "234803…" or an email → what Supabase expects. */
-function parseContact(raw: string): { phone: string } | { email: string } | null {
-  const v = raw.trim();
-  if (v.includes("@")) return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? { email: v.toLowerCase() } : null;
-  let d = v.replace(/\D/g, "");
-  if (d.startsWith("234")) d = d.slice(3);
-  if (d.startsWith("0")) d = d.slice(1);
-  return d.length === 10 ? { phone: `+234${d}` } : null;
-}
-
-/** F01: same one-time-code sign-in as students. Only admin roles get past. */
+/** F01: the same sign-in as students (email, then a password or a code). Only admin roles get past. */
 function SignInCard() {
-  const { status, me, sendCode, verifyCode, devSignIn, signOut } = useAuth();
+  const { status, me, signOut } = useAuth();
   const router = useRouter();
-  const [value, setValue] = useState("");
-  const [step, setStep] = useState<"contact" | "code">("contact");
-  const [code, setCode] = useState("");
-  const [busy, setBusy] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const codeRef = useRef<HTMLInputElement>(null);
-  const contact = parseContact(value);
   const isStudent = status === "signedIn" && me?.role === "student";
 
   useEffect(() => {
-    if (status === "signedIn" && me && me.role !== "student") router.replace(takeNext("/admin"));
+    if (status === "signedIn" && me && me.role !== "student" && me.passwordSet !== false) router.replace(takeNext("/admin"));
   }, [status, me, router]);
-
-  async function send() {
-    if (!contact) return setError("Enter your phone number (e.g. 0803 412 7781) or your email.");
-    setBusy(true);
-    setError(null);
-    try {
-      await sendCode(contact);
-      setStep("code");
-      setTimeout(() => codeRef.current?.focus(), 50);
-    } catch (e) {
-      setError((e as Error).message);
-    } finally {
-      setBusy(false);
-    }
-  }
-
-  async function verify() {
-    if (!contact || code.length !== 6) return;
-    setBusy(true);
-    setError(null);
-    try {
-      await verifyCode(contact, code);
-    } catch {
-      setError("That code doesn't match. Check the latest message and try again.");
-      setCode("");
-    } finally {
-      setBusy(false);
-    }
-  }
 
   return (
     <div className="w-full rounded-[18px] bg-paper p-6 text-exam-ink shadow-card md:p-7">
@@ -80,71 +28,18 @@ function SignInCard() {
           <Logo size={24} tag={false} variant="color" />
           <span className="caps rounded-[4px] bg-exam-ink px-1.5 py-0.5 text-[11px] text-paper">Admin</span>
         </div>
-        <div className="flex flex-col gap-1.5">
-          <h2 className="display text-[44px]">{step === "code" ? "Enter the code" : "Sign in"}</h2>
-          <p className="text-[15px] text-ink2">
-            {step === "code" ? <>We sent a 6-digit code to <strong className="text-ink">{value.trim()}</strong>.</> : "For course reps, tutors and the core team."}
-          </p>
-        </div>
-
         {isStudent ? (
           <div className="flex flex-col gap-3 rounded-[18px] border border-line bg-surface p-5">
             <strong>This account doesn&apos;t have admin access</strong>
-            <span className="text-sm text-ink2">You&apos;re signed in as {me?.displayName ?? "a student"}. Ask a super admin to invite you, then sign in again.</span>
+            <span className="text-sm text-ink2">You&apos;re signed in as {me?.displayName ?? me?.email ?? "a student"}. Ask a super admin to invite you, then sign in again.</span>
             <div className="flex gap-2">
               <Button kind="outline" size="md" onClick={() => router.push("/home")}>Go to the app</Button>
               <Button kind="ghost" size="md" onClick={signOut}>Sign out</Button>
             </div>
           </div>
-        ) : step === "contact" ? (
-          <form className="flex flex-col gap-3" onSubmit={(e) => { e.preventDefault(); send(); }}>
-            <label className="flex flex-col gap-1.5">
-              <span className="text-[13px] font-semibold">Phone or email</span>
-              <input
-                autoFocus
-                value={value}
-                onChange={(e) => { setValue(e.target.value); setError(null); }}
-                placeholder="you@school.edu.ng"
-                autoComplete="username"
-                className="h-12 rounded-xl border-[1.5px] border-line bg-surface px-3.5 text-[15px] outline-none focus:border-accent"
-              />
-            </label>
-            {error && <span className="text-sm text-bad-text" role="alert">{error}</span>}
-            <Button full loading={busy} disabled={!value.trim() || !supabase()}>Send code</Button>
-          </form>
         ) : (
-          <form className="flex flex-col gap-3" onSubmit={(e) => { e.preventDefault(); verify(); }}>
-            <input
-              ref={codeRef}
-              value={code}
-              onChange={(e) => setCode(e.target.value.replace(/\D/g, "").slice(0, 6))}
-              inputMode="numeric"
-              autoComplete="one-time-code"
-              aria-label="6-digit code"
-              className="h-14 rounded-xl border-[1.5px] border-line bg-surface px-3.5 text-center font-mono text-2xl tracking-[0.4em] outline-none focus:border-accent"
-            />
-            {error && <span className="text-sm text-bad-text" role="alert">{error}</span>}
-            <Button full loading={busy} disabled={code.length !== 6}>Sign in</Button>
-            <button type="button" onClick={() => { setStep("contact"); setCode(""); setError(null); }} className="text-sm font-semibold text-accent-text">Use a different phone or email</button>
-          </form>
+          <AuthForm titleClass="display text-[40px] leading-none" intro="For course reps, tutors and the core team. First time? We'll email you a code, then you'll pick a password." />
         )}
-
-        {!supabase() && !isStudent && (
-          <Banner tone="warn" icon="info">Code sign-in isn&apos;t set up on this computer (no Supabase keys). Use a test account below.</Banner>
-        )}
-
-        {DEV_AUTH && !isStudent && (
-          <div className="flex flex-col gap-2 rounded-[18px] border border-dashed border-line p-4">
-            <span className="font-mono text-[11px] font-bold tracking-wide text-ink3">LOCAL TESTING · NO CODE NEEDED</span>
-            {DEV_ADMINS.map((u) => (
-              <button key={u.id} onClick={() => devSignIn(u.id)} className="flex items-center gap-3 rounded-xl px-2 py-2 text-left hover:bg-raised">
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-accent-tint"><Icon name="profile" size={18} color="var(--accent-text)" /></span>
-                <span className="flex flex-col"><strong className="text-sm">{u.name}</strong><span className="text-xs text-ink2">{u.role}</span></span>
-              </button>
-            ))}
-          </div>
-        )}
-
         <p className="text-sm text-ink3">Need access? Ask a super admin to invite you.</p>
       </div>
     </div>

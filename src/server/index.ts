@@ -12,6 +12,7 @@ import { meRoutes } from "./routes/me";
 import { questionRoutes } from "./routes/questions";
 import { challengeRoutes, publicChallengeRoutes } from "./routes/challenges";
 import { quizRoutes } from "./routes/quizzes";
+import { authRoutes } from "./routes/auth";
 import { adminQuizRoutes } from "./routes/admin/quizzes";
 import { adminUploadRoutes } from "./routes/admin/uploads";
 import { adminPaperRoutes } from "./routes/admin/papers";
@@ -40,15 +41,18 @@ app.notFound((c) => c.json({ error: "Not found" }, 404));
 /* Public */
 app.get("/health", (c) => c.json({ ok: true, time: new Date() }));
 app.route("/public/challenges", publicChallengeRoutes);
+app.route("/auth", authRoutes);
 // Local storage driver only: question images are public, upload scans need a signed link.
 app.route("/files", fileRoutes);
 
 /** Daily cron: called by pg_cron, a GitHub Action, or Vercel Cron with the shared secret. */
-app.post("/jobs/daily", async (c) => {
+const daily = async (c: Context<AppEnv>) => {
   const secret = c.req.header("authorization")?.replace(/^Bearer /, "");
   if (!env.CRON_SECRET || secret !== env.CRON_SECRET) return c.json({ error: "Forbidden" }, 403);
   return c.json(await runDaily());
-});
+};
+app.post("/jobs/daily", daily);
+app.get("/jobs/daily", daily);
 
 /** Morning cron (8 am Lagos): the daily pop quiz push. GET too, since Vercel Cron calls with GET. */
 const morning = async (c: Context<AppEnv>) => {
@@ -60,11 +64,13 @@ app.post("/jobs/morning", morning);
 app.get("/jobs/morning", morning);
 
 /** Evening cron (8 pm Lagos): streak reminders. Same secret as the daily job. */
-app.post("/jobs/evening", async (c) => {
+const evening = async (c: Context<AppEnv>) => {
   const secret = c.req.header("authorization")?.replace(/^Bearer /, "");
   if (!env.CRON_SECRET || secret !== env.CRON_SECRET) return c.json({ error: "Forbidden" }, 403);
   return c.json(await runEvening());
-});
+};
+app.post("/jobs/evening", evening);
+app.get("/jobs/evening", evening);
 
 /* Signed in */
 app.use("/catalog/*", auth);

@@ -10,6 +10,7 @@ import { api } from "@/lib/api";
 import { odb } from "@/lib/offline";
 import { takeInvite } from "@/lib/invite";
 import { useToast } from "./ui/kit";
+import { PasswordGate } from "./auth-form";
 
 /**
  * Registers the service worker (production, or NEXT_PUBLIC_SW_DEV=1 for testing) and shows
@@ -114,10 +115,17 @@ function InviteClaimer() {
   return null;
 }
 
+/** Any signed-in account without a password sets one before using the app (new accounts, resets, email-link sign-ins). */
+function NeedsPassword({ children }: { children: ReactNode }) {
+  const { status, me } = useAuth();
+  if (status === "signedIn" && me?.passwordSet === false) return <PasswordGate />;
+  return <>{children}</>;
+}
+
 export function Providers({ children }: { children: ReactNode }) {
   return (
     <AuthProvider>
-      {children}
+      <NeedsPassword>{children}</NeedsPassword>
       <Suspense fallback={null}>
         <ServiceWorker />
       </Suspense>

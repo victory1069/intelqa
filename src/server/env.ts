@@ -52,7 +52,11 @@ const schema = z.object({
   ASK_DAILY_LIMIT: z.coerce.number().int().positive().default(5),
 });
 
-const parsed = schema.safeParse(process.env);
+// `next build` loads the API route to collect page config, before any request runs. The host may
+// not expose runtime secrets then, so a placeholder lets the build finish; real requests still need
+// DATABASE_URL (postgres connects lazily, so nothing is opened during the build).
+const building = process.env.NEXT_PHASE === "phase-production-build";
+const parsed = schema.safeParse(building && !process.env.DATABASE_URL ? { ...process.env, DATABASE_URL: "postgres://build-placeholder" } : process.env);
 if (!parsed.success) {
   console.error("Invalid environment:", parsed.error.flatten().fieldErrors);
   throw new Error("Invalid environment variables. See .env.example.");
