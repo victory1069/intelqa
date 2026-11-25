@@ -23,7 +23,7 @@ export default function SessionPage() {
   );
 }
 
-const MODE_LABEL: Record<string, string> = { exam: "Exam simulation", drill: "Quick drill", topic: "Topic practice", retry: "Retry mistakes", daily: "Daily challenge", challenge: "Friend challenge", quiz: "Practice test" };
+const MODE_LABEL: Record<string, string> = { exam: "Exam simulation", drill: "Quick drill", topic: "Topic practice", retry: "Retry mistakes", daily: "Daily challenge", challenge: "Friend challenge", quiz: "Quiz" };
 
 function Online() {
   const id = useSearchParams().get("id") ?? "";

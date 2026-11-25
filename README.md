@@ -82,6 +82,13 @@ Try it:
 
 The same paper (course, session, semester, type) can't be uploaded twice; delete the old upload first.
 
+## Quiz sets
+
+`content/<set>/*.json` holds ready-made quizzes, one file per course (questions, answers, explanations, and which quiz each question is in). Figures go in `public/figures`. A course can have any number of quizzes.
+
+- `npx tsx scripts/import-quizzes.ts content/ca-2025-2026` checks the files and shows what would be added to the database in `.env.local`.
+- Add `--write` to save, `--update` to overwrite what an earlier run added, `--notify` to put one message per course in students' inboxes. Running it twice never makes copies.
+
 ## Production setup
 
 1. **Supabase project**

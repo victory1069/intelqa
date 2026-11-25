@@ -1,5 +1,5 @@
 import { Hono } from "hono";
-import { and, desc, eq, inArray, ne } from "drizzle-orm";
+import { and, asc, desc, eq, inArray, ne } from "drizzle-orm";
 import { db, schema } from "../db/client";
 import { fail } from "../lib/http";
 import { percentOf } from "../services/scoring";
@@ -13,7 +13,7 @@ export const quizRoutes = new Hono<AppEnv>();
 export type StudentQuiz = Awaited<ReturnType<typeof studentQuizzes>>[number];
 
 /**
- * Practice tests a student can see: live ones in their courses, newest first, plus closed ones
+ * Quizzes a student can see: live ones in their courses, newest first, plus closed ones
  * they sat (so their result stays reachable). Each carries the student's own best and any unfinished sitting.
  */
 export async function studentQuizzes(userId: string, onlyCourse?: string) {
@@ -34,7 +34,7 @@ export async function studentQuizzes(userId: string, onlyCourse?: string) {
     .from(quizzes)
     .innerJoin(courses, eq(courses.id, quizzes.courseId))
     .where(and(inArray(quizzes.courseId, courseIds), ne(quizzes.status, "draft")))
-    .orderBy(desc(quizzes.publishedAt));
+    .orderBy(desc(quizzes.publishedAt), asc(quizzes.title), asc(courses.code));
   if (!rows.length) return [];
 
   const sat = await db
@@ -70,15 +70,15 @@ export async function studentQuizzes(userId: string, onlyCourse?: string) {
     .filter((q) => q.status === "live" || q.sittings > 0);
 }
 
-/** GET /quizzes?course= — practice tests set by course admins. */
+/** GET /quizzes?course= — quizzes set by course admins. */
 quizRoutes.get("/", async (c) => c.json({ quizzes: await studentQuizzes(c.get("user").id, c.req.query("course") || undefined) }));
 
 /** GET /quizzes/:id — one test's header for its start screen. */
 quizRoutes.get("/:id", async (c) => {
   const id = c.req.param("id");
   const [q] = await db.select({ courseId: quizzes.courseId }).from(quizzes).where(eq(quizzes.id, id));
-  if (!q) fail(404, "Practice test not found");
+  if (!q) fail(404, "Quiz not found");
   const item = (await studentQuizzes(c.get("user").id, q.courseId)).find((x) => x.id === id);
-  if (!item) fail(404, "This practice test isn't available");
+  if (!item) fail(404, "This quiz isn't available");
   return c.json({ quiz: item });
 });

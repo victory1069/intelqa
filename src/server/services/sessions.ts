@@ -108,8 +108,8 @@ export async function startAttempt(user: User, input: StartInput) {
     }
     case "quiz": {
       const [quiz] = await db.select().from(schema.quizzes).where(eq(schema.quizzes.id, input.quizId ?? ""));
-      if (!quiz || quiz.status === "draft") fail(404, "This practice test isn't available");
-      if (effectiveStatus(quiz) === "closed") fail(410, "This practice test has closed");
+      if (!quiz || quiz.status === "draft") fail(404, "This quiz isn't available");
+      if (effectiveStatus(quiz) === "closed") fail(410, "This quiz has closed");
       courseId = quiz.courseId;
       quizId = quiz.id;
       questionIds = await liveQuizQuestionIds(quiz);

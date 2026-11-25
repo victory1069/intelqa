@@ -18,7 +18,7 @@ export default function QuizPage() {
   );
 }
 
-/** Start screen for a practice test set by a course admin: what it is, the rules, one Start button. */
+/** Start screen for a quiz set by a course admin: what it is, the rules, one Start button. */
 function Quiz() {
   const id = useSearchParams().get("id") ?? "";
   const router = useRouter();
@@ -38,9 +38,9 @@ function Quiz() {
   if (!data) {
     return (
       <>
-        <AppBar title="Practice test" />
-        <EmptyState glyph={online ? "file" : "offline"} title={online ? "This test isn't available" : "You're offline"}>
-          {online ? error?.message ?? "It may have been taken down." : "Practice tests need data so everyone sits the same set."}
+        <AppBar title="Quiz" />
+        <EmptyState glyph={online ? "file" : "offline"} title={online ? "This quiz isn't available" : "You're offline"}>
+          {online ? error?.message ?? "It may have been taken down." : "Quizzes need data so everyone sits the same set."}
         </EmptyState>
       </>
     );
@@ -63,7 +63,7 @@ function Quiz() {
 
   return (
     <>
-      <AppBar title="Practice test" sub={q.course.code} />
+      <AppBar title="Quiz" sub={q.course.code} />
       <main className="flex flex-1 flex-col gap-8 px-5 pt-4 pb-6">
         <div className="flex flex-col gap-5 rounded-3xl bg-accent p-7 text-on-accent lg:p-9">
           <span className="font-mono text-[11px] font-bold tracking-wide opacity-85">SET BY YOUR {q.course.code} ADMIN</span>
@@ -108,16 +108,16 @@ function Quiz() {
           </div>
         )}
 
-        {closed && <Banner icon="lock">This test has closed. Your results are still here to review.</Banner>}
-        {!online && <Banner icon="offline">You&apos;re offline. Practice tests need data.</Banner>}
+        {closed && <Banner icon="lock">This quiz has closed. Your results are still here to review.</Banner>}
+        {!online && <Banner icon="offline">You&apos;re offline. Quizzes need data.</Banner>}
         {err && <Banner tone="bad" icon="alert">{err}</Banner>}
       </main>
       {!closed && (
         <div className="px-5 pt-3 pb-6">
           {q.openAttemptId ? (
-            <ButtonLink href={`/session?id=${q.openAttemptId}`} full>Resume test</ButtonLink>
+            <ButtonLink href={`/session?id=${q.openAttemptId}`} full>Resume quiz</ButtonLink>
           ) : (
-            <Button full loading={busy} disabled={!online} onClick={start}>{q.sittings ? "Sit it again" : "Start test"}</Button>
+            <Button full loading={busy} disabled={!online} onClick={start}>{q.sittings ? "Sit it again" : "Start quiz"}</Button>
           )}
         </div>
       )}

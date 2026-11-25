@@ -8,7 +8,7 @@ import { useDownloads } from "@/lib/use-downloads";
 import { startOnline } from "@/lib/start";
 import type { Home } from "@/lib/types";
 import { enablePush, markAsked, shouldAskForPush } from "@/lib/push";
-import { QuizCard } from "@/components/quiz-card";
+import { QuizCard, contentLine } from "@/components/quiz-card";
 import { Banner, Bar, Card, Dialog, EmptyState, Sheet, Skeleton, StreakChip, XpChip, fmtClock } from "@/components/ui/kit";
 import { Button, ButtonLink } from "@/components/ui/button";
 import { Icon } from "@/components/ui/icon";
@@ -73,7 +73,7 @@ export default function HomePage() {
     );
   }
 
-  const first = data.courses.find((c) => c.papers > 0);
+  const first = data.courses.find((c) => c.papers > 0 || c.quizzes > 0);
   async function quickDrill(courseId: string) {
     setStarting(true);
     try {
@@ -100,15 +100,16 @@ export default function HomePage() {
           <div className="flex flex-col gap-5 rounded-[22px] bg-accent p-7 text-on-accent">
             <span className="font-mono text-[11px] font-bold tracking-wide opacity-85">START HERE · 3 MINUTES</span>
             <strong className="font-display text-2xl leading-tight">10-question {first.code} drill</strong>
-            <span className="text-sm leading-snug opacity-90">Random questions from {first.papers} past paper{first.papers === 1 ? "" : "s"}. Every answer is explained after.</span>
+            <span className="text-sm leading-snug opacity-90">Random questions from {first.papers ? `${first.papers} past paper${first.papers === 1 ? "" : "s"}` : "past questions"}. Every answer is explained after.</span>
             <Button kind="onAccent" icon="play" full loading={starting} onClick={() => quickDrill(first.id)}>Start practice</Button>
           </div>
+          <QuizList data={data} />
           <span className="label pt-1">Your courses</span>
           <div className="grid grid-cols-2 gap-3">
             {data.courses.map((c) => (
               <Link key={c.id} href={`/course?id=${c.id}`} className="flex flex-col gap-1 rounded-2xl border border-line bg-surface p-4">
                 <span className="font-mono text-[13px] font-bold">{c.code}</span>
-                <span className="text-xs text-ink3">{c.papers ? `${c.papers} paper${c.papers === 1 ? "" : "s"} · not started` : "No papers yet"}</span>
+                <span className="text-xs text-ink3">{contentLine(c) ? `${contentLine(c)} · not started` : "Nothing here yet"}</span>
               </Link>
             ))}
           </div>
@@ -204,15 +205,7 @@ export default function HomePage() {
           </Link>
         )}
 
-        {!offline && data.quizzes?.length > 0 && (
-          <div className="flex flex-col gap-3">
-            <div className="flex items-center justify-between pt-1">
-              <span className="label">New practice tests</span>
-              <Link href="/practise" className="text-[13px] font-semibold text-accent-text">See all</Link>
-            </div>
-            {data.quizzes.map((q) => <QuizCard key={q.id} q={q} />)}
-          </div>
-        )}
+        {!offline && <QuizList data={data} />}
 
         <div className="flex items-center justify-between pt-1">
           <span className="label">{offline ? "On this phone" : "Your courses"}</span>
@@ -236,14 +229,15 @@ export default function HomePage() {
                       ? saved
                         ? `${ready} paper${ready === 1 ? "" : "s"} ready`
                         : "Not downloaded"
-                      : c.papers === 0
-                        ? "No papers yet"
+                      : !contentLine(c)
+                        ? "Nothing here yet"
                         : c.rank
                           ? rankLine(c)
                           : c.rankedAttempts > 0
                             ? `${3 - c.rankedAttempts} more session${3 - c.rankedAttempts === 1 ? "" : "s"} to get ranked`
-                            : `${c.papers} paper${c.papers === 1 ? "" : "s"} · not started`}
+                            : `${contentLine(c)} · not started`}
                   </span>
+                  {!offline && c.quizzes > 0 && (!!c.rank || c.rankedAttempts > 0) && <span className="text-xs text-accent-text">{c.quizzes} quiz{c.quizzes === 1 ? "" : "zes"} available</span>}
                 </span>
                 {dim ? (
                   <Icon name="lock" size={18} color="var(--ink3)" label="Needs data" />
@@ -264,6 +258,20 @@ export default function HomePage() {
       <Moments moment={data.moment} />
       {!data.moment && <PushAsk />}
     </>
+  );
+}
+
+/** The next quiz in each course, and how many are waiting in all. */
+function QuizList({ data }: { data: Home }) {
+  if (!data.quizzes?.length) return null;
+  return (
+    <div className="flex flex-col gap-3">
+      <div className="flex items-center justify-between pt-1">
+        <span className="label">{data.quizzesLeft > 0 ? `${data.quizzesLeft} quiz${data.quizzesLeft === 1 ? "" : "zes"} to do` : "Quizzes"}</span>
+        <Link href="/practise" className="text-[13px] font-semibold text-accent-text">See all</Link>
+      </div>
+      {data.quizzes.map((q) => <QuizCard key={q.id} q={q} />)}
+    </div>
   );
 }
 

@@ -15,7 +15,7 @@ const NAV: { href: string; name: string; glyph: Glyph; match: RegExp; badge?: (d
   { href: "/admin/uploads", name: "Uploads", glyph: "upload", match: /^\/admin\/uploads/, badge: (d) => d.waiting.failed, bad: true },
   { href: "/admin/uploads?status=in_review", name: "Review queue", glyph: "layers", match: /^\/admin\/review/, badge: (d) => d.waiting.inReview },
   { href: "/admin/bank", name: "Question bank", glyph: "book", match: /^\/admin\/bank/ },
-  { href: "/admin/quizzes", name: "Practice tests", glyph: "timer", match: /^\/admin\/quizzes/ },
+  { href: "/admin/quizzes", name: "Quizzes", glyph: "timer", match: /^\/admin\/quizzes/ },
   { href: "/admin/reports", name: "Reports", glyph: "inbox", match: /^\/admin\/reports/, badge: (d) => d.waiting.reports, bad: true },
   { href: "/admin/analytics", name: "Analytics", glyph: "pie", match: /^\/admin\/analytics/ },
   { href: "/admin/catalogue", name: "Catalogue", glyph: "building", match: /^\/admin\/catalogue/, superOnly: true },

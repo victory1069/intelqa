@@ -18,7 +18,7 @@ export default function Downloads() {
   const [failed, setFailed] = useState<string | null>(null);
   const [remove, setRemove] = useState<string | null>(null);
   const total = (courses ?? []).reduce((s, c) => s + c.bytes, 0);
-  const missing = (me?.courses ?? []).filter((c) => c.status === "live" && !courses?.some((d) => d.courseId === c.id));
+  const missing = (me?.courses ?? []).filter((c) => c.status === "live" && c.papers !== 0 && !courses?.some((d) => d.courseId === c.id));
 
   async function get(id: string) {
     setBusy(id);
@@ -49,14 +49,14 @@ export default function Downloads() {
                   <span className="text-xs text-ink2">
                     {d
                       ? `${d.data.papers.length} paper${d.data.papers.length === 1 ? "" : "s"} · ${d.data.papers.reduce((s, p) => s + p.questions.length, 0)} questions · ${Math.round(d.bytes / 1024)} KB · ${new Date(d.at).toLocaleDateString()}`
-                      : c.status === "live" ? "Not downloaded" : "No papers yet"}
+                      : c.papers !== 0 && c.status === "live" ? "Not downloaded" : "No papers to download yet"}
                   </span>
                 </div>
                 {d ? (
                   <button onClick={() => setRemove(c.id)} className="flex h-[34px] items-center gap-1.5 rounded-[10px] bg-ok-tint px-2.5 text-xs font-bold text-ok-text" aria-label={`${c.code} saved. Remove?`}>
                     <Icon name="check" size={16} weight={2.4} />Saved
                   </button>
-                ) : c.status === "live" ? (
+                ) : c.papers !== 0 && c.status === "live" ? (
                   <button disabled={!online || !!busy} onClick={() => get(c.id)} className="flex h-[34px] items-center gap-1.5 rounded-[10px] bg-accent-tint px-2.5 text-xs font-bold text-accent-text disabled:opacity-50">
                     {busy === c.id ? <Spinner size={16} /> : <Icon name="download" size={16} weight={2.4} />}Get
                   </button>

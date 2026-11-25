@@ -24,7 +24,7 @@ export type AdminQuizRow = {
   average: number | null;
 };
 
-/** Every practice test in the admin's courses. */
+/** Every quiz in the admin's courses. */
 export default function QuizzesPage() {
   const [status, setStatus] = useState("");
   const { data } = useApi<{ quizzes: AdminQuizRow[]; counts: Record<string, number> }>("/admin/quizzes");
@@ -34,8 +34,8 @@ export default function QuizzesPage() {
 
   return (
     <>
-      <Header title="Practice tests">
-        <ButtonLink href="/admin/quizzes/new" icon="plus" size="md">New practice test</ButtonLink>
+      <Header title="Quizzes">
+        <ButtonLink href="/admin/quizzes/new" icon="plus" size="md">New quiz</ButtonLink>
       </Header>
       <p className="max-w-[640px] px-5 text-[15px] leading-relaxed text-ink2 sm:px-8 lg:px-12">
         Pick a course, the topics and how many questions. The questions are drawn at random across those topics, and students see the test on their Practise tab.
@@ -49,10 +49,10 @@ export default function QuizzesPage() {
       <main className="px-5 py-8 sm:px-8 lg:px-12 lg:py-10">
         {data && !all.length ? (
           <div className="rounded-2xl border border-line bg-surface py-6">
-            <EmptyState glyph="timer" tone="accent" title="No practice tests yet">
+            <EmptyState glyph="timer" tone="accent" title="No quizzes yet">
               Make one in under a minute: choose a course, a size up to 25 questions and a time limit.
             </EmptyState>
-            <div className="flex justify-center pb-6"><ButtonLink href="/admin/quizzes/new" icon="plus" size="md">New practice test</ButtonLink></div>
+            <div className="flex justify-center pb-6"><ButtonLink href="/admin/quizzes/new" icon="plus" size="md">New quiz</ButtonLink></div>
           </div>
         ) : (
           <div className="overflow-hidden rounded-2xl border border-line bg-surface">

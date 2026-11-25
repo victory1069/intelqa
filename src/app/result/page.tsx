@@ -285,7 +285,7 @@ function OnlineResult({ id }: { id: string }) {
             )}
           </>
         )}
-        {r.mode === "quiz" && r.quizId && <ButtonLink href={`/quiz?id=${r.quizId}`} kind="tonal" full>Sit this test again</ButtonLink>}
+        {r.mode === "quiz" && r.quizId && <ButtonLink href={`/quiz?id=${r.quizId}`} kind="tonal" full>Sit this quiz again</ButtonLink>}
         {r.paperId && (r.mode === "exam" || r.mode === "challenge") && <ChallengeButton paperId={r.paperId} code={r.course.code} score={`${r.score}/${r.maxScore}`} />}
       </div>
       {installSheet}

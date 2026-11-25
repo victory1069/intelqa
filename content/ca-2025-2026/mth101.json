@@ -1,0 +1,1165 @@
+{
+ "course": "MTH 101",
+ "source": "Aureons MTH 101 CA PQ&A.pdf",
+ "session": "2025/2026",
+ "instructions": "Questions from the 2025/2026 continuous assessment (CA) CBT. Every answer is explained after you submit.",
+ "topics": [
+  "Sets",
+  "Quadratic equations",
+  "Sequences & series",
+  "Binomial theorem",
+  "Mathematical induction"
+ ],
+ "questions": [
+  {
+   "ref": "1",
+   "number": 1,
+   "topic": "Sets",
+   "difficulty": "easy",
+   "text": "$U = \\{x : 1 \\le x \\le 10\\}$, where $x$ is a whole number, and $B = \\{\\text{even numbers less than } 10\\}$. Find $B'$.",
+   "options": [
+    "$\\{1,2,3,4,5,6,7,8,9,10\\}$",
+    "$\\{1,3,5,7,9\\}$",
+    "$\\{2,4,6,8\\}$",
+    "$\\{1,3,5,7,9,10\\}$"
+   ],
+   "correct": 3,
+   "explanation": "$B = \\{2,4,6,8\\}$. 10 is not less than 10, so it is in $B'$ along with the odd numbers."
+  },
+  {
+   "ref": "2",
+   "number": 2,
+   "topic": "Sequences & series",
+   "difficulty": "medium",
+   "text": "Find the value of $n$ if the sum of the first $n$ terms of the series $1, 5, 9, \\dots$ is equal to the sum of the first $n$ terms of the series $19, 17, 15, 13, \\dots$",
+   "options": [
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "correct": 3,
+   "explanation": "$\\frac{n}{2}[2 + 4(n-1)] = \\frac{n}{2}[38 - 2(n-1)]$, so $4n - 2 = 40 - 2n$ and $n = 7$."
+  },
+  {
+   "ref": "3",
+   "number": 3,
+   "topic": "Binomial theorem",
+   "difficulty": "easy",
+   "text": "Find the sum of the coefficients of the expansion of $(1-2x)^7$.",
+   "options": [
+    "−1",
+    "0",
+    "1",
+    "128"
+   ],
+   "correct": 0,
+   "explanation": "Put $x = 1$: $(1 - 2)^7 = -1$."
+  },
+  {
+   "ref": "4",
+   "number": 4,
+   "topic": "Quadratic equations",
+   "difficulty": "medium",
+   "text": "If $\\alpha$ and $\\beta$ are the roots of the equation $ax^2 + bx + c = 0$, find the value of $(\\alpha + 1)(\\beta + 1)$.",
+   "options": [
+    "$\\frac{a + b - c}{a}$",
+    "$\\frac{a - b + c}{a}$",
+    "$\\frac{c - b - a}{a}$",
+    "$\\frac{a + b + c}{a}$"
+   ],
+   "correct": 1,
+   "explanation": "$(\\alpha+1)(\\beta+1) = \\alpha\\beta + (\\alpha+\\beta) + 1 = \\frac{c}{a} - \\frac{b}{a} + 1 = \\frac{a - b + c}{a}$."
+  },
+  {
+   "ref": "5",
+   "number": 5,
+   "topic": "Quadratic equations",
+   "difficulty": "easy",
+   "text": "What are the roots of the equation $3k^2 - 2k - 1 = 0$?",
+   "options": [
+    "$k = 1,\\ k = -\\tfrac{1}{3}$",
+    "$k = -1,\\ k = \\tfrac{1}{3}$",
+    "$k = 1,\\ k = 1$",
+    "$k = -1,\\ k = -\\tfrac{1}{3}$"
+   ],
+   "correct": 0,
+   "explanation": "Factorise: $(3k + 1)(k - 1) = 0$."
+  },
+  {
+   "ref": "6",
+   "number": 6,
+   "topic": "Sets",
+   "difficulty": "medium",
+   "text": "$U = \\{x : 1 \\le x \\le 10\\}$, where $x$ is a whole number, $A = \\{\\text{odd numbers less than } 10\\}$ and $B = \\{\\text{even numbers less than } 10\\}$. Find $A' \\cup B'$.",
+   "options": [
+    "$\\{1,2,3,4,5,6,7,8,9,10\\}$",
+    "$\\{2,4,6,8,10\\}$",
+    "$\\{1,3,5,7,9\\}$",
+    "$\\emptyset$"
+   ],
+   "correct": 0,
+   "explanation": "$A' \\cup B' = (A \\cap B)'$. A and B have nothing in common, so this is the whole of U."
+  },
+  {
+   "ref": "7",
+   "number": 7,
+   "topic": "Sequences & series",
+   "difficulty": "medium",
+   "text": "Find 4 geometric means between 243 and $-1$.",
+   "options": [
+    "−81, 27, −9, 3",
+    "81, −27, 9, −3",
+    "81, 27, 9, 3",
+    "−81, −27, −9, −3"
+   ],
+   "correct": 0,
+   "explanation": "$243r^5 = -1$, so $r = -\\frac{1}{3}$ and the means are $-81, 27, -9, 3$."
+  },
+  {
+   "ref": "8",
+   "number": 8,
+   "topic": "Mathematical induction",
+   "difficulty": "easy",
+   "text": "If $P(n) = n^2(n + 1)(n + 2)$, find $P(k + 1)$.",
+   "options": [
+    "$(k + 1)^2(k + 2)(k + 3)$",
+    "$(k + 1)^2(k + 1)(k + 2)$",
+    "$k^2(k + 1)(k + 2)$",
+    "$(k + 1)(k + 2)(k + 3)$"
+   ],
+   "correct": 0,
+   "explanation": "Replace every $n$ with $k + 1$."
+  },
+  {
+   "ref": "10",
+   "number": 10,
+   "topic": "Binomial theorem",
+   "difficulty": "easy",
+   "text": "What is the sum of the coefficients of the expansion of $(1 + x)^8$?",
+   "options": [
+    "512",
+    "128",
+    "65,536",
+    "256"
+   ],
+   "correct": 3,
+   "explanation": "Put $x = 1$: $2^8 = 256$."
+  },
+  {
+   "ref": "11",
+   "number": 11,
+   "topic": "Binomial theorem",
+   "difficulty": "medium",
+   "text": "Find the first three terms of the expansion of $(1 + 3x)^{10}$.",
+   "options": [
+    "$1 + 30x + 405x^2$",
+    "$1 + 30x + 90x^2$",
+    "$1 + 10x + 45x^2$",
+    "$1 + 3x + 9x^2$"
+   ],
+   "correct": 0,
+   "explanation": "$1 + 10(3x) + 45(3x)^2 = 1 + 30x + 405x^2$."
+  },
+  {
+   "ref": "12",
+   "number": 12,
+   "topic": "Sequences & series",
+   "difficulty": "medium",
+   "text": "Find the geometric mean between $\\frac{x-2}{x+1}$ and $(x - 1)(x + 2)$.",
+   "options": [
+    "$\\sqrt{\\frac{(x-2)(x-1)(x+2)}{x+1}}$",
+    "$\\sqrt{\\frac{(x+2)(x-1)}{(x-2)(x+1)}}$",
+    "$\\frac{(x-2)(x-1)}{(x+1)(x+2)}$",
+    "$\\sqrt{(x-2)(x+1)(x-1)(x+2)}$"
+   ],
+   "correct": 0,
+   "explanation": "The geometric mean of $a$ and $b$ is $\\sqrt{ab}$."
+  },
+  {
+   "ref": "13",
+   "number": 13,
+   "topic": "Sets",
+   "difficulty": "easy",
+   "text": "$U = \\{x : 1 \\le x \\le 10\\}$, where $x$ is a whole number, $A = \\{\\text{odd numbers less than } 10\\}$ and $B = \\{\\text{even numbers less than } 10\\}$. How many elements are in $A' \\cup B'$?",
+   "options": [
+    "10",
+    "9",
+    "1",
+    "5"
+   ],
+   "correct": 0,
+   "explanation": "$A' \\cup B' = (A \\cap B)' = U$, which has 10 elements."
+  },
+  {
+   "ref": "14",
+   "number": 14,
+   "topic": "Sequences & series",
+   "difficulty": "medium",
+   "text": "The third term of an A.P. is 10 and the seventh term is 34. Find the product of the common difference and the first term.",
+   "options": [
+    "−12",
+    "10",
+    "12",
+    "−10"
+   ],
+   "correct": 0,
+   "explanation": "$4d = 34 - 10 = 24$, so $d = 6$. Then $a = 10 - 2(6) = -2$ and $ad = -12$."
+  },
+  {
+   "ref": "15",
+   "number": 15,
+   "topic": "Sequences & series",
+   "difficulty": "easy",
+   "text": "The sum to infinity of a geometric series is 12 and the common ratio is $\\frac{2}{3}$. Find the first term.",
+   "options": [
+    "36",
+    "8",
+    "4",
+    "6"
+   ],
+   "correct": 2,
+   "explanation": "$a = S_\\infty(1 - r) = 12 \\times \\frac{1}{3} = 4$."
+  },
+  {
+   "ref": "16",
+   "number": 16,
+   "topic": "Sets",
+   "difficulty": "easy",
+   "text": "Given sets $A = \\{0, 2, 4, 6\\}$ and $B = \\{1, 2, 3, 4\\}$, find $m(A \\cup B)$, where $m$ is the measure (number of elements).",
+   "options": [
+    "8",
+    "4",
+    "6",
+    "7"
+   ],
+   "correct": 2,
+   "explanation": "$A \\cup B = \\{0,1,2,3,4,6\\}$, which has 6 elements."
+  },
+  {
+   "ref": "17",
+   "number": 17,
+   "topic": "Binomial theorem",
+   "difficulty": "easy",
+   "text": "Find the sum of the coefficients of the expansion of $(x + y)^8$.",
+   "options": [
+    "256",
+    "128",
+    "512",
+    "64"
+   ],
+   "correct": 0,
+   "explanation": "Put $x = y = 1$: $2^8 = 256$."
+  },
+  {
+   "ref": "18",
+   "number": 18,
+   "topic": "Sets",
+   "difficulty": "easy",
+   "text": "$U = \\{x : 1 \\le x \\le 10\\}$, where $x$ is a whole number, $A = \\{\\text{odd numbers less than } 10\\}$ and $B = \\{\\text{even numbers less than } 10\\}$. How many elements are in $(A \\cup B)'$?",
+   "options": [
+    "9",
+    "5",
+    "8",
+    "1"
+   ],
+   "correct": 3,
+   "explanation": "$A \\cup B$ is 1 to 9, so only 10 is left out."
+  },
+  {
+   "ref": "19",
+   "number": 19,
+   "topic": "Mathematical induction",
+   "difficulty": "easy",
+   "text": "If $P(n) = \\frac{n(n+1)(2n+1)}{6}$, find the value of $P(3)$.",
+   "options": [
+    "10",
+    "20",
+    "14",
+    "6"
+   ],
+   "correct": 2,
+   "explanation": "$\\frac{3 \\times 4 \\times 7}{6} = 14$."
+  },
+  {
+   "ref": "20",
+   "number": 20,
+   "topic": "Sequences & series",
+   "difficulty": "easy",
+   "text": "Find the limiting sum of the geometric series $6, -2, \\frac{2}{3}, -\\frac{2}{9}, \\dots$",
+   "options": [
+    "2",
+    "18",
+    "4.5",
+    "9"
+   ],
+   "correct": 2,
+   "explanation": "$r = -\\frac{1}{3}$, so $S_\\infty = \\frac{6}{1 + \\frac{1}{3}} = 4.5$."
+  },
+  {
+   "ref": "21",
+   "number": 21,
+   "topic": "Binomial theorem",
+   "difficulty": "medium",
+   "text": "In the expansion of $\\left(2x - \\frac{1}{x}\\right)^4$, find the term independent of $x$.",
+   "options": [
+    "24",
+    "−24",
+    "16",
+    "6"
+   ],
+   "correct": 0,
+   "explanation": "The middle term is $\\binom{4}{2}(2x)^2\\left(-\\frac{1}{x}\\right)^2 = 6 \\times 4 = 24$."
+  },
+  {
+   "ref": "22",
+   "number": 22,
+   "topic": "Sequences & series",
+   "difficulty": "medium",
+   "text": "The first term of a geometric progression is 81 and its 4th term is 3. Find the sum to infinity.",
+   "options": [
+    "121.5",
+    "243",
+    "108",
+    "120"
+   ],
+   "correct": 0,
+   "explanation": "$r^3 = \\frac{3}{81} = \\frac{1}{27}$, so $r = \\frac{1}{3}$ and $S_\\infty = \\frac{81}{2/3} = 121.5$."
+  },
+  {
+   "ref": "23",
+   "number": 23,
+   "topic": "Quadratic equations",
+   "difficulty": "medium",
+   "text": "In the equation $2x^2 - x + c = 0$, find the value of $c$ if one root is double the other.",
+   "options": [
+    "1/9",
+    "1/2",
+    "2/9",
+    "1/18"
+   ],
+   "correct": 0,
+   "explanation": "Roots $\\alpha$ and $2\\alpha$: $3\\alpha = \\frac{1}{2}$, so $\\alpha = \\frac{1}{6}$. Then $\\frac{c}{2} = 2\\alpha^2 = \\frac{1}{18}$ and $c = \\frac{1}{9}$."
+  },
+  {
+   "ref": "24",
+   "number": 24,
+   "topic": "Sequences & series",
+   "difficulty": "easy",
+   "text": "In a G.P., the 1st term is 6 and the common ratio is 3. Find the 4th term.",
+   "options": [
+    "54",
+    "18",
+    "162",
+    "486"
+   ],
+   "correct": 2,
+   "explanation": "$ar^3 = 6 \\times 27 = 162$."
+  },
+  {
+   "ref": "25",
+   "number": 25,
+   "topic": "Binomial theorem",
+   "difficulty": "medium",
+   "text": "In the expansion of $(2x - y)^{10}$, find the coefficient of the 4th term.",
+   "options": [
+    "15,360",
+    "−15,360",
+    "−1,920",
+    "960"
+   ],
+   "correct": 1,
+   "explanation": "$\\binom{10}{3}(2)^7(-1)^3 = 120 \\times 128 \\times (-1) = -15360$."
+  },
+  {
+   "ref": "26",
+   "number": 26,
+   "topic": "Sequences & series",
+   "difficulty": "medium",
+   "text": "In a G.P. with a positive common ratio, the 4th term is 24 and the 8th term is $\\frac{8}{27}$. Find its common ratio.",
+   "options": [
+    "1/3",
+    "3",
+    "1/9",
+    "2/3"
+   ],
+   "correct": 0,
+   "explanation": "$r^4 = \\frac{8}{27} \\div 24 = \\frac{1}{81}$, so $r = \\frac{1}{3}$."
+  },
+  {
+   "ref": "27",
+   "number": 27,
+   "topic": "Quadratic equations",
+   "difficulty": "medium",
+   "text": "If $\\alpha + \\beta = 5$ and $\\alpha\\beta = -2$, find the value of $\\frac{1}{\\alpha^2} + \\frac{1}{\\beta^2}$.",
+   "options": [
+    "29/4",
+    "21/4",
+    "25/4",
+    "33/4"
+   ],
+   "correct": 0,
+   "explanation": "$\\frac{(\\alpha+\\beta)^2 - 2\\alpha\\beta}{(\\alpha\\beta)^2} = \\frac{25 + 4}{4} = \\frac{29}{4}$."
+  },
+  {
+   "ref": "29",
+   "number": 29,
+   "topic": "Sequences & series",
+   "difficulty": "easy",
+   "text": "Find the 6th term of the series $1 + 3 + 9 + \\dots$",
+   "options": [
+    "81",
+    "729",
+    "243",
+    "486"
+   ],
+   "correct": 2,
+   "explanation": "$ar^5 = 3^5 = 243$."
+  },
+  {
+   "ref": "30",
+   "number": 30,
+   "topic": "Binomial theorem",
+   "difficulty": "medium",
+   "text": "Find the total number of distinct terms in the expansion of $(1 + 2x + x^2)^{10}$.",
+   "options": [
+    "11",
+    "22",
+    "21",
+    "10"
+   ],
+   "correct": 2,
+   "explanation": "$1 + 2x + x^2 = (1 + x)^2$, so the expression is $(1 + x)^{20}$, which has 21 terms."
+  },
+  {
+   "ref": "31",
+   "number": 31,
+   "topic": "Sequences & series",
+   "difficulty": "easy",
+   "text": "Find the 7th term of a G.P. whose common ratio is 4 and 6th term is 42.",
+   "options": [
+    "168",
+    "126",
+    "10.5",
+    "210"
+   ],
+   "correct": 0,
+   "explanation": "$T_7 = T_6 \\times r = 42 \\times 4 = 168$."
+  },
+  {
+   "ref": "32",
+   "number": 32,
+   "topic": "Quadratic equations",
+   "difficulty": "medium",
+   "text": "Find the value of $p$ for which $(x + p)^2 = 2 - 3p$ has equal roots.",
+   "options": [
+    "$p = \\tfrac{2}{3}$",
+    "$p = 1$",
+    "$p = -1$",
+    "$p = -2$"
+   ],
+   "correct": 0,
+   "explanation": "The roots are $x = -p \\pm \\sqrt{2 - 3p}$. They are equal when $2 - 3p = 0$, so $p = \\frac{2}{3}$."
+  },
+  {
+   "ref": "33",
+   "number": 33,
+   "topic": "Quadratic equations",
+   "difficulty": "hard",
+   "text": "If one root of $27x^2 + bx + 8 = 0$ is the square of the other, find $b$.",
+   "options": [
+    "−20",
+    "20",
+    "−30",
+    "30"
+   ],
+   "correct": 2,
+   "explanation": "Roots $s$ and $s^2$: $s^3 = \\frac{8}{27}$, so $s = \\frac{2}{3}$ and $s^2 = \\frac{4}{9}$. Their sum is $\\frac{10}{9} = -\\frac{b}{27}$, so $b = -30$."
+  },
+  {
+   "ref": "34",
+   "number": 34,
+   "topic": "Quadratic equations",
+   "difficulty": "medium",
+   "text": "For the quadratic equation $x^2 - x + 2 = 0$ with roots $a$ and $b$, find $2a - \\frac{1}{a} + 2b - \\frac{1}{b}$.",
+   "options": [
+    "1.5",
+    "2.0",
+    "2.5",
+    "3"
+   ],
+   "correct": 0,
+   "explanation": "$2(a + b) - \\frac{a + b}{ab} = 2(1) - \\frac{1}{2} = 1.5$."
+  },
+  {
+   "ref": "35",
+   "number": 35,
+   "topic": "Sequences & series",
+   "difficulty": "easy",
+   "text": "Find the sum of the first 12 terms of the series $3, 2.5, 2, 1.5, \\dots$",
+   "options": [
+    "3",
+    "1.5",
+    "6",
+    "0"
+   ],
+   "correct": 0,
+   "explanation": "$S_{12} = 6[2(3) + 11(-0.5)] = 6 \\times 0.5 = 3$."
+  },
+  {
+   "ref": "36",
+   "number": 36,
+   "topic": "Binomial theorem",
+   "difficulty": "medium",
+   "text": "Find the coefficient of the middle term in the expansion of $\\left(2x + \\frac{1}{x}\\right)^8$.",
+   "options": [
+    "1120",
+    "560",
+    "70",
+    "256"
+   ],
+   "correct": 0,
+   "explanation": "The 5th term is $\\binom{8}{4}(2)^4 = 70 \\times 16 = 1120$."
+  },
+  {
+   "ref": "37",
+   "number": 37,
+   "topic": "Quadratic equations",
+   "difficulty": "medium",
+   "text": "For the quadratic equation $2x^2 - 6x + 3 = 0$ with roots $a$ and $b$, find $a^2 + ab + b^2$.",
+   "options": [
+    "7.5",
+    "5.5",
+    "6",
+    "4.5"
+   ],
+   "correct": 0,
+   "explanation": "$(a + b)^2 - ab = 3^2 - 1.5 = 7.5$."
+  },
+  {
+   "ref": "38",
+   "number": 38,
+   "topic": "Sequences & series",
+   "difficulty": "medium",
+   "text": "Insert a geometric mean between $\\frac{x-1}{x+2}$ and $(x-1)(x+2)$.",
+   "options": [
+    "$x+2$",
+    "$x+1$",
+    "$x-1$",
+    "$(x-1)^2$"
+   ],
+   "correct": 2,
+   "explanation": "$\\sqrt{\\frac{x-1}{x+2} \\times (x-1)(x+2)} = \\sqrt{(x-1)^2} = x - 1$."
+  },
+  {
+   "ref": "39",
+   "number": 39,
+   "topic": "Quadratic equations",
+   "difficulty": "easy",
+   "text": "What is the nature of the roots of a quadratic equation $ax^2 + bx + c = 0$ if $b^2 - 4ac = 0$?",
+   "options": [
+    "Real and distinct",
+    "Imaginary",
+    "Real and equal",
+    "Complex"
+   ],
+   "correct": 2,
+   "explanation": "A zero discriminant gives one repeated real root."
+  },
+  {
+   "ref": "41",
+   "number": 41,
+   "topic": "Sequences & series",
+   "difficulty": "medium",
+   "text": "Insert 3 geometric means between 243 and 3.",
+   "options": [
+    "81, 27, 9",
+    "90, 60, 30",
+    "100, 50, 25",
+    "72, 48, 24"
+   ],
+   "correct": 0,
+   "explanation": "$243r^4 = 3$, so $r = \\frac{1}{3}$ and the means are 81, 27, 9."
+  },
+  {
+   "ref": "42",
+   "number": 42,
+   "topic": "Sets",
+   "difficulty": "easy",
+   "text": "Find the measure (number of elements) of set $A$ if $A = \\{0, 1, 2\\}$.",
+   "options": [
+    "1",
+    "2",
+    "3",
+    "0"
+   ],
+   "correct": 2,
+   "explanation": "0 counts as an element, so there are 3."
+  },
+  {
+   "ref": "43",
+   "number": 43,
+   "topic": "Quadratic equations",
+   "difficulty": "medium",
+   "text": "If $\\alpha$ and $\\beta$ are the roots of $2x^2 - 6x + 3 = 0$, find $\\alpha^2 + \\beta^2 + \\alpha$.",
+   "options": [
+    "$6 + \\alpha$",
+    "$9$",
+    "$6$",
+    "$\\tfrac{15}{2}$"
+   ],
+   "correct": 0,
+   "explanation": "$\\alpha^2 + \\beta^2 = (\\alpha+\\beta)^2 - 2\\alpha\\beta = 9 - 3 = 6$, so the answer is $6 + \\alpha$."
+  },
+  {
+   "ref": "44",
+   "number": 44,
+   "topic": "Sequences & series",
+   "difficulty": "easy",
+   "text": "What is the arithmetic mean of $2x+7y$ and $4x+5y$?",
+   "options": [
+    "$3x + 6y$",
+    "$6x + 12y$",
+    "$3x + 4y$",
+    "$2x + 6y$"
+   ],
+   "correct": 0,
+   "explanation": "$\\frac{6x + 12y}{2} = 3x + 6y$."
+  },
+  {
+   "ref": "45",
+   "number": 45,
+   "topic": "Binomial theorem",
+   "difficulty": "medium",
+   "text": "Find the coefficient of $x^n$ in the expansion of $(1-x)^{-1}$.",
+   "options": [
+    "1",
+    "0",
+    "n",
+    "−1"
+   ],
+   "correct": 0,
+   "explanation": "$(1-x)^{-1} = 1 + x + x^2 + x^3 + \\dots$, so every coefficient is 1."
+  },
+  {
+   "ref": "46",
+   "number": 46,
+   "topic": "Sequences & series",
+   "difficulty": "easy",
+   "text": "The sum to infinity of a G.P. exists when?",
+   "options": [
+    "$|r| < 1$",
+    "$r \\ge 1$",
+    "$r > 1$",
+    "$r = 1$"
+   ],
+   "correct": 0,
+   "explanation": "The terms shrink towards zero only when $|r| < 1$."
+  },
+  {
+   "ref": "47",
+   "number": 47,
+   "topic": "Sequences & series",
+   "difficulty": "medium",
+   "text": "Find the sum to infinity of the sequence $-2, \\frac{2}{3}, \\dots$",
+   "options": [
+    "−3/2",
+    "−3",
+    "3/2",
+    "−5/2"
+   ],
+   "correct": 0,
+   "explanation": "$r = -\\frac{1}{3}$, so $S_\\infty = \\frac{-2}{1 + \\frac{1}{3}} = -\\frac{3}{2}$."
+  },
+  {
+   "ref": "48",
+   "number": 48,
+   "topic": "Sequences & series",
+   "difficulty": "medium",
+   "text": "Insert 5 arithmetic means between 3 and 12.",
+   "options": [
+    "9/2, 6, 15/2, 9, 21/2",
+    "4, 5, 6, 7, 8",
+    "5, 7, 9, 11, 13",
+    "9/2, 13/2, 17/2, 21/2, 12"
+   ],
+   "correct": 0,
+   "explanation": "$3 + 6d = 12$, so $d = \\frac{3}{2}$."
+  },
+  {
+   "ref": "49",
+   "number": 49,
+   "topic": "Sequences & series",
+   "difficulty": "medium",
+   "text": "If the 5th term of a G.P. is 162 and the 8th term is 4374, find the product of the first term and the common ratio.",
+   "options": [
+    "6",
+    "12",
+    "18",
+    "2"
+   ],
+   "correct": 0,
+   "explanation": "$r^3 = \\frac{4374}{162} = 27$, so $r = 3$ and $a = \\frac{162}{81} = 2$. The product is 6 (2 is only the first term)."
+  },
+  {
+   "ref": "51",
+   "number": 51,
+   "topic": "Binomial theorem",
+   "difficulty": "easy",
+   "text": "Which term is the middle term of $(3a + 4b)^8$?",
+   "options": [
+    "5th term",
+    "4th term",
+    "6th term",
+    "3rd term"
+   ],
+   "correct": 0,
+   "explanation": "There are 9 terms, so the 5th is in the middle."
+  },
+  {
+   "ref": "52",
+   "number": 52,
+   "topic": "Quadratic equations",
+   "difficulty": "medium",
+   "text": "Find $k$ in $x^2 - kx - 10 = 0$ when $\\alpha^2 + \\beta^2 = 29$.",
+   "options": [
+    "±7",
+    "±9",
+    "±3",
+    "±11"
+   ],
+   "correct": 2,
+   "explanation": "$(\\alpha+\\beta)^2 - 2\\alpha\\beta = k^2 + 20 = 29$, so $k = \\pm 3$."
+  },
+  {
+   "ref": "53",
+   "number": 53,
+   "topic": "Sequences & series",
+   "difficulty": "easy",
+   "text": "Insert 2 arithmetic means between 4 and 22.",
+   "options": [
+    "9, 13",
+    "10, 16",
+    "11, 15",
+    "12, 18"
+   ],
+   "correct": 1,
+   "explanation": "$4 + 3d = 22$, so $d = 6$."
+  },
+  {
+   "ref": "55",
+   "number": 55,
+   "topic": "Quadratic equations",
+   "difficulty": "easy",
+   "text": "If $\\frac{1}{2}$ is a root of the equation $x^2 + kx - \\frac{5}{4} = 0$, find $k$.",
+   "options": [
+    "1",
+    "3",
+    "2",
+    "4"
+   ],
+   "correct": 2,
+   "explanation": "$\\frac{1}{4} + \\frac{k}{2} - \\frac{5}{4} = 0$, so $k = 2$."
+  },
+  {
+   "ref": "56",
+   "number": 56,
+   "topic": "Sequences & series",
+   "difficulty": "easy",
+   "text": "Three arithmetic means are inserted between 4 and 16. Which of the following is not one of them?",
+   "options": [
+    "7",
+    "10",
+    "9",
+    "13"
+   ],
+   "correct": 2,
+   "explanation": "$4 + 4d = 16$, so $d = 3$ and the means are 7, 10, 13."
+  },
+  {
+   "ref": "58",
+   "number": 58,
+   "topic": "Sequences & series",
+   "difficulty": "easy",
+   "text": "Find the sum to infinity of $2^{-1} + 2^{-2} + 2^{-3} + \\dots$",
+   "options": [
+    "2",
+    "1/2",
+    "1",
+    "3/2"
+   ],
+   "correct": 2,
+   "explanation": "$\\frac{1/2}{1 - 1/2} = 1$."
+  },
+  {
+   "ref": "60",
+   "number": 60,
+   "topic": "Quadratic equations",
+   "difficulty": "easy",
+   "text": "Find $(\\alpha - \\beta)^2$ for $x^2 - 4x + 3 = 0$.",
+   "options": [
+    "8",
+    "6",
+    "4",
+    "2"
+   ],
+   "correct": 2,
+   "explanation": "$(\\alpha+\\beta)^2 - 4\\alpha\\beta = 16 - 12 = 4$."
+  },
+  {
+   "ref": "61",
+   "number": 61,
+   "topic": "Quadratic equations",
+   "difficulty": "medium",
+   "text": "If $\\alpha$ and $\\beta$ are the roots of $3x^2 - 7x - 1 = 0$, find $(\\alpha - \\beta)^2$.",
+   "options": [
+    "61/9",
+    "37/9",
+    "49/9",
+    "55/9"
+   ],
+   "correct": 0,
+   "explanation": "$\\left(\\frac{7}{3}\\right)^2 + \\frac{4}{3} = \\frac{49 + 12}{9} = \\frac{61}{9}$."
+  },
+  {
+   "ref": "62",
+   "number": 62,
+   "topic": "Sequences & series",
+   "difficulty": "easy",
+   "text": "Find the 8th term of the sequence $1, 3, 9, \\dots$",
+   "options": [
+    "6561",
+    "729",
+    "2187",
+    "19683"
+   ],
+   "correct": 2,
+   "explanation": "$3^7 = 2187$."
+  },
+  {
+   "ref": "63",
+   "number": 63,
+   "topic": "Binomial theorem",
+   "difficulty": "medium",
+   "text": "Find the 4th term in the binomial expansion of $(x - 2y)^{10}$.",
+   "options": [
+    "$-960x^7y^3$",
+    "$960x^7y^3$",
+    "$-120x^7y^3$",
+    "$45x^8y^2$"
+   ],
+   "correct": 0,
+   "explanation": "$\\binom{10}{3}x^7(-2y)^3 = 120 \\times (-8)x^7y^3 = -960x^7y^3$."
+  },
+  {
+   "ref": "64",
+   "number": 64,
+   "topic": "Sequences & series",
+   "difficulty": "easy",
+   "text": "Find the sum to infinity of the G.P. $32, 16, 8, \\dots$",
+   "options": [
+    "64",
+    "32",
+    "48",
+    "16"
+   ],
+   "correct": 0,
+   "explanation": "$\\frac{32}{1 - \\frac{1}{2}} = 64$."
+  },
+  {
+   "ref": "66",
+   "number": 66,
+   "topic": "Quadratic equations",
+   "difficulty": "easy",
+   "text": "For the equation $9x^2 - 9x + 1 = 0$, what is the nature of the roots?",
+   "options": [
+    "Real and equal",
+    "Imaginary",
+    "Real and distinct",
+    "Rational"
+   ],
+   "correct": 2,
+   "explanation": "$b^2 - 4ac = 81 - 36 = 45 > 0$, so the roots are real and distinct. 45 is not a perfect square, so they are not rational."
+  },
+  {
+   "ref": "67",
+   "number": 67,
+   "topic": "Quadratic equations",
+   "difficulty": "easy",
+   "text": "For the equation $x^2 - x - 6 = 0$ with roots $\\alpha$ and $\\beta$, find the value of $(\\alpha - \\beta)^2$.",
+   "options": [
+    "24",
+    "20",
+    "25",
+    "15"
+   ],
+   "correct": 2,
+   "explanation": "$(\\alpha+\\beta)^2 - 4\\alpha\\beta = 1 + 24 = 25$."
+  },
+  {
+   "ref": "68",
+   "number": 68,
+   "topic": "Sequences & series",
+   "difficulty": "easy",
+   "text": "Find the 10th term of the sequence $x, 3x, 5x, 7x, \\dots$",
+   "options": [
+    "$19x$",
+    "$20x$",
+    "$21x$",
+    "$18x$"
+   ],
+   "correct": 0,
+   "explanation": "$x + 9(2x) = 19x$."
+  },
+  {
+   "ref": "69",
+   "number": 69,
+   "topic": "Quadratic equations",
+   "difficulty": "medium",
+   "text": "For the equation $x^2 - x - 6 = 0$ with roots $\\alpha$ and $\\beta$, find the value of $\\frac{1}{\\alpha^2} + \\frac{1}{\\beta^2}$.",
+   "options": [
+    "13/36",
+    "11/36",
+    "5/18",
+    "7/18"
+   ],
+   "correct": 0,
+   "explanation": "$\\frac{\\alpha^2+\\beta^2}{(\\alpha\\beta)^2} = \\frac{1 + 12}{36} = \\frac{13}{36}$."
+  },
+  {
+   "ref": "72",
+   "number": 72,
+   "topic": "Quadratic equations",
+   "difficulty": "easy",
+   "text": "For the equation $x^2 - x - 6 = 0$ with roots $\\alpha$ and $\\beta$, find the value of $\\alpha^2 + \\beta^2$.",
+   "options": [
+    "11",
+    "13",
+    "12",
+    "10"
+   ],
+   "correct": 1,
+   "explanation": "$(\\alpha+\\beta)^2 - 2\\alpha\\beta = 1 + 12 = 13$."
+  },
+  {
+   "ref": "73",
+   "number": 73,
+   "topic": "Mathematical induction",
+   "difficulty": "medium",
+   "text": "Suppose that $P(n): \\sum_{i=1}^{n} i^2 = \\frac{n(n+1)(2n+1)}{6}$ is true for $n \\in \\mathbb{N}$. Which of these is NOT a factor of $P(k+1)$?",
+   "options": [
+    "$2k+1$",
+    "$k+2$",
+    "$2k+3$",
+    "$k+1$"
+   ],
+   "correct": 0,
+   "explanation": "$P(k+1) = \\frac{(k+1)(k+2)(2k+3)}{6}$."
+  },
+  {
+   "ref": "74",
+   "number": 74,
+   "topic": "Sequences & series",
+   "difficulty": "medium",
+   "text": "Find the sum of the first eight terms of the sequence $1,\\ 1 + \\sqrt{2},\\ 1 + 2\\sqrt{2},\\ \\dots$",
+   "options": [
+    "$10 + 28\\sqrt{2}$",
+    "$4 + 14\\sqrt{2}$",
+    "$8 + 28\\sqrt{2}$",
+    "$6 + 16\\sqrt{2}$"
+   ],
+   "correct": 2,
+   "explanation": "$S_8 = 4[2 + 7\\sqrt{2}] = 8 + 28\\sqrt{2}$."
+  },
+  {
+   "ref": "75",
+   "number": 75,
+   "topic": "Mathematical induction",
+   "difficulty": "medium",
+   "text": "Suppose that for $n \\in \\mathbb{N}$, $P(n): \\sum_{j=1}^{n} j^4 = \\frac{n(n+1)(2n+1)(3n^2+3n-1)}{30}$ is true. What is $P(2)$?",
+   "options": [
+    "16",
+    "20",
+    "17",
+    "24"
+   ],
+   "correct": 2,
+   "explanation": "$1^4 + 2^4 = 1 + 16 = 17$."
+  },
+  {
+   "ref": "76",
+   "number": 76,
+   "topic": "Sequences & series",
+   "difficulty": "medium",
+   "text": "The second term of a geometric progression is 24 and the fifth term is 81. Find the first term.",
+   "options": [
+    "12",
+    "18",
+    "16",
+    "14"
+   ],
+   "correct": 2,
+   "explanation": "$r^3 = \\frac{81}{24} = \\frac{27}{8}$, so $r = \\frac{3}{2}$ and $a = 24 \\div \\frac{3}{2} = 16$."
+  },
+  {
+   "ref": "78",
+   "number": 78,
+   "topic": "Quadratic equations",
+   "difficulty": "medium",
+   "text": "If $\\alpha$ and $\\beta$ are the roots of $2x^2 - x + 4 = 0$, find the value of $2\\alpha - \\frac{1}{\\beta} + 2\\beta - \\frac{1}{\\alpha}$.",
+   "options": [
+    "1",
+    "1/4",
+    "3/4",
+    "1/2"
+   ],
+   "correct": 2,
+   "explanation": "$2(\\alpha+\\beta) - \\frac{\\alpha+\\beta}{\\alpha\\beta} = 2\\left(\\frac{1}{2}\\right) - \\frac{1/2}{2} = \\frac{3}{4}$."
+  },
+  {
+   "ref": "79",
+   "number": 79,
+   "topic": "Sets",
+   "difficulty": "easy",
+   "text": "Given $U = \\{x \\in \\mathbb{N}: 1 \\le x \\le 10\\}$, $A = \\{\\text{odd numbers in } U\\}$ and $B = \\{\\text{even numbers less than } 10\\}$, find $(A \\cup B)'$.",
+   "options": [
+    "$\\{2, 4, 6, 8\\}$",
+    "$\\{10\\}$",
+    "$\\emptyset$",
+    "$\\{1, 3, 5, 7, 9\\}$"
+   ],
+   "correct": 1,
+   "explanation": "$A \\cup B = \\{1, 2, \\dots, 9\\}$, so only 10 is left."
+  },
+  {
+   "ref": "80",
+   "number": 80,
+   "topic": "Sets",
+   "difficulty": "medium",
+   "text": "Given $U = \\{x \\in \\mathbb{N}: 1 \\le x \\le 10\\}$, $A = \\{\\text{odd numbers in } U\\}$ and $B = \\{\\text{even numbers less than } 10\\}$, find $A \\cap B'$.",
+   "options": [
+    "$\\{2, 4, 6, 8, 10\\}$",
+    "$\\{1, 3, 5, 7\\}$",
+    "$\\{1, 3, 5, 7, 9\\}$",
+    "$\\{9, 10\\}$"
+   ],
+   "correct": 2,
+   "explanation": "$B' = \\{1,3,5,7,9,10\\}$. The part shared with $A$ is $\\{1,3,5,7,9\\}$."
+  },
+  {
+   "ref": "81",
+   "number": 81,
+   "topic": "Sets",
+   "difficulty": "easy",
+   "text": "Which of the following is represented by the diagram?",
+   "options": [
+    "$A \\subset B$",
+    "$B \\subset A$",
+    "$A = B$",
+    "$A \\cap B = \\emptyset$"
+   ],
+   "correct": 0,
+   "explanation": "Circle A lies entirely inside circle B, so A is a proper subset of B.",
+   "image": "/figures/mth101-subset.svg",
+   "imageAlt": "Venn diagram: a shaded circle labelled A drawn completely inside a larger circle labelled B.",
+   "imageBytes": 813
+  }
+ ],
+ "held": [],
+ "quizzes": [
+  {
+   "ref": "q1",
+   "title": "Quiz 1 · CA 2025/2026",
+   "timeLimitMin": 25,
+   "negativeMark": 0,
+   "questions": [
+    "1",
+    "3",
+    "4",
+    "11",
+    "15",
+    "16",
+    "20",
+    "23",
+    "26",
+    "34",
+    "35",
+    "38",
+    "39",
+    "51",
+    "53",
+    "58",
+    "61",
+    "62",
+    "66",
+    "67",
+    "68",
+    "73",
+    "79"
+   ]
+  },
+  {
+   "ref": "q2",
+   "title": "Quiz 2 · CA 2025/2026",
+   "timeLimitMin": 25,
+   "negativeMark": 0,
+   "questions": [
+    "6",
+    "8",
+    "12",
+    "14",
+    "17",
+    "21",
+    "24",
+    "25",
+    "30",
+    "32",
+    "37",
+    "41",
+    "42",
+    "44",
+    "47",
+    "52",
+    "56",
+    "60",
+    "64",
+    "69",
+    "74",
+    "75",
+    "78",
+    "81"
+   ]
+  },
+  {
+   "ref": "q3",
+   "title": "Quiz 3 · CA 2025/2026",
+   "timeLimitMin": 25,
+   "negativeMark": 0,
+   "questions": [
+    "2",
+    "5",
+    "7",
+    "10",
+    "13",
+    "18",
+    "19",
+    "22",
+    "27",
+    "29",
+    "31",
+    "33",
+    "36",
+    "43",
+    "45",
+    "46",
+    "48",
+    "49",
+    "55",
+    "63",
+    "72",
+    "76",
+    "80"
+   ]
+  }
+ ]
+}

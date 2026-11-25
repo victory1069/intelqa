@@ -10,7 +10,12 @@ export function quizFacts(q: StudentQuiz) {
   return [`${q.questions} questions`, `${q.timeLimitMin} min`, q.status === "closed" ? "closed" : q.closesAt ? `closes ${day(q.closesAt)}` : null].filter(Boolean).join(" · ");
 }
 
-/** A practice test set by a course admin. Opens its start screen, or the unfinished sitting. */
+/** What a course has to practise: "2 papers · 6 quizzes". Empty when there's nothing yet. */
+export function contentLine(c: { papers: number; quizzes?: number }) {
+  return [c.papers ? `${c.papers} paper${c.papers === 1 ? "" : "s"}` : null, c.quizzes ? `${c.quizzes} quiz${c.quizzes === 1 ? "" : "zes"}` : null].filter(Boolean).join(" · ");
+}
+
+/** A quiz set by a course admin. Opens its start screen, or the unfinished sitting. */
 export function QuizCard({ q, showCourse = true }: { q: StudentQuiz; showCourse?: boolean }) {
   const href = q.openAttemptId ? `/session?id=${q.openAttemptId}` : `/quiz?id=${q.id}`;
   const state = q.openAttemptId ? "Started · tap to finish" : q.best != null ? `Best ${q.best}% · ${q.sittings} go${q.sittings === 1 ? "" : "es"}` : null;
@@ -20,7 +25,7 @@ export function QuizCard({ q, showCourse = true }: { q: StudentQuiz; showCourse?
         <Icon name="file" size={24} color="var(--accent-text)" />
       </span>
       <span className="flex min-w-0 flex-1 flex-col gap-1">
-        {showCourse && <span className="caps text-[11px] text-ink3">Practice test · {q.course.code}</span>}
+        {showCourse && <span className="caps text-[11px] text-ink3">Quiz · {q.course.code}</span>}
         <strong className="truncate text-[16px]">{q.title}</strong>
         <span className="text-[13px] text-ink2">{state ?? quizFacts(q)}</span>
       </span>

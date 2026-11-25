@@ -41,7 +41,7 @@ async function profile(user: User) {
   const [inst] = user.institutionId ? await db.select().from(institutions).where(eq(institutions.id, user.institutionId)) : [];
   const [dept] = user.departmentId ? await db.select().from(departments).where(eq(departments.id, user.departmentId)) : [];
   const myCourses = await db
-    .select({ id: courses.id, code: courses.code, title: courses.title, status: courses.status })
+    .select({ id: courses.id, code: courses.code, title: courses.title, status: courses.status, papers: sql<number>`(select count(*)::int from papers p where p.course_id = courses.id and p.status = 'published')` })
     .from(userCourses)
     .innerJoin(courses, eq(courses.id, userCourses.courseId))
     .where(eq(userCourses.userId, user.id))
@@ -192,6 +192,7 @@ meRoutes.get("/home", async (c) => {
     .where(eq(userCourses.userId, user.id))
     .orderBy(asc(courses.code));
 
+  const liveQuizzes = (await studentQuizzes(user.id)).filter((q) => q.status === "live");
   const weekDate = lagosDate(lagosWeekStart());
   const courseCards = await Promise.all(
     myCourses.map(async (co) => {
@@ -210,7 +211,7 @@ meRoutes.get("/home", async (c) => {
             where p.course_id = ${co.id} and p.status = 'published'
           `)
         : [];
-      return { ...co, papers, courseScore: stat?.courseScore ?? null, rankedAttempts: stat?.rankedAttempts ?? 0, rank, moved, offlineBytes: Number(size?.bytes ?? 0) };
+      return { ...co, papers, quizzes: liveQuizzes.filter((q) => q.course.id === co.id).length, courseScore: stat?.courseScore ?? null, rankedAttempts: stat?.rankedAttempts ?? 0, rank, moved, offlineBytes: Number(size?.bytes ?? 0) };
     }),
   );
 
@@ -258,8 +259,9 @@ meRoutes.get("/home", async (c) => {
     xp: { total: streak.totalXp, level: levelFor(streak.totalXp) },
     resume,
     daily,
-    // Practice tests the student hasn't sat yet, newest first.
-    quizzes: (await studentQuizzes(user.id)).filter((q) => q.status === "live" && !q.sittings).slice(0, 3),
+    // The next quiz to sit in each course: newest first, one per course, up to three.
+    quizzes: liveQuizzes.filter((q) => !q.sittings).filter((q, i, all) => all.findIndex((x) => x.course.id === q.course.id) === i).slice(0, 3),
+    quizzesLeft: liveQuizzes.filter((q) => !q.sittings).length,
     courses: courseCards,
     firstTime: streak.questionsAnswered === 0,
   });

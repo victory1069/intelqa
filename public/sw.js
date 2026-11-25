@@ -117,7 +117,7 @@ self.addEventListener("fetch", (event) => {
 
   if (url.origin === self.location.origin) {
     if (url.pathname.startsWith("/api/")) return;
-    if (url.pathname.startsWith("/_next/static/") || url.pathname.startsWith("/icons/")) {
+    if (url.pathname.startsWith("/_next/static/") || url.pathname.startsWith("/icons/") || url.pathname.startsWith("/figures/")) {
       event.respondWith(cacheFirst(request, STATIC));
       return;
     }

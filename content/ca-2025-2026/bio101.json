@@ -1,0 +1,2143 @@
+{
+ "course": "BIO 101",
+ "source": "Aureons BIO 101 CA PQ&A.pdf",
+ "session": "2025/2026",
+ "instructions": "Questions from the 2025/2026 continuous assessment (CA) CBT. Every answer is explained after you submit.",
+ "topics": [
+  "Cell structure & organelles",
+  "Chromosomes & cell division",
+  "Genetics & inheritance",
+  "Evolution",
+  "Classification & diversity",
+  "Reproduction",
+  "Cells & biomolecules"
+ ],
+ "questions": [
+  {
+   "ref": "1",
+   "number": 1,
+   "topic": "Chromosomes & cell division",
+   "difficulty": "medium",
+   "text": "Who was the first to observe a chromosome?",
+   "options": [
+    "Wilhelm von Waldeyer",
+    "Wilhelm Hofmeister",
+    "Robert Hooke",
+    "Eduard Strasburger"
+   ],
+   "correct": 1,
+   "explanation": "Wilhelm Hofmeister drew chromosomes in dividing plant cells in the 1840s. Waldeyer only gave them their name, in 1888."
+  },
+  {
+   "ref": "2",
+   "number": 2,
+   "topic": "Cell structure & organelles",
+   "difficulty": "easy",
+   "text": "In which forms can a ribosome exist?",
+   "options": [
+    "70S and 80S",
+    "40S and 50S",
+    "10S and 20S",
+    "50S and 60S"
+   ],
+   "correct": 0,
+   "explanation": "Ribosomes are 70S in prokaryotes (and in mitochondria and chloroplasts) and 80S in the cytoplasm of eukaryotes."
+  },
+  {
+   "ref": "3",
+   "number": 3,
+   "topic": "Cells & biomolecules",
+   "difficulty": "easy",
+   "text": "What is the typical range of a cell's size?",
+   "options": [
+    "10 – 100 mm",
+    "1 – 100 µm",
+    "0.1 – 10 m",
+    "1 – 10 mm"
+   ],
+   "correct": 1,
+   "explanation": "Most cells fall between 1 and 100 µm: bacteria near the lower end, plant and animal cells near the upper end."
+  },
+  {
+   "ref": "4",
+   "number": 4,
+   "topic": "Cell structure & organelles",
+   "difficulty": "easy",
+   "text": "Which of the following organelles is non-membrane bound?",
+   "options": [
+    "Lysosomes",
+    "Ribosomes",
+    "Peroxisomes",
+    "Endoplasmic reticulum"
+   ],
+   "correct": 1,
+   "explanation": "Ribosomes are made of RNA and protein with no membrane. Lysosomes, peroxisomes and the ER are all enclosed by membranes."
+  },
+  {
+   "ref": "5",
+   "number": 5,
+   "topic": "Cell structure & organelles",
+   "difficulty": "easy",
+   "text": "Which of the following is present in both eukaryotic and prokaryotic cells?",
+   "options": [
+    "Ribosomes",
+    "Mitochondria",
+    "Nuclear membrane",
+    "Chloroplasts"
+   ],
+   "correct": 0,
+   "explanation": "Every cell makes proteins, so every cell has ribosomes. Mitochondria, a nuclear membrane and chloroplasts occur only in eukaryotes."
+  },
+  {
+   "ref": "6",
+   "number": 6,
+   "topic": "Cells & biomolecules",
+   "difficulty": "easy",
+   "text": "Chlorophyll is primarily involved in which biological process?",
+   "options": [
+    "Respiration",
+    "Transpiration",
+    "Photosynthesis",
+    "Fermentation"
+   ],
+   "correct": 2,
+   "explanation": "Chlorophyll absorbs the light energy that drives photosynthesis."
+  },
+  {
+   "ref": "7",
+   "number": 7,
+   "topic": "Cell structure & organelles",
+   "difficulty": "easy",
+   "text": "Which of the following stores food, water, and waste within a cell?",
+   "options": [
+    "Mitochondria",
+    "Vacuoles",
+    "Golgi apparatus",
+    "Nucleus"
+   ],
+   "correct": 1,
+   "explanation": "Vacuoles are membrane-bound sacs that store food, water and waste."
+  },
+  {
+   "ref": "8",
+   "number": 8,
+   "topic": "Genetics & inheritance",
+   "difficulty": "medium",
+   "text": "Which of the following best describes the Independent Assortment of genes?",
+   "options": [
+    "Alleles of different genes separate independently during gamete formation",
+    "Two alleles for a trait separate during meiosis",
+    "One allele is always dominant over the other",
+    "Genes are always inherited together if they are on the same chromosome"
+   ],
+   "correct": 0,
+   "explanation": "Independent assortment says the alleles of different genes separate independently of each other during gamete formation. Two alleles of one gene separating is the law of segregation."
+  },
+  {
+   "ref": "9",
+   "number": 9,
+   "topic": "Cell structure & organelles",
+   "difficulty": "easy",
+   "text": "Cytosol is defined as?",
+   "options": [
+    "The solid protein filaments of the cell",
+    "The external coating of the cell wall",
+    "The internal space of the nucleus",
+    "The fluid portion of the cytoplasm, excluding organelles"
+   ],
+   "correct": 3,
+   "explanation": "Cytosol is the fluid part of the cytoplasm only. Cytoplasm is the cytosol plus the organelles."
+  },
+  {
+   "ref": "10",
+   "number": 10,
+   "topic": "Reproduction",
+   "difficulty": "easy",
+   "text": "The ripened ovary of a flower is known as the?",
+   "options": [
+    "Seed",
+    "Fruit",
+    "Ovule",
+    "Stigma"
+   ],
+   "correct": 1,
+   "explanation": "After fertilization the ovary ripens into the fruit and the ovules become the seeds."
+  },
+  {
+   "ref": "11",
+   "number": 11,
+   "topic": "Reproduction",
+   "difficulty": "easy",
+   "text": "The seed develops from which part of the plant?",
+   "options": [
+    "The Ovule",
+    "The Anther",
+    "The Style",
+    "The Receptacle"
+   ],
+   "correct": 0,
+   "explanation": "A seed develops from a fertilized ovule."
+  },
+  {
+   "ref": "12",
+   "number": 12,
+   "topic": "Reproduction",
+   "difficulty": "easy",
+   "text": "The primary reproductive part of a plant is the?",
+   "options": [
+    "Stem",
+    "Root",
+    "Flower",
+    "Leaf"
+   ],
+   "correct": 2,
+   "explanation": "The flower carries the stamens and carpels, so it is the reproductive part of a flowering plant."
+  },
+  {
+   "ref": "14",
+   "number": 14,
+   "topic": "Chromosomes & cell division",
+   "difficulty": "medium",
+   "text": "Which of the following is not a chromatin-associated protein?",
+   "options": [
+    "Histones",
+    "SMC (Structural Maintenance of Chromosomes) proteins",
+    "Tubulin",
+    "HMG (High Mobility Group) proteins"
+   ],
+   "correct": 2,
+   "explanation": "Tubulin builds microtubules and spindle fibres. Histones, SMC proteins and HMG proteins all bind chromatin."
+  },
+  {
+   "ref": "16",
+   "number": 16,
+   "topic": "Cell structure & organelles",
+   "difficulty": "easy",
+   "text": "What is the primary function of microvilli in cellular structures?",
+   "options": [
+    "To facilitate cellular movement and locomotion",
+    "To increase the surface area for absorption and secretion",
+    "To protect the cell from external pathogens",
+    "To synthesize proteins for the plasma membrane"
+   ],
+   "correct": 1,
+   "explanation": "Microvilli are finger-like folds of the membrane that enlarge the surface for absorption and secretion."
+  },
+  {
+   "ref": "17",
+   "number": 17,
+   "topic": "Chromosomes & cell division",
+   "difficulty": "medium",
+   "text": "The following are characteristic features of heterochromatin as opposed to euchromatin, except?",
+   "options": [
+    "It is more densely packed and highly condensed",
+    "It is generally transcriptionally inactive (genes are \"turned off\")",
+    "It stains more lightly when viewed under a microscope",
+    "It is typically found at the periphery of the nucleus"
+   ],
+   "correct": 2,
+   "explanation": "Heterochromatin is condensed, so it stains darkly. Light staining is a feature of euchromatin."
+  },
+  {
+   "ref": "18",
+   "number": 18,
+   "topic": "Reproduction",
+   "difficulty": "easy",
+   "text": "Plants that complete their life cycle from germination to seed production over the course of two years are called?",
+   "options": [
+    "Annuals",
+    "Biennials",
+    "Perennials",
+    "Ephemerals"
+   ],
+   "correct": 1,
+   "explanation": "Biennials take two years: they grow in the first and flower and seed in the second."
+  },
+  {
+   "ref": "19",
+   "number": 19,
+   "topic": "Chromosomes & cell division",
+   "difficulty": "easy",
+   "text": "The primary function of a Histone is?",
+   "options": [
+    "Chromosome Heterozygosity",
+    "Chromosome Homozygosity",
+    "Chromosome packaging",
+    "Chromosome division"
+   ],
+   "correct": 2,
+   "explanation": "DNA winds around histones, which packs it into chromosomes."
+  },
+  {
+   "ref": "20",
+   "number": 20,
+   "topic": "Chromosomes & cell division",
+   "difficulty": "medium",
+   "text": "The most conserved form of Histone across eukaryotic organisms is?",
+   "options": [
+    "H1",
+    "H2A",
+    "H2B",
+    "H4"
+   ],
+   "correct": 3,
+   "explanation": "H4 is almost identical across eukaryotes. H1 is the least conserved histone."
+  },
+  {
+   "ref": "22",
+   "number": 22,
+   "topic": "Evolution",
+   "difficulty": "medium",
+   "text": "Which of the following scientists provided evidence that refuted Jean Lamarck's theory of \"inheritance of acquired traits\"?",
+   "options": [
+    "Charles Darwin",
+    "August Weismann",
+    "Gregor Mendel",
+    "Alfred Wallace"
+   ],
+   "correct": 1,
+   "explanation": "August Weismann cut off mice's tails for many generations and the young were still born with tails, so acquired traits are not inherited."
+  },
+  {
+   "ref": "24",
+   "number": 24,
+   "topic": "Genetics & inheritance",
+   "difficulty": "medium",
+   "text": "In a dihybrid cross (AaBb × AaBb), what is the fraction of offspring with the \"Homozygous Dominant\" genotype (AABB)?",
+   "options": [
+    "3/16",
+    "4/16",
+    "9/16",
+    "1/16"
+   ],
+   "correct": 3,
+   "explanation": "AA has a probability of 1/4 and BB has 1/4, so AABB is 1/4 × 1/4 = 1/16."
+  },
+  {
+   "ref": "26",
+   "number": 26,
+   "topic": "Classification & diversity",
+   "difficulty": "medium",
+   "text": "In the biological study of a classroom ecosystem, which of the following is not typically observed?",
+   "options": [
+    "Listing the organisms",
+    "Collecting the organisms",
+    "Observing characteristic features",
+    "Artificial selection of species"
+   ],
+   "correct": 3,
+   "explanation": "A classroom ecosystem study lists, collects and observes organisms. Artificial selection is breeding, not observation."
+  },
+  {
+   "ref": "28",
+   "number": 28,
+   "topic": "Cell structure & organelles",
+   "difficulty": "easy",
+   "text": "The primary function of a Ribosome is?",
+   "options": [
+    "Reproduction",
+    "Synthesis of proteins",
+    "Energy production",
+    "Transportation of nutrients"
+   ],
+   "correct": 1,
+   "explanation": "Ribosomes join amino acids together to make proteins."
+  },
+  {
+   "ref": "29",
+   "number": 29,
+   "topic": "Cell structure & organelles",
+   "difficulty": "easy",
+   "text": "The cytoskeleton is primarily composed of?",
+   "options": [
+    "Protein filaments (Actin, Microtubules)",
+    "Enzymes and carbohydrates",
+    "Lipids and nucleic acids",
+    "Cellulose and pectin"
+   ],
+   "correct": 0,
+   "explanation": "The cytoskeleton is a network of protein filaments: actin filaments, intermediate filaments and microtubules."
+  },
+  {
+   "ref": "30",
+   "number": 30,
+   "topic": "Cell structure & organelles",
+   "difficulty": "easy",
+   "text": "The function of a Vacuole is most closely associated with?",
+   "options": [
+    "Cellular respiration",
+    "Energy production (ATP)",
+    "Storage of water, nutrients, and waste",
+    "Production of digestive enzymes"
+   ],
+   "correct": 2,
+   "explanation": "Vacuoles store water, nutrients and waste. ATP comes from mitochondria."
+  },
+  {
+   "ref": "32",
+   "number": 32,
+   "topic": "Cell structure & organelles",
+   "difficulty": "easy",
+   "text": "The Phospholipid Bilayer structure of the cell membrane is based on which scientific model?",
+   "options": [
+    "Fluid mosaic model",
+    "Lock and key model",
+    "Sliding filament model",
+    "Double helix model"
+   ],
+   "correct": 0,
+   "explanation": "Singer and Nicolson's fluid mosaic model describes the membrane as a phospholipid bilayer with proteins embedded in it."
+  },
+  {
+   "ref": "33",
+   "number": 33,
+   "topic": "Chromosomes & cell division",
+   "difficulty": "easy",
+   "text": "The specialized protective caps at the end of chromosomes are called?",
+   "options": [
+    "Centromeres",
+    "Telomeres",
+    "Chromatin",
+    "Chromatids"
+   ],
+   "correct": 1,
+   "explanation": "Telomeres cap the ends of chromosomes and stop them wearing away or sticking together."
+  },
+  {
+   "ref": "34",
+   "number": 34,
+   "topic": "Chromosomes & cell division",
+   "difficulty": "easy",
+   "text": "Which of the following is lightly stained and transcriptionally active?",
+   "options": [
+    "Heterochromatin",
+    "Euchromatin",
+    "Centromere",
+    "Telomere"
+   ],
+   "correct": 1,
+   "explanation": "Euchromatin is loosely packed, so it stains lightly and its genes can be transcribed."
+  },
+  {
+   "ref": "35",
+   "number": 35,
+   "topic": "Classification & diversity",
+   "difficulty": "easy",
+   "text": "Reproduction, nutrition, and irritability (response to stimuli) are characteristics of?",
+   "options": [
+    "Some animals and plants",
+    "All animals only",
+    "All plants only",
+    "All animals and plants"
+   ],
+   "correct": 3,
+   "explanation": "Reproduction, nutrition and irritability are characteristics of all living things, both animals and plants."
+  },
+  {
+   "ref": "36",
+   "number": 36,
+   "topic": "Classification & diversity",
+   "difficulty": "easy",
+   "text": "Which of the following organisms belongs to Kingdom Plantae?",
+   "options": [
+    "Starfish",
+    "Jellyfish",
+    "Daisy",
+    "Mushroom"
+   ],
+   "correct": 2,
+   "explanation": "A daisy is a flowering plant. Starfish and jellyfish are animals and a mushroom is a fungus."
+  },
+  {
+   "ref": "37",
+   "number": 37,
+   "topic": "Chromosomes & cell division",
+   "difficulty": "medium",
+   "text": "All the following are recognized types of chromosomes except?",
+   "options": [
+    "Autosomes",
+    "C-chromosomes",
+    "B-chromosomes",
+    "Sex chromosomes"
+   ],
+   "correct": 1,
+   "explanation": "Autosomes, sex chromosomes and B-chromosomes (extra, non-essential ones) are recognised types. \"C-chromosomes\" are not."
+  },
+  {
+   "ref": "38",
+   "number": 38,
+   "topic": "Chromosomes & cell division",
+   "difficulty": "medium",
+   "text": "The protein complex that holds sister chromatids together after DNA replication until they are separated during mitosis is?",
+   "options": [
+    "Topoisomerase",
+    "Histone",
+    "Condensin",
+    "Cohesin"
+   ],
+   "correct": 3,
+   "explanation": "Cohesin holds sister chromatids together until anaphase. Condensin compacts chromosomes."
+  },
+  {
+   "ref": "39",
+   "number": 39,
+   "topic": "Reproduction",
+   "difficulty": "easy",
+   "text": "A flower that possesses only one type of reproductive organ is described as?",
+   "options": [
+    "Monocarpic",
+    "Unisexual",
+    "Dioecious",
+    "Hermaphroditic"
+   ],
+   "correct": 1,
+   "explanation": "A flower with only stamens or only carpels is unisexual. Dioecious describes a whole plant species, not a flower."
+  },
+  {
+   "ref": "40",
+   "number": 40,
+   "topic": "Reproduction",
+   "difficulty": "easy",
+   "text": "A flower is scientifically described as \"complete\" if it possesses how many whorls?",
+   "options": [
+    "2 whorls",
+    "3 whorls",
+    "4 whorls",
+    "5 whorls"
+   ],
+   "correct": 2,
+   "explanation": "A complete flower has four whorls: calyx, corolla, androecium and gynoecium."
+  },
+  {
+   "ref": "41",
+   "number": 41,
+   "topic": "Chromosomes & cell division",
+   "difficulty": "easy",
+   "text": "What are the thread-like structures found in the nucleus that become visible during cell division?",
+   "options": [
+    "Nucleolus",
+    "Chromosomes",
+    "Spindle fibers",
+    "Cytoskeleton"
+   ],
+   "correct": 1,
+   "explanation": "Chromosomes condense and become visible as threads during cell division."
+  },
+  {
+   "ref": "43",
+   "number": 43,
+   "topic": "Cell structure & organelles",
+   "difficulty": "medium",
+   "text": "The core or internal structural arrangement of cilia and flagella is known as the?",
+   "options": [
+    "Axoneme",
+    "Centriole",
+    "Basal body",
+    "Microfilament"
+   ],
+   "correct": 0,
+   "explanation": "The axoneme is the microtubule core of a cilium or flagellum, usually in a 9 + 2 arrangement."
+  },
+  {
+   "ref": "44",
+   "number": 44,
+   "topic": "Chromosomes & cell division",
+   "difficulty": "medium",
+   "text": "Which of the following protein complexes is primarily responsible for the condensation of chromosomes during mitosis?",
+   "options": [
+    "Cohesin",
+    "Condensin",
+    "Histone H1",
+    "Topoisomerase"
+   ],
+   "correct": 1,
+   "explanation": "Condensin coils and compacts chromosomes for mitosis. Cohesin holds sister chromatids together."
+  },
+  {
+   "ref": "45",
+   "number": 45,
+   "topic": "Cell structure & organelles",
+   "difficulty": "easy",
+   "text": "Which organelle is primarily responsible for detoxifying harmful substances, such as drugs and alcohol, in a cell?",
+   "options": [
+    "Smooth Endoplasmic Reticulum (SER)",
+    "Rough Endoplasmic Reticulum (RER)",
+    "Vacuole",
+    "Golgi Apparatus"
+   ],
+   "correct": 0,
+   "explanation": "Smooth ER carries the enzymes that detoxify drugs and alcohol, especially in liver cells."
+  },
+  {
+   "ref": "46",
+   "number": 46,
+   "topic": "Chromosomes & cell division",
+   "difficulty": "medium",
+   "text": "The kinetochore forms at the centromere of a chromosome. The centromere is also referred to as the?",
+   "options": [
+    "Primary constriction",
+    "Telomere cap",
+    "Nucleolar organizer",
+    "Chromomere"
+   ],
+   "correct": 0,
+   "explanation": "The centromere is the narrowed region of a chromosome, so it is called the primary constriction. The kinetochore forms on it."
+  },
+  {
+   "ref": "47",
+   "number": 47,
+   "topic": "Chromosomes & cell division",
+   "difficulty": "medium",
+   "text": "Which enzyme is specifically used to untangle and relieve the tension in coiled or supercoiled DNA during replication?",
+   "options": [
+    "DNA Polymerase",
+    "DNA Ligase",
+    "Topoisomerase",
+    "Helicase"
+   ],
+   "correct": 2,
+   "explanation": "Topoisomerase cuts and rejoins DNA to release supercoiling ahead of the replication fork. Helicase unwinds the strands."
+  },
+  {
+   "ref": "50",
+   "number": 50,
+   "topic": "Genetics & inheritance",
+   "difficulty": "medium",
+   "text": "The Chromosomal Theory of Inheritance was independently proposed by?",
+   "options": [
+    "Walter Sutton and Theodor Boveri",
+    "Gregor Mendel and Charles Darwin",
+    "Watson and Crick",
+    "T.H. Morgan and Alfred Sturtevant"
+   ],
+   "correct": 0,
+   "explanation": "Walter Sutton and Theodor Boveri independently proposed in 1902–1903 that genes are carried on chromosomes."
+  },
+  {
+   "ref": "51",
+   "number": 51,
+   "topic": "Chromosomes & cell division",
+   "difficulty": "medium",
+   "text": "What are the DNA filaments called that condense and appear as distinct structures during cell division?",
+   "options": [
+    "Spindle fibers",
+    "Chromatin",
+    "Microfilaments",
+    "Plasmodesmata"
+   ],
+   "correct": 1,
+   "explanation": "Chromatin is the DNA and protein filament that condenses into visible chromosomes when a cell divides."
+  },
+  {
+   "ref": "52",
+   "number": 52,
+   "topic": "Chromosomes & cell division",
+   "difficulty": "medium",
+   "text": "The structural organization of DNA and histones that appears as beads on a string under a microscope is called?",
+   "options": [
+    "The Chromatin",
+    "The Centromere",
+    "The Kinetochore",
+    "The Ribosome"
+   ],
+   "correct": 0,
+   "explanation": "Nucleosomes strung along DNA give chromatin its beads-on-a-string look."
+  },
+  {
+   "ref": "53",
+   "number": 53,
+   "topic": "Cells & biomolecules",
+   "difficulty": "easy",
+   "text": "Which of the following are examples of biological macromolecules?",
+   "options": [
+    "Oxygen, Carbon, and Hydrogen",
+    "Proteins, Nucleic acids, Carbohydrates, and Lipids",
+    "Glucose, Amino acids, and Nucleotides"
+   ],
+   "correct": 1,
+   "explanation": "The four classes of biological macromolecule are proteins, nucleic acids, carbohydrates and lipids. Glucose, amino acids and nucleotides are their building blocks."
+  },
+  {
+   "ref": "54",
+   "number": 54,
+   "topic": "Cell structure & organelles",
+   "difficulty": "medium",
+   "text": "Microbodies primarily function in?",
+   "options": [
+    "Protein synthesis and folding",
+    "Specific metabolic reactions, such as detoxification and fat breakdown",
+    "Storing genetic information",
+    "Providing structural support to the cell wall"
+   ],
+   "correct": 1,
+   "explanation": "Microbodies such as peroxisomes carry out specific metabolic reactions, including detoxification and breaking down fats."
+  },
+  {
+   "ref": "55",
+   "number": 55,
+   "topic": "Cells & biomolecules",
+   "difficulty": "easy",
+   "text": "Which of the following processes takes place in plants but not in animals?",
+   "options": [
+    "aerobic respiration",
+    "active transport",
+    "mitosis",
+    "photosynthesis"
+   ],
+   "correct": 3,
+   "explanation": "Plants photosynthesise. Aerobic respiration, active transport and mitosis happen in both plants and animals."
+  },
+  {
+   "ref": "56",
+   "number": 56,
+   "topic": "Chromosomes & cell division",
+   "difficulty": "easy",
+   "text": "At what phase of mitosis do the sister chromatids separate and move toward opposite poles?",
+   "options": [
+    "Anaphase",
+    "Prophase",
+    "Metaphase",
+    "Telophase"
+   ],
+   "correct": 0,
+   "explanation": "In anaphase the sister chromatids separate and move to opposite poles."
+  },
+  {
+   "ref": "57",
+   "number": 57,
+   "topic": "Reproduction",
+   "difficulty": "easy",
+   "text": "The process of pollination by insects is known as?",
+   "options": [
+    "Entomophily",
+    "Anemophily",
+    "Hydrophily",
+    "Chiropterophily"
+   ],
+   "correct": 0,
+   "explanation": "Entomophily is pollination by insects. Anemophily is by wind, hydrophily by water and chiropterophily by bats."
+  },
+  {
+   "ref": "59",
+   "number": 59,
+   "topic": "Classification & diversity",
+   "difficulty": "medium",
+   "text": "Parasitic nutrition is found in all of the following organisms except?",
+   "options": [
+    "Roundworm",
+    "Tapeworm",
+    "Mosquito",
+    "Liver fluke"
+   ],
+   "correct": 2,
+   "explanation": "Roundworms, tapeworms and liver flukes live inside a host and feed on it. A mosquito lives freely and only visits to take blood."
+  },
+  {
+   "ref": "60",
+   "number": 60,
+   "topic": "Reproduction",
+   "difficulty": "medium",
+   "text": "What are the four main whorls that make up a complete flower?",
+   "options": [
+    "Calyx, Corolla, Androecium, and Gynoecium",
+    "Corolla, Pedicel, Androecium, and Gynoecium",
+    "Sepals, Receptacle, Androecium, and Gynoecium",
+    "Perianth, Corolla, Androecium, and Gynoecium"
+   ],
+   "correct": 0,
+   "explanation": "The four whorls are calyx (sepals), corolla (petals), androecium (stamens) and gynoecium (carpels)."
+  },
+  {
+   "ref": "61",
+   "number": 61,
+   "topic": "Reproduction",
+   "difficulty": "easy",
+   "text": "Plants that complete their life cycle in one growing season are called?",
+   "options": [
+    "Annuals",
+    "Biannuals",
+    "Perennials",
+    "Biennials"
+   ],
+   "correct": 0,
+   "explanation": "Annuals germinate, flower, seed and die within one growing season."
+  },
+  {
+   "ref": "62",
+   "number": 62,
+   "topic": "Evolution",
+   "difficulty": "easy",
+   "text": "What is a major limitation or refutation of Lamarck’s Theory of Inheritance of Acquired Characteristics?",
+   "options": [
+    "Acquired traits, such as a bodybuilder's muscles, cannot be passed to offspring",
+    "Giraffes' necks grew longer over time",
+    "Organisms do not change over time",
+    "DNA is only found in the nucleus"
+   ],
+   "correct": 0,
+   "explanation": "Changes acquired during life, such as built-up muscles, do not alter the genes in gametes, so they are not passed on."
+  },
+  {
+   "ref": "63",
+   "number": 63,
+   "topic": "Cell structure & organelles",
+   "difficulty": "medium",
+   "text": "The Plasma Membrane is primarily composed of which molecules?",
+   "options": [
+    "Carbohydrates and Proteins",
+    "Carbohydrates, Proteins, and Lipids",
+    "Carbohydrates and Lipids",
+    "Proteins and Nucleic acids"
+   ],
+   "correct": 1,
+   "explanation": "The plasma membrane is made of lipids (mainly phospholipids), proteins and some carbohydrates attached to them."
+  },
+  {
+   "ref": "64",
+   "number": 64,
+   "topic": "Cell structure & organelles",
+   "difficulty": "medium",
+   "text": "The proteins that span across the entire lipid bilayer of the plasma membrane are known as?",
+   "options": [
+    "Peripheral proteins",
+    "Integral proteins",
+    "Glycoproteins",
+    "Lipoproteins"
+   ],
+   "correct": 1,
+   "explanation": "Integral proteins pass through the lipid bilayer. Peripheral proteins sit on its surface."
+  },
+  {
+   "ref": "65",
+   "number": 65,
+   "topic": "Cells & biomolecules",
+   "difficulty": "easy",
+   "text": "Who was the first person to observe and name \"cells\" while looking at cork?",
+   "options": [
+    "Robert Hooke",
+    "Charles Darwin",
+    "Antonie van Leeuwenhoek",
+    "Matthias Schleiden"
+   ],
+   "correct": 0,
+   "explanation": "Robert Hooke named cells in 1665 after looking at cork."
+  },
+  {
+   "ref": "66",
+   "number": 66,
+   "topic": "Cell structure & organelles",
+   "difficulty": "medium",
+   "text": "What is the primary difference between Chromoplasts and Leucoplasts?",
+   "options": [
+    "Chromoplasts store pigments; Leucoplasts store starch/nutrients",
+    "Chromoplasts are for respiration; Leucoplasts are for photosynthesis",
+    "Chromoplasts are found in animals; Leucoplasts are found in plants",
+    "Chromoplasts store water; Leucoplasts store oils"
+   ],
+   "correct": 0,
+   "explanation": "Chromoplasts hold coloured pigments. Leucoplasts are colourless and store starch, oil or protein."
+  },
+  {
+   "ref": "67",
+   "number": 67,
+   "topic": "Cell structure & organelles",
+   "difficulty": "medium",
+   "text": "Which of the following cellular components lack a membrane?",
+   "options": [
+    "Ribosomes only",
+    "Mitochondria",
+    "Nucleolus only",
+    "Both the ribosomes and the nucleolus"
+   ],
+   "correct": 3,
+   "explanation": "Neither ribosomes nor the nucleolus has a membrane. Mitochondria have two."
+  },
+  {
+   "ref": "68",
+   "number": 68,
+   "topic": "Genetics & inheritance",
+   "difficulty": "easy",
+   "text": "How many pairs of sex chromosomes are found in a human cell?",
+   "options": [
+    "1 pair",
+    "2 pairs",
+    "23 pairs",
+    "46 pairs"
+   ],
+   "correct": 0,
+   "explanation": "Humans have 23 pairs of chromosomes: 22 pairs of autosomes and 1 pair of sex chromosomes."
+  },
+  {
+   "ref": "69",
+   "number": 69,
+   "topic": "Reproduction",
+   "difficulty": "easy",
+   "text": "Which of the following best defines pollination?",
+   "options": [
+    "The fusion of male and female gametes to form a zygote",
+    "The transfer of pollen grains from the anther of a stamen to the receptive stigma of a carpel",
+    "The dispersal of seeds away from the parent plant by wind or water",
+    "The process by which a seed begins to grow into a seedling"
+   ],
+   "correct": 1,
+   "explanation": "Pollination is only the transfer of pollen from anther to stigma. Fusion of gametes is fertilization."
+  },
+  {
+   "ref": "70",
+   "number": 70,
+   "topic": "Reproduction",
+   "difficulty": "easy",
+   "text": "Which of the following animals is not viviparous?",
+   "options": [
+    "Snake",
+    "Apes",
+    "Gorilla",
+    "Cheetah"
+   ],
+   "correct": 0,
+   "explanation": "Most snakes lay eggs. Apes, gorillas and cheetahs are mammals that bear live young."
+  },
+  {
+   "ref": "71",
+   "number": 71,
+   "topic": "Reproduction",
+   "difficulty": "easy",
+   "text": "What is the outermost whorl of a flower, which is usually green and protects the flower during the bud stage?",
+   "options": [
+    "Corolla (Petals)",
+    "Calyx (Sepals)",
+    "Androecium (Stamens)",
+    "Gynoecium (Carpels)"
+   ],
+   "correct": 1,
+   "explanation": "The calyx, made of sepals, is the outermost whorl and protects the bud."
+  },
+  {
+   "ref": "72",
+   "number": 72,
+   "topic": "Cells & biomolecules",
+   "difficulty": "easy",
+   "text": "Mycoplasma organisms are generally smaller than typical bacteria.",
+   "options": [
+    "True",
+    "False"
+   ],
+   "correct": 0,
+   "explanation": "Mycoplasmas are among the smallest known cells, about 0.1–0.3 µm across, and have no cell wall."
+  },
+  {
+   "ref": "73",
+   "number": 73,
+   "topic": "Cell structure & organelles",
+   "difficulty": "easy",
+   "text": "Which of the following is a type of protein found within the plasma membrane?",
+   "options": [
+    "Tubulin",
+    "Transmembrane protein",
+    "Ribophorin",
+    "Keratin"
+   ],
+   "correct": 1,
+   "explanation": "Transmembrane proteins cross the plasma membrane. Tubulin and keratin belong to the cytoskeleton and ribophorins to the rough ER."
+  },
+  {
+   "ref": "77",
+   "number": 77,
+   "topic": "Chromosomes & cell division",
+   "difficulty": "medium",
+   "text": "Which histone protein is the most highly conserved and is therefore preferred for comparison across different eukaryotic species?",
+   "options": [
+    "H2A",
+    "H1",
+    "H3",
+    "H2B"
+   ],
+   "correct": 2,
+   "explanation": "Of these, H3 changes least between species. H3 and H4 are the most conserved histones."
+  },
+  {
+   "ref": "79",
+   "number": 79,
+   "topic": "Cell structure & organelles",
+   "difficulty": "easy",
+   "text": "Which organelle is primarily responsible for the processing, packaging, and intracellular transport of proteins and lipids for secretion?",
+   "options": [
+    "Golgi apparatus",
+    "Lysosome",
+    "Mitochondria",
+    "Ribosome"
+   ],
+   "correct": 0,
+   "explanation": "The Golgi apparatus processes and packages proteins and lipids for secretion."
+  },
+  {
+   "ref": "80",
+   "number": 80,
+   "topic": "Genetics & inheritance",
+   "difficulty": "medium",
+   "text": "Sickle cell trait is best described as a?",
+   "options": [
+    "Morphological trait",
+    "Physiological trait",
+    "Disease susceptibility trait",
+    "Behavioral trait"
+   ],
+   "correct": 1,
+   "explanation": "Sickle cell trait concerns how haemoglobin works in the blood, so it is classed as a physiological trait."
+  },
+  {
+   "ref": "81",
+   "number": 81,
+   "topic": "Genetics & inheritance",
+   "difficulty": "medium",
+   "text": "A Test Cross is performed by crossing an individual with an unknown genotype with a homozygous recessive individual. If the resulting offspring show a 1:1 ratio of traits, the unknown genotype is?",
+   "options": [
+    "Hemizygous",
+    "Homozygous Dominant",
+    "Homozygous Recessive",
+    "Heterozygous"
+   ],
+   "correct": 3,
+   "explanation": "A heterozygote (Aa) crossed with aa gives half Aa and half aa, a 1:1 ratio. A homozygous dominant parent would give only dominant offspring."
+  },
+  {
+   "ref": "84",
+   "number": 84,
+   "topic": "Reproduction",
+   "difficulty": "easy",
+   "text": "The process by which a new plant grows from a fragment or specialized reproductive structure of the parent plant is?",
+   "options": [
+    "Pollination",
+    "Meiosis",
+    "Fertilization",
+    "Vegetative propagation"
+   ],
+   "correct": 3,
+   "explanation": "Vegetative propagation grows a new plant from a part of the parent, such as a stem, root or leaf."
+  },
+  {
+   "ref": "85",
+   "number": 85,
+   "topic": "Chromosomes & cell division",
+   "difficulty": "easy",
+   "text": "During the early stages of cell division, the genetic material condenses from a diffuse mass into visible thread-like structures called?",
+   "options": [
+    "Nucleoli",
+    "Chromosomes",
+    "Microtubules",
+    "Ribosomes"
+   ],
+   "correct": 1,
+   "explanation": "Diffuse chromatin condenses into visible chromosomes early in cell division."
+  },
+  {
+   "ref": "86",
+   "number": 86,
+   "topic": "Genetics & inheritance",
+   "difficulty": "easy",
+   "text": "An organism's behavior is typically influenced or determined by?",
+   "options": [
+    "Genetic factors only",
+    "Environmental factors only",
+    "Both genetic and environmental factors",
+    "Physical traits only"
+   ],
+   "correct": 2,
+   "explanation": "Behaviour depends on both inherited genes and the environment."
+  },
+  {
+   "ref": "87",
+   "number": 87,
+   "topic": "Reproduction",
+   "difficulty": "medium",
+   "text": "Algae grow and multiply rapidly in the presence of water and nutrients primarily through?",
+   "options": [
+    "Fragmentation",
+    "Budding",
+    "Spore formation",
+    "Binary fission"
+   ],
+   "correct": 0,
+   "explanation": "With plenty of water and nutrients, algae break into fragments that each grow into a new individual."
+  },
+  {
+   "ref": "88",
+   "number": 88,
+   "topic": "Reproduction",
+   "difficulty": "easy",
+   "text": "The primary method of asexual reproduction in bread molds is?",
+   "options": [
+    "Budding",
+    "Fragmentation",
+    "Spore formation",
+    "Binary fission"
+   ],
+   "correct": 2,
+   "explanation": "Bread mould (Rhizopus) reproduces asexually by spores made in sporangia."
+  },
+  {
+   "ref": "89",
+   "number": 89,
+   "topic": "Reproduction",
+   "difficulty": "easy",
+   "text": "Reproduction in plants that does not involve flowers, fruits, or seeds is known as?",
+   "options": [
+    "Sexual reproduction",
+    "Vegetative propagation",
+    "Double fertilization",
+    "Pollination"
+   ],
+   "correct": 1,
+   "explanation": "Vegetative propagation uses roots, stems or leaves instead of flowers, fruits or seeds."
+  },
+  {
+   "ref": "90",
+   "number": 90,
+   "topic": "Cells & biomolecules",
+   "difficulty": "easy",
+   "text": "Antonie van Leeuwenhoek was the first to discover and describe little animals which he called?",
+   "options": [
+    "Animalcules",
+    "Cork cells",
+    "Lysosomes",
+    "Nuclei"
+   ],
+   "correct": 0,
+   "explanation": "Leeuwenhoek called the microorganisms he saw animalcules, meaning little animals."
+  },
+  {
+   "ref": "91",
+   "number": 91,
+   "topic": "Cell structure & organelles",
+   "difficulty": "easy",
+   "text": "What is the primary function of the cytosol?",
+   "options": [
+    "To protect the cell from the external environment",
+    "To act as the site for many metabolic reactions and suspend organelles",
+    "To generate ATP via aerobic respiration",
+    "To synthesize proteins for export"
+   ],
+   "correct": 1,
+   "explanation": "Cytosol is the fluid where many metabolic reactions, such as glycolysis, happen and in which organelles are suspended."
+  },
+  {
+   "ref": "92",
+   "number": 92,
+   "topic": "Cell structure & organelles",
+   "difficulty": "easy",
+   "text": "The part of the cell that consists of the jelly-like substance holding all the organelles in place is the?",
+   "options": [
+    "Cytoskeleton",
+    "Cell wall",
+    "Nucleoplasm",
+    "Cytoplasm"
+   ],
+   "correct": 3,
+   "explanation": "Cytoplasm is the jelly-like material that holds the organelles in place."
+  },
+  {
+   "ref": "93",
+   "number": 93,
+   "topic": "Cell structure & organelles",
+   "difficulty": "medium",
+   "text": "Which organelle is specifically responsible for detoxifying metabolic waste and harmful substances?",
+   "options": [
+    "Mitochondria",
+    "Ribosome",
+    "Peroxisome",
+    "Nucleolus"
+   ],
+   "correct": 2,
+   "explanation": "Peroxisomes break down toxic substances, using catalase to destroy hydrogen peroxide."
+  },
+  {
+   "ref": "94",
+   "number": 94,
+   "topic": "Cell structure & organelles",
+   "difficulty": "medium",
+   "text": "The cell organelle containing oxidative/reducing enzymes responsible for the breakdown of long-chain fatty acids is the?",
+   "options": [
+    "Smooth ER",
+    "Golgi apparatus",
+    "Lysosome",
+    "Peroxisome"
+   ],
+   "correct": 3,
+   "explanation": "Peroxisomes contain oxidative enzymes that break down long-chain fatty acids."
+  },
+  {
+   "ref": "97",
+   "number": 97,
+   "topic": "Reproduction",
+   "difficulty": "medium",
+   "text": "Which of the following is not a process associated with sexual reproduction?",
+   "options": [
+    "Gamete formation",
+    "Fertilization",
+    "Parthenocarpy",
+    "Meiosis"
+   ],
+   "correct": 2,
+   "explanation": "Parthenocarpy is fruit forming without fertilization. Meiosis, gamete formation and fertilization are all steps of sexual reproduction."
+  },
+  {
+   "ref": "98",
+   "number": 98,
+   "topic": "Evolution",
+   "difficulty": "easy",
+   "text": "Which of the following concepts best represents the core of Darwin’s theory (Darwinism)?",
+   "options": [
+    "Inheritance of Acquired Traits",
+    "Survival of the Fittest",
+    "Independent Assortment of Genes",
+    "Use and Disuse of organs"
+   ],
+   "correct": 1,
+   "explanation": "Darwin's theory centres on survival of the fittest. Use and disuse and acquired traits belong to Lamarck."
+  },
+  {
+   "ref": "101",
+   "number": 101,
+   "topic": "Genetics & inheritance",
+   "difficulty": "easy",
+   "text": "In genetics, a trait that is expressed and masks the effect of another trait in a heterozygous individual is described as?",
+   "options": [
+    "Dominant",
+    "Recessive",
+    "Co-dominant",
+    "Incomplete"
+   ],
+   "correct": 0,
+   "explanation": "A dominant trait shows in a heterozygote and masks the recessive one."
+  },
+  {
+   "ref": "102",
+   "number": 102,
+   "topic": "Classification & diversity",
+   "difficulty": "medium",
+   "text": "Systematics is the study of the diversification of living forms. Which of the following is not a characteristic or goal of Systematics?",
+   "options": [
+    "Covering and naming all known organisms",
+    "Classifying organisms based on shared traits",
+    "Following and reconstructing genetic trends",
+    "Focusing only on Classifying organisms based on relationship between them"
+   ],
+   "correct": 3,
+   "explanation": "Systematics names, classifies and traces the evolution of organisms. It is not limited to classification."
+  },
+  {
+   "ref": "103",
+   "number": 103,
+   "topic": "Reproduction",
+   "difficulty": "easy",
+   "text": "The transfer of pollen grains from the anther of one flower to the receptive stigma of another flower is known as?",
+   "options": [
+    "Self-pollination",
+    "Cross-pollination",
+    "Fertilization",
+    "Germination"
+   ],
+   "correct": 1,
+   "explanation": "Moving pollen from one flower to the stigma of another is cross-pollination."
+  },
+  {
+   "ref": "104",
+   "number": 104,
+   "topic": "Classification & diversity",
+   "difficulty": "medium",
+   "text": "The confusion or complexity in understanding animal diversity is often increased by the process of?",
+   "options": [
+    "Evolution",
+    "Replication",
+    "Extinction",
+    "Distribution"
+   ],
+   "correct": 0,
+   "explanation": "Evolution keeps producing new forms, which makes animal diversity harder to sort out."
+  },
+  {
+   "ref": "105",
+   "number": 105,
+   "topic": "Genetics & inheritance",
+   "difficulty": "easy",
+   "text": "Which of Mendel’s laws is demonstrated by a dihybrid cross resulting in a phenotypic ratio of 9:3:3:1?",
+   "options": [
+    "Law of Dominance",
+    "Law of Segregation",
+    "Law of Independent Assortment",
+    "Law of Unit Characters"
+   ],
+   "correct": 2,
+   "explanation": "A 9:3:3:1 ratio appears because the two genes assort independently."
+  },
+  {
+   "ref": "106",
+   "number": 106,
+   "topic": "Classification & diversity",
+   "difficulty": "medium",
+   "text": "What scientific discipline provides the system for organizing, naming, and recalling the roughly 1.5 million known species groups?",
+   "options": [
+    "Taxonomy",
+    "Classification",
+    "Genetics",
+    "Ecology"
+   ],
+   "correct": 0,
+   "explanation": "Taxonomy is the science of naming, describing and organising species."
+  },
+  {
+   "ref": "107",
+   "number": 107,
+   "topic": "Cells & biomolecules",
+   "difficulty": "easy",
+   "text": "The saying \"Omnis cellula e cellula\" emphasizes which biological concept?",
+   "options": [
+    "Abiogenesis",
+    "Cells arising from pre-existing cells",
+    "Spontaneous generation",
+    "Cells being created from inorganic matter"
+   ],
+   "correct": 1,
+   "explanation": "\"Omnis cellula e cellula\" is Latin for \"every cell comes from a cell\". Virchow popularised it."
+  },
+  {
+   "ref": "109",
+   "number": 109,
+   "topic": "Cell structure & organelles",
+   "difficulty": "easy",
+   "text": "The Tonoplast is a specialized membrane found surrounding which organelle?",
+   "options": [
+    "Mitochondria",
+    "Nucleus",
+    "Large Central Vacuole",
+    "Lysosome"
+   ],
+   "correct": 2,
+   "explanation": "The tonoplast is the membrane around the large central vacuole of a plant cell."
+  },
+  {
+   "ref": "111",
+   "number": 111,
+   "topic": "Reproduction",
+   "difficulty": "easy",
+   "text": "The fusion of the haploid nucleus of a sperm cell with the haploid nucleus of an egg cell results in a?",
+   "options": [
+    "Diploid zygote (2n)",
+    "Haploid gamete (n)",
+    "Triploid endosperm (3n)",
+    "Tetraploid embryo (4n)"
+   ],
+   "correct": 0,
+   "explanation": "Two haploid nuclei (n + n) fuse to give a diploid zygote (2n)."
+  },
+  {
+   "ref": "112",
+   "number": 112,
+   "topic": "Cell structure & organelles",
+   "difficulty": "easy",
+   "text": "The primary function of the large central vacuole in a plant cell is?",
+   "options": [
+    "Storage of nutrients/waste and maintaining cell rigidity",
+    "Detoxifying harmful substances",
+    "Synthesizing genetic materials",
+    "Producing energy (ATP)"
+   ],
+   "correct": 0,
+   "explanation": "The central vacuole stores nutrients and waste, and its turgor pressure keeps the cell rigid."
+  },
+  {
+   "ref": "113",
+   "number": 113,
+   "topic": "Cells & biomolecules",
+   "difficulty": "easy",
+   "text": "Viruses are generally smaller than?",
+   "options": [
+    "Most bacteria",
+    "Atoms",
+    "Lipids",
+    "Water molecules"
+   ],
+   "correct": 0,
+   "explanation": "Most viruses are 20–300 nm, smaller than most bacteria but far larger than atoms and small molecules."
+  },
+  {
+   "ref": "114",
+   "number": 114,
+   "topic": "Chromosomes & cell division",
+   "difficulty": "easy",
+   "text": "Who is credited with coining the term \"Chromosome\" in 1888?",
+   "options": [
+    "H. Waldeyer",
+    "Gregor Mendel",
+    "Robert Hooke",
+    "Charles Darwin"
+   ],
+   "correct": 0,
+   "explanation": "Heinrich Wilhelm Waldeyer coined the word chromosome, \"coloured body\", in 1888."
+  },
+  {
+   "ref": "116",
+   "number": 116,
+   "topic": "Cell structure & organelles",
+   "difficulty": "easy",
+   "text": "Which part of the cell acts as the primary boundary and facilitates the physical connection and communication between adjacent cells?",
+   "options": [
+    "Nucleus",
+    "Cell membrane",
+    "Vacuole",
+    "Golgi body"
+   ],
+   "correct": 1,
+   "explanation": "The cell membrane is the boundary of the cell and carries the proteins that connect it to its neighbours."
+  },
+  {
+   "ref": "117",
+   "number": 117,
+   "topic": "Chromosomes & cell division",
+   "difficulty": "easy",
+   "text": "Which organelle or structure is responsible for the organization and formation of spindle fibers during animal cell division?",
+   "options": [
+    "Centrioles",
+    "Lysosomes",
+    "Ribosomes",
+    "Mitochondria"
+   ],
+   "correct": 0,
+   "explanation": "Centrioles organise the spindle fibres in animal cells."
+  },
+  {
+   "ref": "119",
+   "number": 119,
+   "topic": "Cells & biomolecules",
+   "difficulty": "easy",
+   "text": "What is the typical size range for most eukaryotic cells?",
+   "options": [
+    "1 to 10 micrometers",
+    "10 to 100 micrometers",
+    "100 to 500 micrometers",
+    "1 to 10 millimeter"
+   ],
+   "correct": 1,
+   "explanation": "Most eukaryotic cells are 10–100 µm. Prokaryotes are usually 1–10 µm."
+  },
+  {
+   "ref": "120",
+   "number": 120,
+   "topic": "Reproduction",
+   "difficulty": "easy",
+   "text": "The pistil of a flower is composed of which three parts?",
+   "options": [
+    "Anther, Filament, and Pollen",
+    "Stigma, Style, and Ovary",
+    "Sepal, Petal, and Receptacle",
+    "Stigma, Anther, and Ovary"
+   ],
+   "correct": 1,
+   "explanation": "A pistil is made of the stigma, style and ovary."
+  },
+  {
+   "ref": "122",
+   "number": 122,
+   "topic": "Genetics & inheritance",
+   "difficulty": "easy",
+   "text": "The gene for color blindness is located on which chromosome?",
+   "options": [
+    "Y chromosome",
+    "X chromosome",
+    "Chromosome 21",
+    "Chromosome 22"
+   ],
+   "correct": 1,
+   "explanation": "Colour blindness is X-linked. Males have only one X, so one faulty copy is enough."
+  },
+  {
+   "ref": "123",
+   "number": 123,
+   "topic": "Evolution",
+   "difficulty": "easy",
+   "text": "The total collection of all the different genes and alleles present in a breeding population is called the?",
+   "options": [
+    "Genotype",
+    "Gene pool",
+    "Genome",
+    "Phenotype"
+   ],
+   "correct": 1,
+   "explanation": "The gene pool is all the alleles in a breeding population. A genome belongs to one organism."
+  },
+  {
+   "ref": "108b",
+   "number": 108,
+   "topic": "Cell structure & organelles",
+   "difficulty": "easy",
+   "text": "What is the primary function of the chloroplast in a plant cell?",
+   "options": [
+    "Cellular respiration",
+    "Protein synthesis",
+    "Photosynthesis",
+    "Lipid storage"
+   ],
+   "correct": 2,
+   "explanation": "Chloroplasts are the site of photosynthesis."
+  },
+  {
+   "ref": "124",
+   "number": 124,
+   "topic": "Classification & diversity",
+   "difficulty": "easy",
+   "text": "In the hierarchy of biological classification, which level is the most exclusive and contains only one type of organism?",
+   "options": [
+    "Kingdom",
+    "Phylum",
+    "Genus",
+    "Species"
+   ],
+   "correct": 3,
+   "explanation": "Species is the lowest rank and contains only one kind of organism."
+  },
+  {
+   "ref": "125",
+   "number": 125,
+   "topic": "Cell structure & organelles",
+   "difficulty": "easy",
+   "text": "Which of the following is a primary function of lysosomes?",
+   "options": [
+    "Intracellular digestion and waste removal",
+    "ATP production",
+    "DNA replication",
+    "Carbohydrate synthesis"
+   ],
+   "correct": 0,
+   "explanation": "Lysosomes contain digestive enzymes that break down worn-out parts and waste inside the cell."
+  },
+  {
+   "ref": "126",
+   "number": 126,
+   "topic": "Genetics & inheritance",
+   "difficulty": "easy",
+   "text": "How many pairs of autosomes are found in a normal human somatic cell?",
+   "options": [
+    "1 pair",
+    "23 pairs",
+    "22 pairs",
+    "46 pairs"
+   ],
+   "correct": 2,
+   "explanation": "Humans have 22 pairs of autosomes and 1 pair of sex chromosomes."
+  },
+  {
+   "ref": "128",
+   "number": 128,
+   "topic": "Cells & biomolecules",
+   "difficulty": "easy",
+   "text": "Polymerization is the chemical process of?",
+   "options": [
+    "Breaking down large molecules into smaller units",
+    "The movement of water across a semi-permeable membrane",
+    "Combining small repeating units to form a large molecule"
+   ],
+   "correct": 2,
+   "explanation": "Polymerization joins many small units (monomers) into one large molecule."
+  },
+  {
+   "ref": "129",
+   "number": 129,
+   "topic": "Chromosomes & cell division",
+   "difficulty": "easy",
+   "text": "Which of the following statements about chromosomes is true?",
+   "options": [
+    "They are only found in the cytoplasm",
+    "The terminal ends of a chromosome are called telomeres",
+    "They are always X-shaped regardless of the cell cycle stage",
+    "They do not contain proteins"
+   ],
+   "correct": 1,
+   "explanation": "The ends of a chromosome are called telomeres. Chromosomes are in the nucleus, contain proteins, and are X-shaped only after replication."
+  },
+  {
+   "ref": "130",
+   "number": 130,
+   "topic": "Evolution",
+   "difficulty": "easy",
+   "text": "What is the core concept or main theory of Charles Darwin's evolutionary model?",
+   "options": [
+    "Inheritance of acquired characteristics",
+    "Spontaneous generation of life",
+    "Natural Selection",
+    "Law of Independent Assortment"
+   ],
+   "correct": 2,
+   "explanation": "Darwin's main idea was natural selection."
+  },
+  {
+   "ref": "131",
+   "number": 131,
+   "topic": "Reproduction",
+   "difficulty": "easy",
+   "text": "After fertilization, the ripened ovule develops into the?",
+   "options": [
+    "Fruit",
+    "Seed",
+    "Flower",
+    "Stem"
+   ],
+   "correct": 1,
+   "explanation": "After fertilization the ovule becomes the seed and the ovary becomes the fruit."
+  },
+  {
+   "ref": "132",
+   "number": 132,
+   "topic": "Reproduction",
+   "difficulty": "easy",
+   "text": "A fruit is botanically defined as a matured or ripened?",
+   "options": [
+    "Ovary",
+    "Ovule",
+    "Stigma",
+    "Pollen grain"
+   ],
+   "correct": 0,
+   "explanation": "A fruit is a ripened ovary."
+  },
+  {
+   "ref": "133",
+   "number": 133,
+   "topic": "Evolution",
+   "difficulty": "medium",
+   "text": "A new mutation can spread through a population and become more common primarily through the process of?",
+   "options": [
+    "Natural Selection and Genetic Drift",
+    "Spontaneous generation",
+    "Mitotic cell division",
+    "Intracellular transport"
+   ],
+   "correct": 0,
+   "explanation": "A mutation spreads if it is favoured by natural selection or, by chance, through genetic drift."
+  },
+  {
+   "ref": "134",
+   "number": 134,
+   "topic": "Cells & biomolecules",
+   "difficulty": "easy",
+   "text": "In a prokaryotic cell, the genetic material is not enclosed in a membrane but is found in a concentrated region called the?",
+   "options": [
+    "Nucleus",
+    "Nucleoid",
+    "Cytoplasm",
+    "Smooth ER"
+   ],
+   "correct": 1,
+   "explanation": "Prokaryotic DNA lies in the nucleoid, a region with no membrane."
+  },
+  {
+   "ref": "135",
+   "number": 135,
+   "topic": "Chromosomes & cell division",
+   "difficulty": "easy",
+   "text": "At which phase of the cell cycle is the genetic material found in its uncondensed, thread-like form known as chromatin?",
+   "options": [
+    "Prophase",
+    "Metaphase",
+    "Anaphase",
+    "Interphase"
+   ],
+   "correct": 3,
+   "explanation": "During interphase DNA is uncondensed chromatin. It condenses from prophase."
+  },
+  {
+   "ref": "138",
+   "number": 138,
+   "topic": "Chromosomes & cell division",
+   "difficulty": "medium",
+   "text": "The beads-on-a-string structures found on the chromonemata are called?",
+   "options": [
+    "Centromeres",
+    "Chromomeres",
+    "Genes",
+    "Telomeres"
+   ],
+   "correct": 1,
+   "explanation": "Chromomeres are the bead-like thickenings along the chromonemata."
+  },
+  {
+   "ref": "140",
+   "number": 140,
+   "topic": "Classification & diversity",
+   "difficulty": "medium",
+   "text": "Systematics is best defined as the study of?",
+   "options": [
+    "Grouping and naming organisms based on evolutionary trends",
+    "Grouping all animals and plants by size only",
+    "The study of cell division only",
+    "The study of chemical reactions in the cytosol"
+   ],
+   "correct": 0,
+   "explanation": "Systematics groups and names organisms according to their evolutionary relationships."
+  },
+  {
+   "ref": "141",
+   "number": 141,
+   "topic": "Cells & biomolecules",
+   "difficulty": "medium",
+   "text": "Eukaryotic cells are much larger than prokaryotic cells. They tackle the issue of slow diffusion through?",
+   "options": [
+    "Increasing cell size further",
+    "Compartmentalization",
+    "Reducing the number of proteins",
+    "Thickening the cell wall"
+   ],
+   "correct": 1,
+   "explanation": "Eukaryotic cells divide their interior into membrane-bound compartments, which shortens diffusion distances."
+  },
+  {
+   "ref": "142",
+   "number": 142,
+   "topic": "Cell structure & organelles",
+   "difficulty": "medium",
+   "text": "What is primarily responsible for cell adhesion?",
+   "options": [
+    "Glycoproteins",
+    "DNA filaments",
+    "Ribosomal units",
+    "Vacuole pressure"
+   ],
+   "correct": 0,
+   "explanation": "Glycoproteins on the cell surface let cells recognise and stick to each other."
+  },
+  {
+   "ref": "143",
+   "number": 143,
+   "topic": "Cell structure & organelles",
+   "difficulty": "easy",
+   "text": "What are the units of a ribosome in a Eukaryotic cell?",
+   "options": [
+    "50S and 30S",
+    "60S and 40S",
+    "70S and 10S",
+    "90S and 20S"
+   ],
+   "correct": 1,
+   "explanation": "The eukaryotic 80S ribosome has 60S and 40S subunits. Prokaryotic 70S ribosomes have 50S and 30S."
+  },
+  {
+   "ref": "144",
+   "number": 144,
+   "topic": "Classification & diversity",
+   "difficulty": "medium",
+   "text": "In taxonomy, organisms are categorized based on strict rules. Which of the following is NOT a standard basis for grouping into a Domain?",
+   "options": [
+    "Properties",
+    "Rules",
+    "Principles",
+    "Period"
+   ],
+   "correct": 3,
+   "explanation": "Organisms are grouped using properties, rules and principles. The period an organism lived in is not a basis for a domain."
+  },
+  {
+   "ref": "145",
+   "number": 145,
+   "topic": "Cell structure & organelles",
+   "difficulty": "easy",
+   "text": "Which of the following combinations represents the three main types of plastids found in plants?",
+   "options": [
+    "Chromoplasts, Leucoplasts, and Chloroplasts",
+    "Mitochondria, Vacuoles, and Nuclei",
+    "Lysosomes, Ribosomes, and Centrioles"
+   ],
+   "correct": 0,
+   "explanation": "The three main plastids are chloroplasts, chromoplasts and leucoplasts."
+  },
+  {
+   "ref": "146",
+   "number": 146,
+   "topic": "Cells & biomolecules",
+   "difficulty": "medium",
+   "text": "The surface area to volume ratio of a cell decreases with?",
+   "options": [
+    "Increase in cell size",
+    "Decrease in cell size",
+    "Increase in cell temperature",
+    "Decrease in cell nutrients"
+   ],
+   "correct": 0,
+   "explanation": "As a cell grows, volume rises faster than surface area, so the ratio falls."
+  },
+  {
+   "ref": "147",
+   "number": 147,
+   "topic": "Chromosomes & cell division",
+   "difficulty": "medium",
+   "text": "The chromatin that makes up chromosomes consists of?",
+   "options": [
+    "Nucleic acid and basic proteins",
+    "Acid carbohydrates and basic protein",
+    "Nucleic acid and neutral protein",
+    "Basic Carbohydrates and acid protein"
+   ],
+   "correct": 0,
+   "explanation": "Chromosomes are made of nucleic acid (DNA) bound to basic proteins, the histones."
+  },
+  {
+   "ref": "148",
+   "number": 148,
+   "topic": "Reproduction",
+   "difficulty": "easy",
+   "text": "The budding form of reproduction is commonly found in which fungus?",
+   "options": [
+    "Yeast",
+    "Conidia",
+    "Sporangia",
+    "Mushroom"
+   ],
+   "correct": 0,
+   "explanation": "Yeast reproduces by budding. Conidia and sporangia are spore structures."
+  },
+  {
+   "ref": "151",
+   "number": 151,
+   "topic": "Evolution",
+   "difficulty": "easy",
+   "text": "When two or more organisms share the same limited resources in an environment, it is called?",
+   "options": [
+    "Adaptation",
+    "Competition",
+    "Symbiosis",
+    "Mutualism"
+   ],
+   "correct": 1,
+   "explanation": "Organisms that need the same limited resource compete for it."
+  },
+  {
+   "ref": "152",
+   "number": 152,
+   "topic": "Cell structure & organelles",
+   "difficulty": "medium",
+   "text": "Which part of the mitochondria is most closely associated with the enzymes for ATP production?",
+   "options": [
+    "Thylakoid",
+    "Outer membrane",
+    "Matrix",
+    "Chloroplast"
+   ],
+   "correct": 2,
+   "explanation": "Of these, the matrix is the part of the mitochondrion that holds enzymes feeding ATP production, such as those of the Krebs cycle. Thylakoids belong to chloroplasts."
+  },
+  {
+   "ref": "154",
+   "number": 154,
+   "topic": "Cell structure & organelles",
+   "difficulty": "easy",
+   "text": "The Endoplasmic Reticulum (ER) is primarily used for?",
+   "options": [
+    "Energy production and storage",
+    "Synthesis and transport of proteins and lipids",
+    "Digestion of cellular waste",
+    "Control of cell division"
+   ],
+   "correct": 1,
+   "explanation": "Rough ER makes and moves proteins, and smooth ER makes lipids."
+  },
+  {
+   "ref": "155",
+   "number": 155,
+   "topic": "Genetics & inheritance",
+   "difficulty": "easy",
+   "text": "Genetic materials are encoded in?",
+   "options": [
+    "Ribosomes",
+    "DNA",
+    "Mitochondria",
+    "The Golgi body"
+   ],
+   "correct": 1,
+   "explanation": "Genetic information is encoded in DNA."
+  },
+  {
+   "ref": "157",
+   "number": 157,
+   "topic": "Genetics & inheritance",
+   "difficulty": "easy",
+   "text": "The phenotypic ratio of a Mendelian monohybrid cross is?",
+   "options": [
+    "1:2:1",
+    "3:1",
+    "9:3:3:1",
+    "2:1"
+   ],
+   "correct": 1,
+   "explanation": "A monohybrid cross of two heterozygotes gives 3 dominant to 1 recessive. 1:2:1 is the genotypic ratio."
+  },
+  {
+   "ref": "158",
+   "number": 158,
+   "topic": "Genetics & inheritance",
+   "difficulty": "easy",
+   "text": "How many pairs of chromosomes are in a normal human cell?",
+   "options": [
+    "46 pairs",
+    "23 pairs",
+    "22 pairs",
+    "44 pairs"
+   ],
+   "correct": 1,
+   "explanation": "A normal human body cell has 46 chromosomes, which is 23 pairs."
+  },
+  {
+   "ref": "159",
+   "number": 159,
+   "topic": "Cell structure & organelles",
+   "difficulty": "easy",
+   "text": "Which organelle is termed the \"suicidal bag\"?",
+   "options": [
+    "Ribosome",
+    "Centriole",
+    "Lysosome",
+    "Nucleolus"
+   ],
+   "correct": 2,
+   "explanation": "Lysosomes are called suicidal bags because their enzymes can digest the whole cell if they burst."
+  },
+  {
+   "ref": "160",
+   "number": 160,
+   "topic": "Cell structure & organelles",
+   "difficulty": "medium",
+   "text": "Why do animal vacuoles maintain their small size compared to plant vacuoles?",
+   "options": [
+    "Animals do not need to store water",
+    "They are used for temporary storage rather than structural support",
+    "Animal cells have a cell wall that limits size",
+    "They are only present during cell division"
+   ],
+   "correct": 1,
+   "explanation": "Animal vacuoles are small because they only store things temporarily. Plant vacuoles also give structural support."
+  },
+  {
+   "ref": "161",
+   "number": 161,
+   "topic": "Classification & diversity",
+   "difficulty": "medium",
+   "text": "Animals are not diverse in terms of their?",
+   "options": [
+    "Habitat",
+    "Body symmetry",
+    "Mode of nutrition",
+    "Method of reproduction"
+   ],
+   "correct": 2,
+   "explanation": "Animals vary in habitat, symmetry and reproduction, but all of them are heterotrophs."
+  },
+  {
+   "ref": "164",
+   "number": 164,
+   "topic": "Cells & biomolecules",
+   "difficulty": "easy",
+   "text": "A macromolecule can be described as?",
+   "options": [
+    "Organelle",
+    "Atom",
+    "A cell",
+    "Polymer"
+   ],
+   "correct": 3,
+   "explanation": "A macromolecule is a large molecule, usually a polymer of smaller units."
+  },
+  {
+   "ref": "165",
+   "number": 165,
+   "topic": "Chromosomes & cell division",
+   "difficulty": "medium",
+   "text": "Which histone protein is responsible for clamping or compacting the DNA the most by securing the entry/exit of the DNA around the core?",
+   "options": [
+    "H1",
+    "H2A",
+    "H2B",
+    "H4"
+   ],
+   "correct": 0,
+   "explanation": "H1 is the linker histone. It clamps the DNA where it enters and leaves the nucleosome core."
+  }
+ ],
+ "held": [],
+ "quizzes": [
+  {
+   "ref": "q1",
+   "title": "Quiz 1 · CA 2025/2026",
+   "timeLimitMin": 12,
+   "negativeMark": 0,
+   "questions": [
+    "5",
+    "12",
+    "22",
+    "33",
+    "39",
+    "46",
+    "51",
+    "54",
+    "59",
+    "64",
+    "68",
+    "81",
+    "89",
+    "97",
+    "107",
+    "108b",
+    "116",
+    "140",
+    "146",
+    "155",
+    "164",
+    "165"
+   ]
+  },
+  {
+   "ref": "q2",
+   "title": "Quiz 2 · CA 2025/2026",
+   "timeLimitMin": 12,
+   "negativeMark": 0,
+   "questions": [
+    "6",
+    "7",
+    "26",
+    "34",
+    "43",
+    "47",
+    "52",
+    "60",
+    "62",
+    "67",
+    "70",
+    "86",
+    "103",
+    "109",
+    "112",
+    "113",
+    "129",
+    "132",
+    "141",
+    "147",
+    "157",
+    "158"
+   ]
+  },
+  {
+   "ref": "q3",
+   "title": "Quiz 3 · CA 2025/2026",
+   "timeLimitMin": 12,
+   "negativeMark": 0,
+   "questions": [
+    "2",
+    "8",
+    "10",
+    "17",
+    "29",
+    "40",
+    "44",
+    "50",
+    "65",
+    "73",
+    "85",
+    "87",
+    "91",
+    "102",
+    "111",
+    "114",
+    "123",
+    "125",
+    "128",
+    "142",
+    "151",
+    "160"
+   ]
+  },
+  {
+   "ref": "q4",
+   "title": "Quiz 4 · CA 2025/2026",
+   "timeLimitMin": 12,
+   "negativeMark": 0,
+   "questions": [
+    "3",
+    "9",
+    "18",
+    "19",
+    "32",
+    "37",
+    "55",
+    "66",
+    "71",
+    "77",
+    "80",
+    "88",
+    "93",
+    "104",
+    "105",
+    "117",
+    "124",
+    "130",
+    "145",
+    "148",
+    "159",
+    "161"
+   ]
+  },
+  {
+   "ref": "q5",
+   "title": "Quiz 5 · CA 2025/2026",
+   "timeLimitMin": 12,
+   "negativeMark": 0,
+   "questions": [
+    "1",
+    "11",
+    "16",
+    "20",
+    "30",
+    "35",
+    "45",
+    "53",
+    "56",
+    "69",
+    "72",
+    "84",
+    "92",
+    "94",
+    "101",
+    "120",
+    "126",
+    "133",
+    "138",
+    "144",
+    "152"
+   ]
+  },
+  {
+   "ref": "q6",
+   "title": "Quiz 6 · CA 2025/2026",
+   "timeLimitMin": 12,
+   "negativeMark": 0,
+   "questions": [
+    "4",
+    "14",
+    "24",
+    "28",
+    "36",
+    "38",
+    "41",
+    "57",
+    "61",
+    "63",
+    "79",
+    "90",
+    "98",
+    "106",
+    "119",
+    "122",
+    "131",
+    "134",
+    "135",
+    "143",
+    "154"
+   ]
+  }
+ ]
+}

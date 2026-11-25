@@ -241,7 +241,7 @@ export const paperQuestions = pgTable(
 );
 
 /**
- * A practice test an admin sets for a course. The admin picks the course, topics, size and time;
+ * A quiz an admin sets for a course. The admin picks the course, topics, size and time;
  * the questions are drawn at random across those topics and every student sits the same set.
  */
 export const quizzes = pgTable(

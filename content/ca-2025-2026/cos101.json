@@ -1,0 +1,1385 @@
+{
+ "course": "COS 101",
+ "courseTitle": "Introduction to Computing Sciences",
+ "source": "Aureons COS 101 CA PQ&A.pdf",
+ "session": "2025/2026",
+ "instructions": "Questions from the 2025/2026 continuous assessment (CA) CBT. Every answer is explained after you submit.",
+ "topics": [
+  "History of computing",
+  "Computer hardware",
+  "Software & operating systems",
+  "Language translators",
+  "Logic gates",
+  "Boolean algebra & truth tables"
+ ],
+ "questions": [
+  {
+   "ref": "1",
+   "number": 1,
+   "topic": "Logic gates",
+   "difficulty": "easy",
+   "text": "Which of the following is NOT a basic logical operation?",
+   "options": [
+    "NOT",
+    "AND",
+    "OR",
+    "XOR"
+   ],
+   "correct": 3,
+   "explanation": "The three basic logical operations are NOT, AND and OR. XOR is built from them."
+  },
+  {
+   "ref": "2",
+   "number": 2,
+   "topic": "Boolean algebra & truth tables",
+   "difficulty": "easy",
+   "text": "In Boolean algebra, which logic gate has the highest order of precedence?",
+   "options": [
+    "NAND",
+    "AND",
+    "OR",
+    "NOT"
+   ],
+   "correct": 3,
+   "explanation": "The order of precedence is NOT, then AND, then OR."
+  },
+  {
+   "ref": "3",
+   "number": 3,
+   "topic": "Computer hardware",
+   "difficulty": "easy",
+   "text": "Which unit handles all processing done by the computer system?",
+   "options": [
+    "CPU",
+    "ALU",
+    "Main storage",
+    "Control Unit"
+   ],
+   "correct": 0,
+   "explanation": "The CPU carries out all processing. The ALU and control unit are parts of it."
+  },
+  {
+   "ref": "4",
+   "number": 4,
+   "topic": "Boolean algebra & truth tables",
+   "difficulty": "easy",
+   "text": "When the number of variables is denoted as n, what is the formula for the number of input combinations?",
+   "options": [
+    "2²",
+    "2n",
+    "2ⁿ",
+    "n²"
+   ],
+   "correct": 2,
+   "explanation": "Each variable can be 0 or 1, so n variables give 2ⁿ combinations."
+  },
+  {
+   "ref": "5",
+   "number": 5,
+   "topic": "History of computing",
+   "difficulty": "easy",
+   "text": "Microsoft was founded by Bill Gates and Paul Allen in what year?",
+   "options": [
+    "1970",
+    "1981",
+    "1990",
+    "1975"
+   ],
+   "correct": 3,
+   "explanation": "Bill Gates and Paul Allen founded Microsoft in 1975."
+  },
+  {
+   "ref": "6",
+   "number": 6,
+   "topic": "History of computing",
+   "difficulty": "medium",
+   "text": "What type of punched cards did Jacquard's looms use to automate patterns?",
+   "options": [
+    "Glass cards",
+    "Plastic cards",
+    "Wooden cards",
+    "Metal cards"
+   ],
+   "correct": 2,
+   "explanation": "Jacquard's loom (1801) read its pattern from punched wooden cards held together in a long row."
+  },
+  {
+   "ref": "7",
+   "number": 7,
+   "topic": "History of computing",
+   "difficulty": "easy",
+   "text": "Grace Hopper is credited with the creation of which High-Level Language (HLL)?",
+   "options": [
+    "FORTRAN",
+    "COBOL",
+    "BASIC",
+    "Pascal"
+   ],
+   "correct": 1,
+   "explanation": "Grace Hopper's work on compilers led to COBOL. FORTRAN came from John Backus and Pascal from Niklaus Wirth."
+  },
+  {
+   "ref": "8",
+   "number": 8,
+   "topic": "Logic gates",
+   "difficulty": "easy",
+   "text": "What is the main function of logic gates in computer science?",
+   "options": [
+    "To encrypt sensitive data",
+    "To solve complex decimal equations",
+    "To manage the power supply of the motherboard",
+    "To perform operations on binary input to produce a single output"
+   ],
+   "correct": 3,
+   "explanation": "A logic gate takes one or more binary inputs and produces a single binary output."
+  },
+  {
+   "ref": "9",
+   "number": 9,
+   "topic": "Software & operating systems",
+   "difficulty": "easy",
+   "text": "Word processors are examples of?",
+   "options": [
+    "System software",
+    "Application software",
+    "Utility software",
+    "Firmware"
+   ],
+   "correct": 1,
+   "explanation": "Word processors help the user do a task, so they are application software."
+  },
+  {
+   "ref": "10",
+   "number": 10,
+   "topic": "Language translators",
+   "difficulty": "easy",
+   "text": "What is the primary function of a linker?",
+   "options": [
+    "To convert source code into assembly language",
+    "To detect viruses within a software package",
+    "To combine object files into a single executable program",
+    "To allocate memory to the CPU"
+   ],
+   "correct": 2,
+   "explanation": "A linker combines object files and libraries into one executable program."
+  },
+  {
+   "ref": "12",
+   "number": 12,
+   "topic": "Logic gates",
+   "difficulty": "easy",
+   "text": "Which of the following is a unary operator?",
+   "options": [
+    "NOT",
+    "AND",
+    "XOR",
+    "OR"
+   ],
+   "correct": 0,
+   "explanation": "NOT acts on a single input, so it is unary. AND, OR and XOR need two."
+  },
+  {
+   "ref": "13",
+   "number": 13,
+   "topic": "Computer hardware",
+   "difficulty": "easy",
+   "text": "Auxiliary storage is used for?",
+   "options": [
+    "Storing information on a short-term",
+    "Storing information on a long-term",
+    "Processing mathematical calculations",
+    "Managing peripheral devices"
+   ],
+   "correct": 1,
+   "explanation": "Auxiliary (secondary) storage keeps information long-term, even when power is off."
+  },
+  {
+   "ref": "16",
+   "number": 16,
+   "topic": "Logic gates",
+   "difficulty": "easy",
+   "text": "Which logical operation produces a TRUE output only when both inputs are FALSE?",
+   "options": [
+    "NAND",
+    "AND",
+    "NOR",
+    "XNOR"
+   ],
+   "correct": 2,
+   "explanation": "NOR is NOT OR, so it is TRUE only when both inputs are FALSE."
+  },
+  {
+   "ref": "17",
+   "number": 17,
+   "topic": "Computer hardware",
+   "difficulty": "easy",
+   "text": "What is the primary function of the Arithmetic Logic Unit (ALU)?",
+   "options": [
+    "To store files permanently",
+    "To coordinate the computer's internal clock",
+    "To manage power distribution",
+    "To perform mathematical calculations and logical comparisons"
+   ],
+   "correct": 3,
+   "explanation": "The ALU does arithmetic and logical comparisons. The control unit does the coordinating."
+  },
+  {
+   "ref": "18b",
+   "number": 18,
+   "topic": "Boolean algebra & truth tables",
+   "difficulty": "easy",
+   "text": "In digital electronics and Boolean algebra, De Morgan’s Law is used for:",
+   "options": [
+    "Increasing CPU clock speed",
+    "Simplifying complex logical expressions",
+    "Managing memory allocation",
+    "Encrypting data for storage"
+   ],
+   "correct": 1,
+   "explanation": "De Morgan's laws, (A·B)' = A' + B' and (A + B)' = A'·B', are used to simplify logical expressions."
+  },
+  {
+   "ref": "19",
+   "number": 19,
+   "topic": "Logic gates",
+   "difficulty": "easy",
+   "text": "What is the specific input requirement to get a TRUE (1) output from an AND operation?",
+   "options": [
+    "One input must be True",
+    "All inputs must be True",
+    "Both inputs must be False",
+    "Inputs must be different"
+   ],
+   "correct": 1,
+   "explanation": "AND gives 1 only if every input is 1."
+  },
+  {
+   "ref": "20",
+   "number": 20,
+   "topic": "Boolean algebra & truth tables",
+   "difficulty": "easy",
+   "text": "If a logic gate has 3 input variables, how many total input combinations will exist in its truth table?",
+   "options": [
+    "6",
+    "9",
+    "8",
+    "4"
+   ],
+   "correct": 2,
+   "explanation": "2³ = 8 combinations."
+  },
+  {
+   "ref": "23",
+   "number": 23,
+   "topic": "Software & operating systems",
+   "difficulty": "easy",
+   "text": "A program that consists of a sequence of instructions is?",
+   "options": [
+    "A Database",
+    "Software",
+    "A Loader",
+    "A Statistical package"
+   ],
+   "correct": 1,
+   "explanation": "Software is a set of programs, and a program is a sequence of instructions."
+  },
+  {
+   "ref": "24",
+   "number": 24,
+   "topic": "Software & operating systems",
+   "difficulty": "easy",
+   "text": "SPSS is an example of a?",
+   "options": [
+    "Word processor",
+    "Operating system",
+    "Statistical package",
+    "Graphics software"
+   ],
+   "correct": 2,
+   "explanation": "SPSS stands for Statistical Package for the Social Sciences."
+  },
+  {
+   "ref": "25",
+   "number": 25,
+   "topic": "Software & operating systems",
+   "difficulty": "easy",
+   "text": "Software used to solve simultaneous linear equations falls under?",
+   "options": [
+    "Numerical/Mathematical software",
+    "Word processing",
+    "Presentation software",
+    "Database management"
+   ],
+   "correct": 0,
+   "explanation": "Solving simultaneous equations is numerical work, so it needs numerical or mathematical software."
+  },
+  {
+   "ref": "26",
+   "number": 26,
+   "topic": "Computer hardware",
+   "difficulty": "easy",
+   "text": "Which of the following is an input device?",
+   "options": [
+    "Microphone",
+    "SSD",
+    "Monitor",
+    "Printer"
+   ],
+   "correct": 0,
+   "explanation": "A microphone sends sound into the computer. Monitors and printers are output devices and an SSD is storage."
+  },
+  {
+   "ref": "27",
+   "number": 27,
+   "topic": "History of computing",
+   "difficulty": "easy",
+   "text": "The first programmer in history was?",
+   "options": [
+    "Grace Hopper",
+    "Ada Byron",
+    "Charles Babbage",
+    "Blaise Pascal"
+   ],
+   "correct": 1,
+   "explanation": "Ada Byron (Lady Lovelace) wrote the first published program, for Babbage's Analytical Engine."
+  },
+  {
+   "ref": "28",
+   "number": 28,
+   "topic": "Logic gates",
+   "difficulty": "medium",
+   "text": "The output of a two-input XOR gate is true when?",
+   "options": [
+    "Both inputs are true",
+    "Only one input is false",
+    "At least one input is false",
+    "Both inputs are false"
+   ],
+   "correct": 1,
+   "explanation": "XOR is TRUE when the inputs differ, which means exactly one is false and the other is true."
+  },
+  {
+   "ref": "29",
+   "number": 29,
+   "topic": "Computer hardware",
+   "difficulty": "easy",
+   "text": "What is the primary function of the Control Unit (CU) within the CPU?",
+   "options": [
+    "To perform mathematical calculations",
+    "To direct and coordinate the operations of the processor",
+    "To store permanent data files",
+    "To provide power to the motherboard"
+   ],
+   "correct": 1,
+   "explanation": "The control unit directs and coordinates the processor's operations."
+  },
+  {
+   "ref": "30",
+   "number": 30,
+   "topic": "Logic gates",
+   "difficulty": "easy",
+   "text": "In a NAND gate, if all inputs are TRUE, the output will be?",
+   "options": [
+    "TRUE",
+    "FALSE"
+   ],
+   "correct": 1,
+   "explanation": "NAND is NOT AND. All TRUE inputs make AND true, so NAND is FALSE."
+  },
+  {
+   "ref": "31",
+   "number": 31,
+   "topic": "Logic gates",
+   "difficulty": "easy",
+   "text": "In a NAND gate, if all inputs are FALSE, the output will be?",
+   "options": [
+    "TRUE",
+    "FALSE"
+   ],
+   "correct": 0,
+   "explanation": "NAND is NOT AND. All FALSE inputs make AND false, so NAND is TRUE."
+  },
+  {
+   "ref": "33",
+   "number": 33,
+   "topic": "Logic gates",
+   "difficulty": "easy",
+   "text": "An XOR operation will produce a TRUE output when the two inputs are?",
+   "options": [
+    "Both false",
+    "Both true",
+    "Different",
+    "Equal"
+   ],
+   "correct": 2,
+   "explanation": "XOR (exclusive OR) is TRUE only when the two inputs are different."
+  },
+  {
+   "ref": "34",
+   "number": 34,
+   "topic": "Software & operating systems",
+   "difficulty": "easy",
+   "text": "Which utility system is used to arrange data into a specific order?",
+   "options": [
+    "Sort",
+    "Merge",
+    "Copy",
+    "Linker"
+   ],
+   "correct": 0,
+   "explanation": "A sort utility arranges data in a specified order. Merge combines ordered files."
+  },
+  {
+   "ref": "35",
+   "number": 35,
+   "topic": "Language translators",
+   "difficulty": "easy",
+   "text": "Assemblers are language translators that translate?",
+   "options": [
+    "Assembly language into machine code",
+    "High-Level Language (HLL) into machine code",
+    "Low-Level Language (LLL) into High-Level Language",
+    "English into binary code"
+   ],
+   "correct": 0,
+   "explanation": "An assembler translates assembly language into machine code."
+  },
+  {
+   "ref": "37",
+   "number": 37,
+   "topic": "Software & operating systems",
+   "difficulty": "easy",
+   "text": "What are the primary functions of an Operating System?",
+   "options": [
+    "Managing hardware and software resources",
+    "Providing a user interface",
+    "Managing files and memory",
+    "All of these"
+   ],
+   "correct": 3,
+   "explanation": "An operating system manages hardware and software resources, files and memory, and provides the user interface."
+  },
+  {
+   "ref": "38",
+   "number": 38,
+   "topic": "Computer hardware",
+   "difficulty": "easy",
+   "text": "Computer hardware is generally divided into which of the following categories?",
+   "options": [
+    "Input, Output, Storage, and Processing",
+    "Software, Firmware, and Liveware",
+    "Programs, Data, and Information",
+    "System units and Application units"
+   ],
+   "correct": 0,
+   "explanation": "Hardware is grouped into input, output, storage and processing devices."
+  },
+  {
+   "ref": "40",
+   "number": 40,
+   "topic": "Software & operating systems",
+   "difficulty": "easy",
+   "text": "One of the following is a primary function of an Operating System regarding resource management?",
+   "options": [
+    "Creating graphic designs",
+    "Allocation of resources to different programs",
+    "Performing complex mathematical calculations",
+    "Designing hardware components"
+   ],
+   "correct": 1,
+   "explanation": "An operating system allocates resources such as CPU time and memory to programs."
+  },
+  {
+   "ref": "41",
+   "number": 41,
+   "topic": "Software & operating systems",
+   "difficulty": "easy",
+   "text": "Which of the following is NOT a core responsibility of an Operating System?",
+   "options": [
+    "Memory management",
+    "File management",
+    "Word processing",
+    "Processor scheduling"
+   ],
+   "correct": 2,
+   "explanation": "Word processing is done by application software. The others are operating system jobs."
+  },
+  {
+   "ref": "42",
+   "number": 42,
+   "topic": "Boolean algebra & truth tables",
+   "difficulty": "easy",
+   "text": "In the logic circuit shown, what is the Boolean expression for the output at point C?",
+   "options": [
+    "A",
+    "A + B'",
+    "A'",
+    "A'C"
+   ],
+   "correct": 2,
+   "explanation": "The triangle with a small circle is a NOT gate, so C = A'.",
+   "image": "/figures/cos101-circuit-1.svg",
+   "imageAlt": "Logic circuit: input A passes through a NOT gate (output C). C and B feed an AND gate (output D). D and B feed an OR gate (output Q).",
+   "imageBytes": 1395
+  },
+  {
+   "ref": "43",
+   "number": 43,
+   "topic": "Boolean algebra & truth tables",
+   "difficulty": "medium",
+   "text": "In the logic circuit shown, what is the Boolean expression for the output at point D?",
+   "options": [
+    "A' · B",
+    "A + B",
+    "C'",
+    "B'"
+   ],
+   "correct": 0,
+   "explanation": "D is the output of the AND gate with inputs C = A' and B, so D = A'·B.",
+   "image": "/figures/cos101-circuit-1.svg",
+   "imageAlt": "Logic circuit: input A passes through a NOT gate (output C). C and B feed an AND gate (output D). D and B feed an OR gate (output Q).",
+   "imageBytes": 1395
+  },
+  {
+   "ref": "44",
+   "number": 44,
+   "topic": "Boolean algebra & truth tables",
+   "difficulty": "medium",
+   "text": "In the logic circuit shown, what is the final Boolean expression for the output Q (before simplifying)?",
+   "options": [
+    "A · B",
+    "A' + B",
+    "C + D",
+    "(A' · B) + B"
+   ],
+   "correct": 3,
+   "explanation": "Q is the OR of D and B, so Q = (A'·B) + B. (This simplifies to B.)",
+   "image": "/figures/cos101-circuit-1.svg",
+   "imageAlt": "Logic circuit: input A passes through a NOT gate (output C). C and B feed an AND gate (output D). D and B feed an OR gate (output Q).",
+   "imageBytes": 1395
+  },
+  {
+   "ref": "45",
+   "number": 45,
+   "topic": "Logic gates",
+   "difficulty": "medium",
+   "text": "An XOR gate can be constructed from which combination of gates?",
+   "options": [
+    "NAND, NOR, XNOR",
+    "AND, NOR, NOT",
+    "XNOR, OR, NOR",
+    "NOT, AND, OR"
+   ],
+   "correct": 3,
+   "explanation": "A XOR B = A·B' + A'·B, which uses NOT, AND and OR."
+  },
+  {
+   "ref": "46",
+   "number": 46,
+   "topic": "Software & operating systems",
+   "difficulty": "easy",
+   "text": "Microsoft Excel belongs to which kind of software?",
+   "options": [
+    "Application software",
+    "Operating system",
+    "Utility software",
+    "Data management software"
+   ],
+   "correct": 0,
+   "explanation": "Excel is a spreadsheet program, which is application software."
+  },
+  {
+   "ref": "47",
+   "number": 47,
+   "topic": "Logic gates",
+   "difficulty": "easy",
+   "text": "XNOR is a combination of which two gates?",
+   "options": [
+    "XOR and NOT",
+    "OR and NOT",
+    "AND and NOT",
+    "XOR and AND"
+   ],
+   "correct": 0,
+   "explanation": "XNOR is XOR followed by NOT."
+  },
+  {
+   "ref": "48",
+   "number": 48,
+   "topic": "History of computing",
+   "difficulty": "easy",
+   "text": "Who invented the first device for mechanical calculations?",
+   "options": [
+    "Charles Babbage",
+    "Blaise Pascal",
+    "Gottfried Leibniz",
+    "Herman Hollerith"
+   ],
+   "correct": 1,
+   "explanation": "Blaise Pascal built the Pascaline, an early mechanical calculator, in 1642."
+  },
+  {
+   "ref": "49",
+   "number": 49,
+   "topic": "Logic gates",
+   "difficulty": "easy",
+   "text": "In terms of construction, a NOR gate is?",
+   "options": [
+    "OR before NOT",
+    "NOT before OR",
+    "AND before NOT",
+    "NOT before AND"
+   ],
+   "correct": 0,
+   "explanation": "NOR is an OR gate followed by a NOT."
+  },
+  {
+   "ref": "50",
+   "number": 50,
+   "topic": "Language translators",
+   "difficulty": "easy",
+   "text": "Which of the following converts a High-Level Language (HLL) into machine language all at once?",
+   "options": [
+    "Compiler",
+    "Assembler",
+    "Interpreter",
+    "Linker"
+   ],
+   "correct": 0,
+   "explanation": "A compiler translates the whole program at once. An interpreter goes line by line."
+  },
+  {
+   "ref": "51",
+   "number": 51,
+   "topic": "Language translators",
+   "difficulty": "easy",
+   "text": "The function of an interpreter is to?",
+   "options": [
+    "Convert the entire source code into an executable file before running",
+    "Combine multiple object files into a single program",
+    "Only check for syntax errors without executing the code",
+    "Translate and execute High-Level Language (HLL) instructions line-by-line"
+   ],
+   "correct": 3,
+   "explanation": "An interpreter translates and runs the program one line at a time."
+  },
+  {
+   "ref": "52",
+   "number": 52,
+   "topic": "Language translators",
+   "difficulty": "medium",
+   "text": "A major difference between a compiler and an interpreter is?",
+   "options": [
+    "A compiler translates the whole program before execution, while an interpreter translates it during runtime",
+    "An interpreter is faster than a compiler at executing large programs",
+    "A compiler does not generate an object code, but an interpreter does",
+    "Interpreters are only used for low-level languages"
+   ],
+   "correct": 0,
+   "explanation": "A compiler translates everything before execution. An interpreter translates while the program runs."
+  },
+  {
+   "ref": "53",
+   "number": 53,
+   "topic": "Language translators",
+   "difficulty": "medium",
+   "text": "Which of these statements is true regarding error detection in translators?",
+   "options": [
+    "Neither can detect syntax errors",
+    "A compiler stops at the first error and does not check the rest of the program",
+    "Both compilers and interpreters report all errors only after the entire program is scanned",
+    "An interpreter stops and reports an error as soon as it encounters one in a line"
+   ],
+   "correct": 3,
+   "explanation": "An interpreter works line by line, so it stops at the first error it meets. A compiler scans the whole program and lists its errors."
+  },
+  {
+   "ref": "54",
+   "number": 54,
+   "topic": "Boolean algebra & truth tables",
+   "difficulty": "medium",
+   "text": "In the logic circuit shown, what is the Boolean expression for the output at point D?",
+   "options": [
+    "A + B",
+    "(A + B)'",
+    "A · B",
+    "A' + B'"
+   ],
+   "correct": 1,
+   "explanation": "An OR shape with a circle on the output is a NOR gate, so D = (A + B)'.",
+   "image": "/figures/cos101-circuit-2.svg",
+   "imageAlt": "Logic circuit: inputs A and B feed an OR-shaped gate with a small circle on its output (output D). B and C feed an AND-shaped gate (output E). D and E feed an OR-shaped gate.",
+   "imageBytes": 1595
+  },
+  {
+   "ref": "55",
+   "number": 55,
+   "topic": "Boolean algebra & truth tables",
+   "difficulty": "easy",
+   "text": "In the logic circuit shown, what is the Boolean expression for the output at point E?",
+   "options": [
+    "B + C",
+    "B' · C",
+    "B · C",
+    "(B + C)'"
+   ],
+   "correct": 2,
+   "explanation": "E is the output of an AND gate with inputs B and C, so E = B·C.",
+   "image": "/figures/cos101-circuit-2.svg",
+   "imageAlt": "Logic circuit: inputs A and B feed an OR-shaped gate with a small circle on its output (output D). B and C feed an AND-shaped gate (output E). D and E feed an OR-shaped gate.",
+   "imageBytes": 1595
+  },
+  {
+   "ref": "56",
+   "number": 56,
+   "topic": "Boolean algebra & truth tables",
+   "difficulty": "medium",
+   "text": "What is the final Boolean expression for the output of the entire circuit shown?",
+   "options": [
+    "(A + B) · (B + C)",
+    "D' + E",
+    "(A · B)' + (B + C)",
+    "(A + B)' + (B · C)"
+   ],
+   "correct": 3,
+   "explanation": "The last gate is OR, so the output is D + E = (A + B)' + (B·C).",
+   "image": "/figures/cos101-circuit-2.svg",
+   "imageAlt": "Logic circuit: inputs A and B feed an OR-shaped gate with a small circle on its output (output D). B and C feed an AND-shaped gate (output E). D and E feed an OR-shaped gate.",
+   "imageBytes": 1595
+  },
+  {
+   "ref": "56b",
+   "number": 56,
+   "topic": "History of computing",
+   "difficulty": "medium",
+   "text": "The Abacus has been used for counting as far back as?",
+   "options": [
+    "500 BC",
+    "1000 AD",
+    "200 BC",
+    "800 BC"
+   ],
+   "correct": 0,
+   "explanation": "The abacus has been used for counting since about 500 BC."
+  },
+  {
+   "ref": "58",
+   "number": 58,
+   "topic": "Logic gates",
+   "difficulty": "easy",
+   "text": "In the statement \"If Shade comes and Yetunde goes, I will come,\" which logic gate is represented?",
+   "options": [
+    "XOR",
+    "OR",
+    "AND",
+    "NOT"
+   ],
+   "correct": 2,
+   "explanation": "Both conditions must hold (\"and\"), so it is an AND gate."
+  },
+  {
+   "ref": "59",
+   "number": 59,
+   "topic": "Boolean algebra & truth tables",
+   "difficulty": "medium",
+   "text": "If A = \"Max entered a bank\", B = \"He wants to withdraw money\", and C = \"The bank is open\", which Boolean expression represents: \"Max went to the bank and withdrew money OR the bank was open and Max withdrew money\"?",
+   "options": [
+    "(A · B) + (C · B)",
+    "A + B · A + C",
+    "(A + B) · (C + B)",
+    "A · B + C"
+   ],
+   "correct": 0,
+   "explanation": "\"Went to the bank and withdrew\" is A·B. \"Bank open and withdrew\" is C·B. Joined by OR: (A·B) + (C·B)."
+  },
+  {
+   "ref": "61",
+   "number": 61,
+   "topic": "History of computing",
+   "difficulty": "medium",
+   "text": "Philip Emeagwali's 1989 breakthrough in parallel computing led to the?",
+   "options": [
+    "Reinvention of supercomputers",
+    "Invention of the first vacuum tube",
+    "Development of the first word processor",
+    "Creation of the first mechanical calculator"
+   ],
+   "correct": 0,
+   "explanation": "Emeagwali's 1989 work with thousands of parallel processors is credited with changing how supercomputers were designed."
+  },
+  {
+   "ref": "62",
+   "number": 62,
+   "topic": "Boolean algebra & truth tables",
+   "difficulty": "medium",
+   "text": "A = \"My account balance is high\", B = \"The bank is open\", and C = \"Jessie has a high account balance\". Which expression represents: \"I will withdraw money if my account balance is high and the bank is open, OR if Jessie’s account balance is high and the bank is open\"?",
+   "options": [
+    "AB + CB",
+    "A + B + C",
+    "(A + B)C",
+    "A(B + C)"
+   ],
+   "correct": 0,
+   "explanation": "\"My balance high and bank open\" is AB. \"Jessie's balance high and bank open\" is CB. Joined by OR: AB + CB."
+  },
+  {
+   "ref": "63",
+   "number": 63,
+   "topic": "Computer hardware",
+   "difficulty": "easy",
+   "text": "Which device is known as the brain of the computer hardware?",
+   "options": [
+    "CPU",
+    "RAM",
+    "Hard Drive",
+    "Motherboard"
+   ],
+   "correct": 0,
+   "explanation": "The CPU is called the brain of the computer because it carries out the instructions."
+  },
+  {
+   "ref": "64",
+   "number": 64,
+   "topic": "Logic gates",
+   "difficulty": "easy",
+   "text": "What is the output of an OR gate if one input is TRUE and the other is FALSE?",
+   "options": [
+    "TRUE",
+    "FALSE"
+   ],
+   "correct": 0,
+   "explanation": "OR is TRUE when at least one input is TRUE."
+  },
+  {
+   "ref": "65",
+   "number": 65,
+   "topic": "Logic gates",
+   "difficulty": "easy",
+   "text": "For a NAND gate, the output will be TRUE if?",
+   "options": [
+    "At least one input is FALSE",
+    "All inputs are TRUE",
+    "No inputs are FALSE",
+    "Both inputs are 1"
+   ],
+   "correct": 0,
+   "explanation": "NAND is FALSE only when all inputs are TRUE. One FALSE input is enough to make it TRUE."
+  },
+  {
+   "ref": "66",
+   "number": 66,
+   "topic": "Logic gates",
+   "difficulty": "easy",
+   "text": "The output will be TRUE if both inputs are either both TRUE or both FALSE. This is valid for which logic gate?",
+   "options": [
+    "XOR",
+    "XNOR",
+    "NAND",
+    "OR"
+   ],
+   "correct": 1,
+   "explanation": "XNOR is TRUE when the inputs are the same."
+  },
+  {
+   "ref": "67",
+   "number": 67,
+   "topic": "Logic gates",
+   "difficulty": "medium",
+   "text": "What is the Boolean representation of the XNOR gate?",
+   "options": [
+    "A + B",
+    "A . B",
+    "A ⊙ B",
+    "A ⊕ B"
+   ],
+   "correct": 2,
+   "explanation": "XNOR is written A ⊙ B. A ⊕ B is XOR."
+  },
+  {
+   "ref": "68",
+   "number": 68,
+   "topic": "History of computing",
+   "difficulty": "easy",
+   "text": "Who designed the Analytical Engine?",
+   "options": [
+    "Blaise Pascal",
+    "Charles Babbage",
+    "Lady Ada Lovelace",
+    "John von Neumann"
+   ],
+   "correct": 1,
+   "explanation": "Charles Babbage designed the Analytical Engine."
+  },
+  {
+   "ref": "69",
+   "number": 69,
+   "topic": "Computer hardware",
+   "difficulty": "easy",
+   "text": "Which professional group is primarily responsible for building and integrating computer systems?",
+   "options": [
+    "Data Analysts",
+    "Computer Engineers",
+    "Web Designers",
+    "Technical Writers"
+   ],
+   "correct": 1,
+   "explanation": "Computer engineers build and integrate computer systems."
+  },
+  {
+   "ref": "71",
+   "number": 71,
+   "topic": "Boolean algebra & truth tables",
+   "difficulty": "easy",
+   "text": "If A = 1, B = 0 and C = 1, what is the result of the Boolean expression A(B + C)?",
+   "options": [
+    "0",
+    "1",
+    "Error",
+    "Undefined"
+   ],
+   "correct": 1,
+   "explanation": "B + C = 0 + 1 = 1, and A·1 = 1·1 = 1."
+  },
+  {
+   "ref": "72",
+   "number": 72,
+   "topic": "Boolean algebra & truth tables",
+   "difficulty": "easy",
+   "text": "The number of possible input combinations in a truth table with 6 variables is?",
+   "options": [
+    "12",
+    "32",
+    "64",
+    "128"
+   ],
+   "correct": 2,
+   "explanation": "2⁶ = 64."
+  },
+  {
+   "ref": "73",
+   "number": 73,
+   "topic": "Logic gates",
+   "difficulty": "easy",
+   "text": "Which of the following statements correctly describes the difference between XOR and XNOR gates?",
+   "options": [
+    "XOR outputs 1 when inputs are the same; XNOR outputs 1 when they are different",
+    "XOR outputs 1 when inputs are different; XNOR outputs 1 when they are the same",
+    "XOR is the same as an OR gate; XNOR is the same as a NOR gate",
+    "XOR only accepts two inputs while XNOR accepts many"
+   ],
+   "correct": 1,
+   "explanation": "XOR outputs 1 for different inputs. XNOR outputs 1 for equal inputs."
+  },
+  {
+   "ref": "74",
+   "number": 74,
+   "topic": "Boolean algebra & truth tables",
+   "difficulty": "easy",
+   "text": "A Truth Table is primarily used for?",
+   "options": [
+    "Storing large amounts of data",
+    "Testing the validity of logic statements",
+    "Increasing the speed of the CPU",
+    "Connecting peripheral devices"
+   ],
+   "correct": 1,
+   "explanation": "A truth table lists every input combination, so it tests whether a logic statement holds."
+  },
+  {
+   "ref": "75",
+   "number": 75,
+   "topic": "Logic gates",
+   "difficulty": "medium",
+   "text": "Which of the symbols P, Q, R and S in the diagram is a NAND gate?",
+   "options": [
+    "P",
+    "Q",
+    "R",
+    "S"
+   ],
+   "correct": 1,
+   "explanation": "A NAND gate is the D-shaped AND symbol with a small circle on its output.",
+   "image": "/figures/cos101-gates.svg",
+   "imageAlt": "Four gate symbols. P: curved OR shape with a small circle on the output. Q: D-shape with a small circle on the output. R: OR shape with a double curved back. S: triangle with a small circle on the output.",
+   "imageBytes": 1541
+  },
+  {
+   "ref": "76",
+   "number": 76,
+   "topic": "Software & operating systems",
+   "difficulty": "easy",
+   "text": "Which of the following are examples of Operating Systems?",
+   "options": [
+    "Windows",
+    "macOS",
+    "Linux",
+    "All of these"
+   ],
+   "correct": 3,
+   "explanation": "Windows, macOS and Linux are all operating systems."
+  },
+  {
+   "ref": "78",
+   "number": 78,
+   "topic": "Logic gates",
+   "difficulty": "medium",
+   "text": "What does the gate shown represent?",
+   "options": [
+    "Z = A' + B",
+    "Z = A + B'",
+    "Z = (A + B)'",
+    "Z = A + B"
+   ],
+   "correct": 2,
+   "explanation": "The OR shape with a circle on its output is a NOR gate: Z = (A + B)'.",
+   "image": "/figures/cos101-nor.svg",
+   "imageAlt": "Gate symbol: inputs A and B enter a curved OR-shaped body with a small circle on the output Z.",
+   "imageBytes": 849
+  },
+  {
+   "ref": "79",
+   "number": 79,
+   "topic": "Logic gates",
+   "difficulty": "easy",
+   "text": "Which logic gate does NOT have multiple binary inputs?",
+   "options": [
+    "OR",
+    "AND",
+    "NOT",
+    "XOR"
+   ],
+   "correct": 2,
+   "explanation": "NOT has only one input."
+  },
+  {
+   "ref": "80",
+   "number": 80,
+   "topic": "Logic gates",
+   "difficulty": "easy",
+   "text": "Which logic gate returns TRUE only when both inputs are TRUE and returns FALSE otherwise?",
+   "options": [
+    "AND",
+    "OR",
+    "XOR",
+    "NOT"
+   ],
+   "correct": 0,
+   "explanation": "AND is TRUE only when both inputs are TRUE."
+  },
+  {
+   "ref": "84",
+   "number": 84,
+   "topic": "Software & operating systems",
+   "difficulty": "easy",
+   "text": "Which of the following is an example of an Operating System?",
+   "options": [
+    "Microsoft Word",
+    "Google Chrome",
+    "Windows",
+    "Python"
+   ],
+   "correct": 2,
+   "explanation": "Windows is an operating system. Word and Chrome are applications and Python is a programming language."
+  },
+  {
+   "ref": "85",
+   "number": 85,
+   "topic": "Boolean algebra & truth tables",
+   "difficulty": "easy",
+   "text": "NOT gate is represented as?",
+   "options": [
+    "A.B",
+    "A'",
+    "A×B",
+    "A+B"
+   ],
+   "correct": 1,
+   "explanation": "NOT A is written A'."
+  },
+  {
+   "ref": "86",
+   "number": 86,
+   "topic": "History of computing",
+   "difficulty": "medium",
+   "text": "The feature of modern computers adopted by the Von Neumann machine?",
+   "options": [
+    "Punched cards",
+    "Beads and wires",
+    "Capacitor charges",
+    "Stored program"
+   ],
+   "correct": 3,
+   "explanation": "Von Neumann's design keeps the program in memory with the data. This is the stored-program idea used in modern computers."
+  },
+  {
+   "ref": "87",
+   "number": 87,
+   "topic": "Software & operating systems",
+   "difficulty": "easy",
+   "text": "The proper management of computer hardware resources is done by?",
+   "options": [
+    "CPU",
+    "Operating system",
+    "Compiler",
+    "RAM"
+   ],
+   "correct": 1,
+   "explanation": "The operating system manages the hardware resources."
+  },
+  {
+   "ref": "88",
+   "number": 88,
+   "topic": "Boolean algebra & truth tables",
+   "difficulty": "medium",
+   "text": "What is the Boolean logic expression represented by this truth table?\n$\\begin{array}{cc|c}A&B&Z\\\\\\hline 0&0&1\\\\0&1&0\\\\1&0&0\\\\1&1&0\\end{array}$",
+   "options": [
+    "Z = A' + B'",
+    "Z = A + B'",
+    "Z = (A + B)'",
+    "Z = A + B"
+   ],
+   "correct": 2,
+   "explanation": "Z is 1 only when A and B are both 0. That is NOR: Z = (A + B)'."
+  },
+  {
+   "ref": "91",
+   "number": 91,
+   "topic": "Logic gates",
+   "difficulty": "easy",
+   "text": "Which gate is represented by this truth table?\n$\\begin{array}{cc|c}A&B&C\\\\\\hline 0&0&1\\\\0&1&0\\\\1&0&0\\\\1&1&1\\end{array}$",
+   "options": [
+    "NOR",
+    "OR",
+    "XNOR",
+    "NAND"
+   ],
+   "correct": 2,
+   "explanation": "The output is 1 when the inputs are equal, which is XNOR."
+  },
+  {
+   "ref": "92",
+   "number": 92,
+   "topic": "Logic gates",
+   "difficulty": "easy",
+   "text": "Which gate has this truth table?\n$\\begin{array}{cc|c}X&Y&Z\\\\\\hline 0&0&0\\\\0&1&1\\\\1&0&1\\\\1&1&1\\end{array}$",
+   "options": [
+    "OR",
+    "NOT",
+    "NOR",
+    "AND"
+   ],
+   "correct": 0,
+   "explanation": "The output is 1 when at least one input is 1, which is OR."
+  },
+  {
+   "ref": "93",
+   "number": 93,
+   "topic": "Logic gates",
+   "difficulty": "easy",
+   "text": "The table below shows the readings of which gate?\n$\\begin{array}{cc|c}X&Y&Z\\\\\\hline 0&0&0\\\\0&1&0\\\\1&0&0\\\\1&1&1\\end{array}$",
+   "options": [
+    "OR",
+    "NAND",
+    "NOR",
+    "AND"
+   ],
+   "correct": 3,
+   "explanation": "The output is 1 only when both inputs are 1, which is AND."
+  },
+  {
+   "ref": "94",
+   "number": 94,
+   "topic": "Logic gates",
+   "difficulty": "easy",
+   "text": "The output in this table shows the readings of which gate?\n$\\begin{array}{cc|c}A&B&Z\\\\\\hline 0&0&1\\\\0&1&1\\\\1&0&1\\\\1&1&0\\end{array}$",
+   "options": [
+    "NOR",
+    "XOR",
+    "NAND",
+    "OR"
+   ],
+   "correct": 2,
+   "explanation": "The output is 0 only when both inputs are 1, which is NAND."
+  },
+  {
+   "ref": "95",
+   "number": 95,
+   "topic": "Logic gates",
+   "difficulty": "medium",
+   "text": "Which gate does the diagram represent?",
+   "options": [
+    "OR gate",
+    "AND gate",
+    "NOR gate",
+    "NAND gate"
+   ],
+   "correct": 3,
+   "explanation": "The D-shaped AND symbol with a small circle on the output is a NAND gate.",
+   "image": "/figures/cos101-nand.svg",
+   "imageAlt": "Gate symbol: two inputs enter a D-shaped body with a small circle on the output.",
+   "imageBytes": 430
+  },
+  {
+   "ref": "96",
+   "number": 96,
+   "topic": "History of computing",
+   "difficulty": "easy",
+   "text": "Who is widely recognized as the Mother of COBOL for her work on early compilers?",
+   "options": [
+    "Ada Lovelace",
+    "Margaret Hamilton",
+    "Grace Hopper",
+    "Joseph Marie"
+   ],
+   "correct": 2,
+   "explanation": "Grace Hopper is known as the Mother of COBOL."
+  },
+  {
+   "ref": "97",
+   "number": 97,
+   "topic": "History of computing",
+   "difficulty": "easy",
+   "text": "The invention of the Punched Card system by Herman Hollerith eventually led to the founding of which major company?",
+   "options": [
+    "Apple",
+    "Microsoft",
+    "IBM",
+    "Intel"
+   ],
+   "correct": 2,
+   "explanation": "Hollerith's Tabulating Machine Company became part of the firm later renamed IBM."
+  },
+  {
+   "ref": "98",
+   "number": 98,
+   "topic": "History of computing",
+   "difficulty": "medium",
+   "text": "Which part of the Abacus represents human fingers?",
+   "options": [
+    "Lower part",
+    "Upper part",
+    "Middle part",
+    "Upper and lower part"
+   ],
+   "correct": 0,
+   "explanation": "On the abacus the lower beads stand for the five fingers of a hand. The upper beads stand for the hands."
+  }
+ ],
+ "held": [],
+ "quizzes": [
+  {
+   "ref": "q1",
+   "title": "Quiz 1 · CA 2025/2026",
+   "timeLimitMin": 12,
+   "negativeMark": 0,
+   "questions": [
+    "1",
+    "4",
+    "8",
+    "13",
+    "24",
+    "29",
+    "30",
+    "40",
+    "42",
+    "48",
+    "49",
+    "50",
+    "56",
+    "68",
+    "73",
+    "74",
+    "75",
+    "76",
+    "93",
+    "96",
+    "98"
+   ]
+  },
+  {
+   "ref": "q2",
+   "title": "Quiz 2 · CA 2025/2026",
+   "timeLimitMin": 12,
+   "negativeMark": 0,
+   "questions": [
+    "3",
+    "6",
+    "16",
+    "19",
+    "20",
+    "23",
+    "25",
+    "33",
+    "35",
+    "38",
+    "44",
+    "53",
+    "54",
+    "56b",
+    "62",
+    "64",
+    "67",
+    "85",
+    "87",
+    "91",
+    "95"
+   ]
+  },
+  {
+   "ref": "q3",
+   "title": "Quiz 3 · CA 2025/2026",
+   "timeLimitMin": 12,
+   "negativeMark": 0,
+   "questions": [
+    "2",
+    "5",
+    "9",
+    "17",
+    "27",
+    "28",
+    "34",
+    "41",
+    "45",
+    "51",
+    "55",
+    "58",
+    "63",
+    "65",
+    "71",
+    "72",
+    "78",
+    "79",
+    "86",
+    "94"
+   ]
+  },
+  {
+   "ref": "q4",
+   "title": "Quiz 4 · CA 2025/2026",
+   "timeLimitMin": 12,
+   "negativeMark": 0,
+   "questions": [
+    "7",
+    "10",
+    "12",
+    "18b",
+    "26",
+    "31",
+    "37",
+    "43",
+    "46",
+    "47",
+    "52",
+    "59",
+    "61",
+    "66",
+    "69",
+    "80",
+    "84",
+    "88",
+    "92",
+    "97"
+   ]
+  }
+ ]
+}

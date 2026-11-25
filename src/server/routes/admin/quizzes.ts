@@ -16,7 +16,7 @@ export const adminQuizRoutes = new Hono<AppEnv>();
 
 async function loadQuiz(id: string, user: User) {
   const [q] = await db.select().from(quizzes).where(eq(quizzes.id, id));
-  if (!q) fail(404, "Practice test not found");
+  if (!q) fail(404, "Quiz not found");
   await assertCourseAccess(user, q.courseId);
   return q;
 }
@@ -34,7 +34,7 @@ async function announce(q: Quiz) {
   const until = q.closesAt ? ` Open until ${q.closesAt.toLocaleDateString("en-GB", { day: "numeric", month: "short" })}.` : "";
   await notify(ids, {
     kind: "paper",
-    title: `New ${course.code} practice test`,
+    title: `New ${course.code} quiz`,
     body: `${q.title}: ${q.questionIds.length} questions, ${q.timeLimitMin} minutes.${until}`,
     url: `/quiz?id=${q.id}`,
   });

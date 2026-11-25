@@ -64,7 +64,7 @@ export default function Dashboard() {
   return (
     <>
       <Header eyebrow={scope && `Your courses: ${scope}`} title={hello}>
-        <ButtonLink href="/admin/quizzes/new" icon="plus" size="md" kind="outline">New practice test</ButtonLink>
+        <ButtonLink href="/admin/quizzes/new" icon="plus" size="md" kind="outline">New quiz</ButtonLink>
         <ButtonLink href="/admin/uploads/new" icon="upload" size="md">Upload a paper</ButtonLink>
       </Header>
       <main className="flex flex-col gap-6 lg:gap-8 px-5 py-8 sm:px-8 lg:px-12 lg:py-12">

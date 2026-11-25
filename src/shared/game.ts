@@ -75,7 +75,7 @@ export const MODES = {
   retry: { label: "Retry mistakes", ranked: false },
   daily: { label: "Daily challenge", ranked: false },
   challenge: { label: "Friend challenge", ranked: false },
-  quiz: { label: "Practice test", ranked: false },
+  quiz: { label: "Quiz", ranked: false },
 } as const;
 export type Mode = keyof typeof MODES;
 
@@ -84,7 +84,7 @@ export const DRILL_SIZES = { 10: 8 * 60, 20: 16 * 60 } as const;
 export const DAILY_SIZE = 10;
 export const DAILY_TIME_SEC = 8 * 60;
 
-/** Admin-set practice tests: questions per test, and the time limit range in minutes. */
+/** Admin-set quizzes: questions per test, and the time limit range in minutes. */
 export const QUIZ_MAX_QUESTIONS = 25;
 export const QUIZ_MIN_QUESTIONS = 5;
 export const QUIZ_MAX_MINUTES = 120;

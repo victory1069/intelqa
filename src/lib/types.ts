@@ -34,7 +34,7 @@ export type Me = {
   inviteCode: string | null;
   institution: { id: string; name: string; shortCode: string } | null;
   department: { id: string; name: string } | null;
-  courses: { id: string; code: string; title: string; status: string }[];
+  courses: { id: string; code: string; title: string; status: string; /** Published papers. */ papers: number }[];
   streak: Streak;
   xp: { total: number; level: Level };
   badges: { key: string; name: string; sub: string; glyph: string; earned: boolean }[];
@@ -57,13 +57,15 @@ export type Home = {
   xp: { total: number; level: Level };
   resume: { id: string; mode: Mode; courseCode: string; session: string | null; answered: number; total: number; deadlineAt: string | null } | null;
   daily: { courseId: string; courseCode: string; played: number; mine: { attemptId: string; score: number | null; timeTakenSec: number | null } | null; resetsAt: string } | null;
-  courses: { id: string; code: string; title: string; status: string; papers: number; courseScore: number | null; rankedAttempts: number; rank: Rank; /** Places gained (+) or lost (−) this Lagos week; null with no snapshot. */ moved: number | null; /** Estimated size of the offline download. */ offlineBytes: number }[];
+  courses: { id: string; code: string; title: string; status: string; papers: number; /** Live quizzes. */ quizzes: number; courseScore: number | null; rankedAttempts: number; rank: Rank; /** Places gained (+) or lost (−) this Lagos week; null with no snapshot. */ moved: number | null; /** Estimated size of the offline download. */ offlineBytes: number }[];
   firstTime: boolean;
-  /** Practice tests set by course admins that the student hasn't sat yet. */
+  /** The next quiz to sit in each course, up to three. */
   quizzes: StudentQuiz[];
+  /** Live quizzes the student hasn't sat yet, across all their courses. */
+  quizzesLeft: number;
 };
 
-/** A practice test set by a course admin, as a student sees it. */
+/** A quiz set by a course admin, as a student sees it. */
 export type StudentQuiz = {
   id: string;
   title: string;
@@ -87,6 +89,10 @@ export type CoursePage = {
   courseScore: number | null;
   rankedAttempts: number;
   rank: Rank;
+  /** Live quizzes in the course. */
+  quizzes: number;
+  /** Checked questions available for drills. */
+  questions: number;
   mistakes: number;
   topics: { id: string; name: string; questions: number; mastery: number | null }[];
   papers: { id: string; session: string; examType: string; timeLimitMin: number; optionCount: number; negativeMark: number; questions: number; best: number | null; tried: boolean }[];

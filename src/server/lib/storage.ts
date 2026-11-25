@@ -90,9 +90,10 @@ export async function signedUrl(bucket: string, key: string, expiresInSec = 60 *
   return data.signedUrl;
 }
 
-/** Question images live in a public bucket so the service worker can cache them. */
+/** Question images live in a public bucket so the service worker can cache them. A path starting with "/" is a figure shipped with the app (public/figures). */
 export function publicImageUrl(key: string | null | undefined): string | null {
   if (!key) return null;
+  if (key.startsWith("/")) return key;
   if (env.storage === "local") return fileUrl(env.STORAGE_BUCKET_IMAGES, key);
   if (!env.NEXT_PUBLIC_SUPABASE_URL) return null;
   return `${env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/${env.STORAGE_BUCKET_IMAGES}/${key}`;

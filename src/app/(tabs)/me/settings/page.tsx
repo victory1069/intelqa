@@ -10,6 +10,7 @@ import { currentSubscription, disablePush, enablePush, pushPermission } from "@/
 import { isIOS } from "@/lib/install";
 import type { Me } from "@/lib/types";
 import { AppBar, Banner, Card, Sheet } from "@/components/ui/kit";
+import { contentLine } from "@/components/quiz-card";
 import { Button } from "@/components/ui/button";
 import { Icon } from "@/components/ui/icon";
 
@@ -250,7 +251,7 @@ function NameSheet({ open, me, onClose, onSaved }: { open: boolean; me: Me; onCl
 }
 
 function CoursesSheet({ open, me, onClose, onSaved }: { open: boolean; me: Me; onClose: () => void; onSaved: (m: Me) => void }) {
-  const { data } = useApi<{ courses: { id: string; code: string; title: string; papers: number }[] }>(open && me.institution ? `/catalog/courses?institutionId=${me.institution.id}` : null);
+  const { data } = useApi<{ courses: { id: string; code: string; title: string; papers: number; quizzes: number }[] }>(open && me.institution ? `/catalog/courses?institutionId=${me.institution.id}` : null);
   const [sel, setSel] = useState<Set<string>>(() => new Set(me.courses.map((c) => c.id)));
   const [busy, setBusy] = useState(false);
   return (
@@ -263,6 +264,7 @@ function CoursesSheet({ open, me, onClose, onSaved }: { open: boolean; me: Me; o
             <button key={c.id} role="checkbox" aria-checked={on} onClick={() => { const s = new Set(sel); if (on) s.delete(c.id); else s.add(c.id); setSel(s); }} className={`flex items-center gap-3 rounded-xl px-3 py-2.5 text-left ${on ? "border-2 border-accent bg-accent-tint" : "border-[1.5px] border-line"}`}>
               <span className={`flex h-5 w-5 items-center justify-center rounded-md ${on ? "bg-accent" : "border-2 border-line"}`}>{on && <Icon name="check" size={13} color="var(--on-accent)" weight={3} />}</span>
               <span className="flex flex-1 flex-col"><span className="font-mono text-[13px] font-bold">{c.code}</span><span className="text-xs text-ink2">{c.title}</span></span>
+              <span className="text-right text-xs text-ink3">{contentLine(c)}</span>
             </button>
           );
         })}

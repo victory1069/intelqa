@@ -1,0 +1,1523 @@
+{
+ "course": "PHY 101",
+ "source": "Aureons PHY 101 CA PQ&A.pdf",
+ "session": "2025/2026",
+ "instructions": "Questions from the 2025/2026 continuous assessment (CA) CBT. Every answer is explained after you submit.",
+ "topics": [
+  "Vectors",
+  "Motion",
+  "Units & measurement",
+  "Forces",
+  "Relative motion & reference frames",
+  "Momentum & collisions"
+ ],
+ "questions": [
+  {
+   "ref": "3",
+   "number": 3,
+   "topic": "Vectors",
+   "difficulty": "easy",
+   "text": "If the scalar product of two vectors is zero, the vectors are?",
+   "options": [
+    "Parallel",
+    "Perpendicular",
+    "Anti-parallel",
+    "Co-linear"
+   ],
+   "correct": 1,
+   "explanation": "$\\vec{A}\\cdot\\vec{B} = AB\\cos\\theta$. It is zero for non-zero vectors only when θ = 90°."
+  },
+  {
+   "ref": "4",
+   "number": 4,
+   "topic": "Vectors",
+   "difficulty": "easy",
+   "text": "The magnitude of the vector product of two parallel vectors is?",
+   "options": [
+    "Maximum",
+    "Zero",
+    "Unity",
+    "Equal to the product of their magnitudes"
+   ],
+   "correct": 1,
+   "explanation": "$|\\vec{A}\\times\\vec{B}| = AB\\sin\\theta$, and sin 0° = 0."
+  },
+  {
+   "ref": "5",
+   "number": 5,
+   "topic": "Vectors",
+   "difficulty": "easy",
+   "text": "Which of the following represents the result of the dot product of a vector with itself?",
+   "options": [
+    "The square of its magnitude",
+    "Zero",
+    "The magnitude itself",
+    "A unit vector"
+   ],
+   "correct": 0,
+   "explanation": "$\\vec{A}\\cdot\\vec{A} = A^2\\cos 0° = A^2$."
+  },
+  {
+   "ref": "6",
+   "number": 6,
+   "topic": "Vectors",
+   "difficulty": "easy",
+   "text": "The cross product of two vectors $\\vec{A}$ and $\\vec{B}$ results in a vector that is?",
+   "options": [
+    "Parallel to both $\\vec{A}$ and $\\vec{B}$",
+    "Perpendicular to the plane containing $\\vec{A}$ and $\\vec{B}$",
+    "At an angle of 45° to both vectors",
+    "In the same direction as the scalar product"
+   ],
+   "correct": 1,
+   "explanation": "The cross product is perpendicular to the plane that contains the two vectors."
+  },
+  {
+   "ref": "7",
+   "number": 7,
+   "topic": "Relative motion & reference frames",
+   "difficulty": "easy",
+   "text": "In classical mechanics, the state of motion or rest of an object is defined relative to which of the following?",
+   "options": [
+    "Absolute space",
+    "A fundamental constant",
+    "A frame of reference",
+    "The speed of light"
+   ],
+   "correct": 2,
+   "explanation": "Whether an object is moving or at rest depends on the frame of reference chosen."
+  },
+  {
+   "ref": "8",
+   "number": 8,
+   "topic": "Forces",
+   "difficulty": "easy",
+   "text": "The tendency of a stationary object to remain at rest unless acted upon by an external force is primarily described by?",
+   "options": [
+    "Newton's First Law of Motion",
+    "Newton's Second Law of Motion",
+    "Newton's Third Law of Motion",
+    "The Universal Law of Gravitation"
+   ],
+   "correct": 0,
+   "explanation": "Newton's first law says an object stays at rest or in uniform motion unless a net external force acts."
+  },
+  {
+   "ref": "10",
+   "number": 10,
+   "topic": "Forces",
+   "difficulty": "easy",
+   "text": "If an object is moving at a constant velocity, what can be concluded about the net force acting upon it?",
+   "options": [
+    "The net force is increasing",
+    "The net force is zero",
+    "The net force is equal to the object's mass",
+    "The net force is directed toward the center of motion"
+   ],
+   "correct": 1,
+   "explanation": "Constant velocity means zero acceleration, so the net force is zero."
+  },
+  {
+   "ref": "11",
+   "number": 11,
+   "topic": "Vectors",
+   "difficulty": "easy",
+   "text": "When calculating the dot product of two perpendicular vectors, the resulting scalar value is?",
+   "options": [
+    "The product of their magnitudes",
+    "Unity",
+    "Zero",
+    "Negative"
+   ],
+   "correct": 2,
+   "explanation": "cos 90° = 0, so the dot product of perpendicular vectors is zero."
+  },
+  {
+   "ref": "13",
+   "number": 13,
+   "topic": "Forces",
+   "difficulty": "medium",
+   "text": "A constant force of 1000 N acts on a mass $m_1$, producing an initial acceleration of 10 m/s². When an additional mass m is added to $m_1$, the same force produces a new acceleration that is two-thirds of the initial value. Calculate the value of $m_1$ and the new acceleration.",
+   "options": [
+    "$m_1$ = 100 kg, a = 6.67 m/s²",
+    "$m_1$ = 100 kg, a = 10 m/s²",
+    "$m_1$ = 33.3 kg, a = 6.67 m/s²",
+    "$m_1$ = 50 kg, a = 5 m/s²"
+   ],
+   "correct": 0,
+   "explanation": "$m_1 = F/a = 1000/10 = 100$ kg. The new acceleration is $\\frac{2}{3} \\times 10 = 6.67$ m/s²."
+  },
+  {
+   "ref": "14",
+   "number": 14,
+   "topic": "Motion",
+   "difficulty": "easy",
+   "text": "Which of the following statements correctly describes the sign conventions for distance and displacement?",
+   "options": [
+    "Distance can be negative, while displacement is always positive",
+    "Distance is always positive or zero, while displacement can be positive, negative, or zero",
+    "Both distance and displacement must always be positive",
+    "Displacement is always positive, while distance can be zero"
+   ],
+   "correct": 1,
+   "explanation": "Distance is a length of path, so it is never negative. Displacement has direction, so it can be positive, negative or zero."
+  },
+  {
+   "ref": "15",
+   "number": 15,
+   "topic": "Motion",
+   "difficulty": "easy",
+   "text": "What is the fundamental difference between speed and velocity?",
+   "options": [
+    "Speed is a vector quantity, while velocity is a scalar quantity",
+    "Velocity includes direction, while speed only represents magnitude",
+    "Speed is measured in m/s, while velocity is measured in m/s²",
+    "There is no difference between the two in classical mechanics"
+   ],
+   "correct": 1,
+   "explanation": "Velocity is speed with direction."
+  },
+  {
+   "ref": "16",
+   "number": 16,
+   "topic": "Vectors",
+   "difficulty": "easy",
+   "text": "A unit vector is specifically defined as a vector having?",
+   "options": [
+    "A magnitude of zero",
+    "A magnitude of 1",
+    "The same direction as the x-axis only",
+    "A magnitude equal to the mass of the object"
+   ],
+   "correct": 1,
+   "explanation": "A unit vector has magnitude 1."
+  },
+  {
+   "ref": "17",
+   "number": 17,
+   "topic": "Vectors",
+   "difficulty": "easy",
+   "text": "In vector algebra, the unit vector is primarily used to?",
+   "options": [
+    "Change the magnitude of a vector",
+    "Represent the scalar component of a motion",
+    "Specify the direction of a vector quantity",
+    "Calculate the area of a parallelogram"
+   ],
+   "correct": 2,
+   "explanation": "A unit vector shows direction only."
+  },
+  {
+   "ref": "18",
+   "number": 18,
+   "topic": "Motion",
+   "difficulty": "easy",
+   "text": "An object moves from a starting point to a destination 50 meters away and then returns to the starting point. What is the final displacement?",
+   "options": [
+    "100 meters",
+    "50 meters",
+    "Zero",
+    "-50 meters"
+   ],
+   "correct": 2,
+   "explanation": "The object ends where it started, so displacement is zero. The distance is 100 m."
+  },
+  {
+   "ref": "19",
+   "number": 19,
+   "topic": "Relative motion & reference frames",
+   "difficulty": "easy",
+   "text": "What is the value of the relative velocity of an object when measured with respect to itself?",
+   "options": [
+    "Infinite",
+    "Constant",
+    "Zero",
+    "Unity"
+   ],
+   "correct": 2,
+   "explanation": "The velocity of an object relative to itself is $v - v = 0$."
+  },
+  {
+   "ref": "20",
+   "number": 20,
+   "topic": "Vectors",
+   "difficulty": "medium",
+   "text": "Based on the rules of unit vector cross products, which of the following identities is NOT correct?",
+   "options": [
+    "$\\hat{k} \\times \\hat{j} = -\\hat{i}$",
+    "$\\hat{i} \\times \\hat{j} = \\hat{k}$",
+    "$\\hat{k} \\times \\hat{i} = \\hat{j}$",
+    "$\\hat{j} \\times \\hat{i} = \\hat{k}$"
+   ],
+   "correct": 3,
+   "explanation": "$\\hat{j}\\times\\hat{i} = -\\hat{k}$, so writing it as $\\hat{k}$ is wrong."
+  },
+  {
+   "ref": "21",
+   "number": 21,
+   "topic": "Vectors",
+   "difficulty": "easy",
+   "text": "Given the vector $\\vec{A} = 2\\hat{i} - 3\\hat{j}$, what is its magnitude?",
+   "options": [
+    "1",
+    "5",
+    "$\\sqrt{13}$",
+    "13"
+   ],
+   "correct": 2,
+   "explanation": "$|\\vec{A}| = \\sqrt{2^2 + (-3)^2} = \\sqrt{13}$."
+  },
+  {
+   "ref": "22",
+   "number": 22,
+   "topic": "Vectors",
+   "difficulty": "easy",
+   "text": "If $\\vec{A} = 2\\hat{i} - 3\\hat{j}$ and $\\vec{B} = \\hat{i} + \\hat{j}$, find $\\vec{A} - \\vec{B}$.",
+   "options": [
+    "$\\hat{i} - 4\\hat{j}$",
+    "$3\\hat{i} - 2\\hat{j}$",
+    "$\\hat{i} + 4\\hat{j}$",
+    "$3\\hat{i} - 4\\hat{j}$"
+   ],
+   "correct": 0,
+   "explanation": "$(2-1)\\hat{i} + (-3-1)\\hat{j} = \\hat{i} - 4\\hat{j}$."
+  },
+  {
+   "ref": "23",
+   "number": 23,
+   "topic": "Vectors",
+   "difficulty": "easy",
+   "text": "Consider three vectors A, B, and C. The operation A - B - C represents?",
+   "options": [
+    "The scalar sum of the vectors",
+    "The vector subtraction of B and C from A",
+    "The cross product of the three vectors",
+    "A null vector"
+   ],
+   "correct": 1,
+   "explanation": "Subtracting B and C from A gives A − B − C."
+  },
+  {
+   "ref": "24",
+   "number": 24,
+   "topic": "Vectors",
+   "difficulty": "easy",
+   "text": "Which of the following is the result of the dot product $\\hat{i}\\cdot\\hat{i}$?",
+   "options": [
+    "0",
+    "1",
+    "$\\hat{k}$",
+    "−1"
+   ],
+   "correct": 1,
+   "explanation": "$\\hat{i}\\cdot\\hat{i} = 1 \\times 1 \\times \\cos 0° = 1$."
+  },
+  {
+   "ref": "25",
+   "number": 25,
+   "topic": "Vectors",
+   "difficulty": "easy",
+   "text": "If the cross product of two non-zero vectors A and B results in a null vector, the vectors must be?",
+   "options": [
+    "Perpendicular",
+    "Parallel",
+    "At 45° to each other",
+    "Orthogonal"
+   ],
+   "correct": 1,
+   "explanation": "A null cross product of non-zero vectors means sin θ = 0, so they are parallel."
+  },
+  {
+   "ref": "26",
+   "number": 26,
+   "topic": "Vectors",
+   "difficulty": "medium",
+   "text": "Given the vector equations $\\vec{A} - \\vec{B} = 2\\vec{C}$ and $\\vec{A} + \\vec{B} = 4\\vec{C}$, where $\\vec{C} = 3\\hat{i} + 4\\hat{j}$, what is the vector $\\vec{B}$?",
+   "options": [
+    "$6\\hat{i} + 8\\hat{j}$",
+    "$3\\hat{i} + 4\\hat{j}$",
+    "$9\\hat{i} + 12\\hat{j}$",
+    "$12\\hat{i} + 16\\hat{j}$"
+   ],
+   "correct": 1,
+   "explanation": "Subtract the first equation from the second: $2\\vec{B} = 2\\vec{C}$, so $\\vec{B} = \\vec{C} = 3\\hat{i} + 4\\hat{j}$."
+  },
+  {
+   "ref": "27",
+   "number": 27,
+   "topic": "Relative motion & reference frames",
+   "difficulty": "easy",
+   "text": "Which of the following is a characteristic of an inertial reference frame?",
+   "options": [
+    "It is accelerating and Newton’s laws do not hold true",
+    "It is not accelerating and Newton’s laws do not hold true",
+    "It is accelerating and Newton’s laws hold true",
+    "It is not accelerating and Newton’s laws hold true"
+   ],
+   "correct": 3,
+   "explanation": "An inertial frame does not accelerate, and Newton's laws hold in it."
+  },
+  {
+   "ref": "28",
+   "number": 28,
+   "topic": "Vectors",
+   "difficulty": "easy",
+   "text": "What is the value of the cross product $\\hat{j}\\times\\hat{i}$?",
+   "options": [
+    "$\\hat{k}$",
+    "$-\\hat{k}$",
+    "$\\hat{i}$",
+    "Zero"
+   ],
+   "correct": 1,
+   "explanation": "$\\hat{i}\\times\\hat{j} = \\hat{k}$, and reversing the order changes the sign."
+  },
+  {
+   "ref": "29",
+   "number": 29,
+   "topic": "Vectors",
+   "difficulty": "easy",
+   "text": "If vector $\\vec{P} = 4\\hat{i} + 3\\hat{j}$, what is the magnitude of the unit vector acting in the direction of $\\vec{P}$?",
+   "options": [
+    "1",
+    "5",
+    "7",
+    "25"
+   ],
+   "correct": 0,
+   "explanation": "Every unit vector has magnitude 1."
+  },
+  {
+   "ref": "32",
+   "number": 32,
+   "topic": "Vectors",
+   "difficulty": "medium",
+   "text": "The operation $\\hat{k}\\cdot(\\hat{i}\\times\\hat{j})$ results in which of the following values?",
+   "options": [
+    "0",
+    "1",
+    "−1",
+    "$\\hat{i}$"
+   ],
+   "correct": 1,
+   "explanation": "$\\hat{i}\\times\\hat{j} = \\hat{k}$ and $\\hat{k}\\cdot\\hat{k} = 1$."
+  },
+  {
+   "ref": "33",
+   "number": 33,
+   "topic": "Vectors",
+   "difficulty": "easy",
+   "text": "If the dot product of two vectors is equal to the product of their magnitudes, the angle between them is?",
+   "options": [
+    "0°",
+    "45°",
+    "90°",
+    "180°"
+   ],
+   "correct": 0,
+   "explanation": "AB cos θ = AB means cos θ = 1, so θ = 0°."
+  },
+  {
+   "ref": "34",
+   "number": 34,
+   "topic": "Units & measurement",
+   "difficulty": "easy",
+   "text": "What are the dimensions of density?",
+   "options": [
+    "ML⁻²",
+    "ML⁻³",
+    "M⁻¹L³",
+    "ML³"
+   ],
+   "correct": 1,
+   "explanation": "Density = mass/volume, so its dimensions are ML⁻³."
+  },
+  {
+   "ref": "35",
+   "number": 35,
+   "topic": "Motion",
+   "difficulty": "medium",
+   "text": "A footballer kicks a ball with an initial velocity of 20 m/s at an angle of 45° to the horizontal. What is the horizontal range? (Take g = 10 m/s²)",
+   "options": [
+    "40 m",
+    "20 m",
+    "50 m",
+    "80 m"
+   ],
+   "correct": 0,
+   "explanation": "$R = \\frac{u^2\\sin 2\\theta}{g} = \\frac{400 \\times \\sin 90°}{10} = 40$ m."
+  },
+  {
+   "ref": "36",
+   "number": 36,
+   "topic": "Motion",
+   "difficulty": "medium",
+   "text": "A ball is thrown vertically upwards with an initial velocity of 20 m/s. Using g = 9.8 m/s², find the maximum height reached by the ball.",
+   "options": [
+    "20.4 m",
+    "10.2 m",
+    "40.8 m",
+    "15.6 m"
+   ],
+   "correct": 0,
+   "explanation": "$H = \\frac{u^2}{2g} = \\frac{400}{19.6} = 20.4$ m."
+  },
+  {
+   "ref": "37",
+   "number": 37,
+   "topic": "Motion",
+   "difficulty": "easy",
+   "text": "Which of the following statements is true regarding the distance and displacement of a moving body?",
+   "options": [
+    "Distance is always equal to displacement",
+    "Displacement can be zero even if distance is non-zero",
+    "Distance can be negative",
+    "Displacement is a scalar quantity"
+   ],
+   "correct": 1,
+   "explanation": "A round trip covers distance but has zero displacement."
+  },
+  {
+   "ref": "38",
+   "number": 38,
+   "topic": "Motion",
+   "difficulty": "easy",
+   "text": "If an object is moving at a constant speed in a straight line, its acceleration is?",
+   "options": [
+    "Constant and non-zero",
+    "Increasing",
+    "Zero",
+    "Decreasing"
+   ],
+   "correct": 2,
+   "explanation": "Constant speed in a straight line is constant velocity, so acceleration is zero."
+  },
+  {
+   "ref": "39",
+   "number": 39,
+   "topic": "Vectors",
+   "difficulty": "easy",
+   "text": "Which of the following is the unit of a unit vector?",
+   "options": [
+    "Newtons",
+    "Meters",
+    "It has no units",
+    "Seconds"
+   ],
+   "correct": 2,
+   "explanation": "A unit vector is a vector divided by its own magnitude, so the units cancel."
+  },
+  {
+   "ref": "40",
+   "number": 40,
+   "topic": "Motion",
+   "difficulty": "easy",
+   "text": "The horizontal component of a projectile's velocity, ignoring air resistance, is?",
+   "options": [
+    "Constant",
+    "Zero",
+    "Continuously increasing",
+    "Continuously decreasing"
+   ],
+   "correct": 0,
+   "explanation": "With no air resistance no horizontal force acts, so the horizontal velocity stays constant."
+  },
+  {
+   "ref": "41",
+   "number": 41,
+   "topic": "Relative motion & reference frames",
+   "difficulty": "medium",
+   "text": "Which two events occur at the same location in the diagram?",
+   "options": [
+    "B and C",
+    "A and B",
+    "A and C",
+    "None of these"
+   ],
+   "correct": 2,
+   "explanation": "Events A and C are both at position P₁ (at different times). A and B happen at the same time but at different positions.",
+   "image": "/figures/phy101-spacetime.svg",
+   "imageAlt": "Space-time diagram with position (x, y, z) on the vertical axis and time on the other. Event A is at position P1 and time t1. Event B is at position P2 and time t1. Event C is at position P1 and time t2.",
+   "imageBytes": 2026
+  },
+  {
+   "ref": "45",
+   "number": 45,
+   "topic": "Units & measurement",
+   "difficulty": "easy",
+   "text": "What is the dimension of wavelength?",
+   "options": [
+    "T",
+    "M",
+    "L",
+    "ML⁻¹"
+   ],
+   "correct": 2,
+   "explanation": "Wavelength is a length, so its dimension is L."
+  },
+  {
+   "ref": "46",
+   "number": 46,
+   "topic": "Relative motion & reference frames",
+   "difficulty": "easy",
+   "text": "Which of the following is the definition of space-time?",
+   "options": [
+    "A combination of space and time into a single four-dimensional continuum",
+    "The concept that time is absolute",
+    "The separation of time from space",
+    "The fundamental unit of classical mechanics"
+   ],
+   "correct": 0,
+   "explanation": "Space-time joins three space dimensions and time into one four-dimensional continuum."
+  },
+  {
+   "ref": "47",
+   "number": 47,
+   "topic": "Vectors",
+   "difficulty": "medium",
+   "text": "Given the vectors $\\vec{A} = 4\\hat{i} - 1.5\\hat{j}$, $\\vec{B} = -1.2\\hat{i} + 3\\hat{j}$ and $\\vec{C} = -2.8\\hat{j}$, calculate $\\vec{A} - \\vec{B} - \\vec{C}$.",
+   "options": [
+    "$5.2\\hat{i} - 1.7\\hat{j}$",
+    "$2.8\\hat{i} + 4.3\\hat{j}$",
+    "$5.2\\hat{i} + 1.3\\hat{j}$",
+    "$2.8\\hat{i} - 7.3\\hat{j}$"
+   ],
+   "correct": 0,
+   "explanation": "x: 4 − (−1.2) = 5.2. y: −1.5 − 3 − (−2.8) = −1.7."
+  },
+  {
+   "ref": "48",
+   "number": 48,
+   "topic": "Momentum & collisions",
+   "difficulty": "medium",
+   "text": "Two bodies, A and B, each have a mass of 10 kg. Body A has an initial velocity of $-25\\hat{i} - 30\\hat{j}$ and body B has an initial velocity of $20\\hat{i} + 10\\hat{j}$. If the final velocity of body A is $-15\\hat{i} + 25\\hat{j}$ after an interaction, and the system is isolated, what is the final velocity of body B?",
+   "options": [
+    "$10\\hat{i} - 45\\hat{j}$",
+    "$-10\\hat{i} + 45\\hat{j}$",
+    "$5\\hat{i} - 35\\hat{j}$",
+    "$15\\hat{i} + 15\\hat{j}$"
+   ],
+   "correct": 0,
+   "explanation": "Masses are equal, so $\\vec{v}_B = \\vec{u}_A + \\vec{u}_B - \\vec{v}_A = (-5\\hat{i} - 20\\hat{j}) - (-15\\hat{i} + 25\\hat{j}) = 10\\hat{i} - 45\\hat{j}$."
+  },
+  {
+   "ref": "49",
+   "number": 49,
+   "topic": "Momentum & collisions",
+   "difficulty": "easy",
+   "text": "In the absence of external forces, the total momentum of a system of interacting bodies remains?",
+   "options": [
+    "Zero",
+    "Constant",
+    "Variable",
+    "Equal to the net force"
+   ],
+   "correct": 1,
+   "explanation": "With no external force, total momentum is conserved."
+  },
+  {
+   "ref": "50",
+   "number": 50,
+   "topic": "Forces",
+   "difficulty": "easy",
+   "text": "If the mass of an object is doubled while the net force acting on it remains constant, the acceleration will?",
+   "options": [
+    "Double",
+    "Remain the same",
+    "Be halved",
+    "Become zero"
+   ],
+   "correct": 2,
+   "explanation": "a = F/m, so doubling m halves a."
+  },
+  {
+   "ref": "51",
+   "number": 51,
+   "topic": "Vectors",
+   "difficulty": "easy",
+   "text": "Which of the following vector operations is used to determine the work done by a force over a displacement?",
+   "options": [
+    "Vector product",
+    "Scalar product",
+    "Vector addition",
+    "Unit vector division"
+   ],
+   "correct": 1,
+   "explanation": "Work is $\\vec{F}\\cdot\\vec{d}$, a scalar product."
+  },
+  {
+   "ref": "52",
+   "number": 52,
+   "topic": "Vectors",
+   "difficulty": "easy",
+   "text": "A vector is said to be a null vector if?",
+   "options": [
+    "Its direction is fixed at the origin",
+    "Its magnitude is zero",
+    "It is parallel to the x-axis",
+    "It has a magnitude of unity"
+   ],
+   "correct": 1,
+   "explanation": "A null vector has zero magnitude."
+  },
+  {
+   "ref": "53",
+   "number": 53,
+   "topic": "Vectors",
+   "difficulty": "medium",
+   "text": "Given the vectors $\\vec{A} = 4\\hat{i} - 1.5\\hat{j}$, $\\vec{B} = -1.2\\hat{i} + 3\\hat{j}$ and $\\vec{C} = -2.8\\hat{j}$, calculate $\\vec{A} - \\vec{B} + \\vec{C}$.",
+   "options": [
+    "$5.2\\hat{i} - 7.3\\hat{j}$",
+    "$2.8\\hat{i} + 4.3\\hat{j}$",
+    "$5.2\\hat{i} - 1.7\\hat{j}$",
+    "$2.8\\hat{i} - 1.5\\hat{j}$"
+   ],
+   "correct": 0,
+   "explanation": "x: 4 + 1.2 = 5.2. y: −1.5 − 3 + (−2.8) = −7.3."
+  },
+  {
+   "ref": "54",
+   "number": 54,
+   "topic": "Vectors",
+   "difficulty": "medium",
+   "text": "Consider the vector equations $\\vec{A} - \\vec{B} = 2\\vec{C}$ and $\\vec{A} + \\vec{B} = 4\\vec{C}$. If $\\vec{C} = 3\\hat{i} + 4\\hat{j}$, determine the vector $\\vec{A}$.",
+   "options": [
+    "$3\\hat{i} + 4\\hat{j}$",
+    "$6\\hat{i} + 8\\hat{j}$",
+    "$9\\hat{i} + 12\\hat{j}$",
+    "$12\\hat{i} + 16\\hat{j}$"
+   ],
+   "correct": 2,
+   "explanation": "Add the equations: $2\\vec{A} = 6\\vec{C}$, so $\\vec{A} = 3\\vec{C} = 9\\hat{i} + 12\\hat{j}$."
+  },
+  {
+   "ref": "56",
+   "number": 56,
+   "topic": "Vectors",
+   "difficulty": "easy",
+   "text": "If a system of vectors satisfies the condition A + B = 4C, the resultant vector of A and B is?",
+   "options": [
+    "Parallel to C",
+    "Perpendicular to C",
+    "A null vector",
+    "Equal to C"
+   ],
+   "correct": 0,
+   "explanation": "The resultant is 4 times C, so it is parallel to C."
+  },
+  {
+   "ref": "57",
+   "number": 57,
+   "topic": "Vectors",
+   "difficulty": "easy",
+   "text": "In the vector operation A - B, the direction of the resultant vector is determined by?",
+   "options": [
+    "Adding the magnitude of B to A",
+    "Adding the negative of vector B to vector A",
+    "Multiplying the components of A and B",
+    "The dot product of A and B"
+   ],
+   "correct": 1,
+   "explanation": "A − B means A + (−B)."
+  },
+  {
+   "ref": "58",
+   "number": 58,
+   "topic": "Vectors",
+   "difficulty": "easy",
+   "text": "If vector $\\vec{C} = 3\\hat{i} + 4\\hat{j}$, what is the unit vector in the direction of $\\vec{C}$?",
+   "options": [
+    "$\\frac{3\\hat{i} + 4\\hat{j}}{5}$",
+    "$\\frac{3\\hat{i} + 4\\hat{j}}{7}$",
+    "$\\frac{3\\hat{i} + 4\\hat{j}}{25}$",
+    "$3\\hat{i} - 4\\hat{j}$"
+   ],
+   "correct": 0,
+   "explanation": "The magnitude of C is $\\sqrt{3^2 + 4^2} = 5$, so the unit vector is C divided by 5."
+  },
+  {
+   "ref": "59",
+   "number": 59,
+   "topic": "Momentum & collisions",
+   "difficulty": "medium",
+   "text": "A body of mass 16 kg moving at 8 m/s collides with a body of mass 7 kg moving at 4 m/s in the same direction. If the collision is perfectly inelastic, find their common velocity after the collision.",
+   "options": [
+    "6.78 m/s",
+    "5.24 m/s",
+    "9.12 m/s",
+    "4.00 m/s"
+   ],
+   "correct": 0,
+   "explanation": "$v = \\frac{16 \\times 8 + 7 \\times 4}{16 + 7} = \\frac{156}{23} = 6.78$ m/s."
+  },
+  {
+   "ref": "61",
+   "number": 61,
+   "topic": "Vectors",
+   "difficulty": "hard",
+   "text": "If $\\vec{A} = 3\\hat{i} + 3\\hat{j} - 2\\hat{k}$, $\\vec{B} = -\\hat{i} - 4\\hat{j} + 2\\hat{k}$ and $\\vec{C} = 2\\hat{i} + 2\\hat{j} + \\hat{k}$, find the scalar triple product $\\vec{A}\\cdot(\\vec{B}\\times\\vec{C})$.",
+   "options": [
+    "−21",
+    "15",
+    "−13",
+    "0"
+   ],
+   "correct": 0,
+   "explanation": "$\\vec{B}\\times\\vec{C} = -8\\hat{i} + 5\\hat{j} + 6\\hat{k}$. Then $\\vec{A}\\cdot(\\vec{B}\\times\\vec{C}) = -24 + 15 - 12 = -21$."
+  },
+  {
+   "ref": "62",
+   "number": 62,
+   "topic": "Relative motion & reference frames",
+   "difficulty": "easy",
+   "text": "Body A moves at 8 m/s North and Body B moves at 6 m/s South. What is the velocity of A with respect to B?",
+   "options": [
+    "14 m/s North",
+    "10 m/s South",
+    "14 m/s South",
+    "10 m/s North"
+   ],
+   "correct": 0,
+   "explanation": "Take north as positive: 8 − (−6) = 14 m/s north."
+  },
+  {
+   "ref": "63",
+   "number": 63,
+   "topic": "Momentum & collisions",
+   "difficulty": "hard",
+   "text": "A body of mass 16 kg moving at 8 m/s collides with a body of mass 7 kg moving at 4 m/s in the same direction. If the collision is perfectly inelastic, calculate the kinetic energy lost during the impact (to the nearest joule where needed).",
+   "options": [
+    "45.2 J",
+    "39 J",
+    "11.1 J",
+    "22.5 J"
+   ],
+   "correct": 1,
+   "explanation": "Initial KE = 512 + 56 = 568 J. Common velocity = 156/23 m/s, so final KE = ½ × 23 × (156/23)² = 529 J. Lost: about 39 J."
+  },
+  {
+   "ref": "64",
+   "number": 64,
+   "topic": "Momentum & collisions",
+   "difficulty": "easy",
+   "text": "Which of the following defines an inelastic collision?",
+   "options": [
+    "Momentum is conserved, but kinetic energy is not",
+    "Kinetic energy is conserved, but momentum is not",
+    "Both momentum and kinetic energy are conserved",
+    "Neither momentum nor kinetic energy is conserved"
+   ],
+   "correct": 0,
+   "explanation": "In an inelastic collision momentum is conserved but some kinetic energy is lost."
+  },
+  {
+   "ref": "65",
+   "number": 65,
+   "topic": "Vectors",
+   "difficulty": "medium",
+   "text": "In the vector calculation $\\vec{A}\\cdot(\\vec{B}\\times\\vec{C})$, if the result is zero, it implies that the three vectors are?",
+   "options": [
+    "Mutually perpendicular",
+    "Coplanar",
+    "Parallel to each other",
+    "Unit vectors"
+   ],
+   "correct": 1,
+   "explanation": "The scalar triple product is the volume of the box formed by the vectors. Zero volume means they lie in one plane."
+  },
+  {
+   "ref": "66",
+   "number": 66,
+   "topic": "Vectors",
+   "difficulty": "medium",
+   "text": "Three forces of 20 N, 40 N and 60 N act on a body of mass 250 g at angles of 0°, 30° and 60° respectively. Find the resulting force vector acting on the body.",
+   "options": [
+    "$64.64\\hat{i} + 71.96\\hat{j}$",
+    "$71.96\\hat{i} + 64.64\\hat{j}$",
+    "$71.96\\hat{i} + 84.64\\hat{j}$",
+    "$84.64\\hat{i} + 71.96\\hat{j}$"
+   ],
+   "correct": 3,
+   "explanation": "x: 20 + 40 cos 30° + 60 cos 60° = 84.64. y: 0 + 40 sin 30° + 60 sin 60° = 71.96."
+  },
+  {
+   "ref": "67",
+   "number": 67,
+   "topic": "Vectors",
+   "difficulty": "medium",
+   "text": "Given the vectors $\\vec{D}_1 = 3\\hat{i} - 2\\hat{j} + 4\\hat{k}$ and $\\vec{D}_2 = -5\\hat{i} + 3\\hat{j} - \\hat{k}$, calculate $2\\vec{D}_1\\cdot 4\\vec{D}_2$.",
+   "options": [
+    "180",
+    "−180",
+    "−200",
+    "200"
+   ],
+   "correct": 2,
+   "explanation": "$2\\vec{D}_1\\cdot 4\\vec{D}_2 = 8(\\vec{D}_1\\cdot\\vec{D}_2) = 8(-15 - 6 - 4) = -200$."
+  },
+  {
+   "ref": "68",
+   "number": 68,
+   "topic": "Momentum & collisions",
+   "difficulty": "medium",
+   "text": "A body of mass 200 g moves in a straight line in the positive-x direction at 25 m/s. It hits a wall and rebounds in the negative-x direction at 35 m/s. If the interaction lasts 2 seconds, find the magnitude of the average force exerted.",
+   "options": [
+    "6 N",
+    "12 N",
+    "60 N",
+    "120 N"
+   ],
+   "correct": 0,
+   "explanation": "$F = \\frac{m\\Delta v}{t} = \\frac{0.2 \\times (35 + 25)}{2} = 6$ N."
+  },
+  {
+   "ref": "69",
+   "number": 69,
+   "topic": "Momentum & collisions",
+   "difficulty": "medium",
+   "text": "A body of mass 200 g moves in a straight line in the positive-x direction at 25 m/s. It hits a wall and rebounds in the negative-x direction at 35 m/s. If the interaction lasts 1 second, find the magnitude of the average force exerted.",
+   "options": [
+    "6 N",
+    "12 N",
+    "60 N",
+    "120 N"
+   ],
+   "correct": 1,
+   "explanation": "$F = \\frac{m\\Delta v}{t} = \\frac{0.2 \\times (35 + 25)}{1} = 12$ N."
+  },
+  {
+   "ref": "70",
+   "number": 70,
+   "topic": "Units & measurement",
+   "difficulty": "easy",
+   "text": "What is the SI unit of impulse?",
+   "options": [
+    "Newton-meters",
+    "Newton-seconds",
+    "Kilogram-meters",
+    "Joules"
+   ],
+   "correct": 1,
+   "explanation": "Impulse = force × time, so its unit is the newton-second."
+  },
+  {
+   "ref": "71",
+   "number": 71,
+   "topic": "Momentum & collisions",
+   "difficulty": "easy",
+   "text": "In a collision where two bodies stick together after impact, which of the following is conserved?",
+   "options": [
+    "Kinetic energy only",
+    "Linear momentum only",
+    "Both linear momentum and kinetic energy",
+    "Neither momentum nor kinetic energy"
+   ],
+   "correct": 1,
+   "explanation": "Sticking together is a perfectly inelastic collision: momentum is conserved, kinetic energy is not."
+  },
+  {
+   "ref": "72",
+   "number": 72,
+   "topic": "Vectors",
+   "difficulty": "medium",
+   "text": "If a vector is multiplied by a negative scalar other than −1, the resulting vector will have?",
+   "options": [
+    "The same direction and magnitude",
+    "The opposite direction and same magnitude",
+    "The opposite direction and changed magnitude",
+    "No change at all"
+   ],
+   "correct": 2,
+   "explanation": "A negative scalar reverses the direction, and any size other than 1 changes the magnitude."
+  },
+  {
+   "ref": "73",
+   "number": 73,
+   "topic": "Motion",
+   "difficulty": "medium",
+   "text": "A goalkeeper throws a ball from ground level with an initial speed of 20 m/s at an angle of 45°. How long will it take for the ball to reach the ground? (Take g = 10 m/s²)",
+   "options": [
+    "1.6 s",
+    "2.4 s",
+    "2.8 s",
+    "3.2 s"
+   ],
+   "correct": 2,
+   "explanation": "$T = \\frac{2u\\sin\\theta}{g} = \\frac{2 \\times 20 \\times \\sin 45°}{10} = 2.8$ s."
+  },
+  {
+   "ref": "74",
+   "number": 74,
+   "topic": "Relative motion & reference frames",
+   "difficulty": "easy",
+   "text": "If body A moves with an acceleration of 3 m/s² along the x-axis, and body B moves with an acceleration of 1 m/s² in the same direction, find the acceleration of A relative to B.",
+   "options": [
+    "4 m/s²",
+    "2 m/s²",
+    "-2 m/s²",
+    "3 m/s²"
+   ],
+   "correct": 1,
+   "explanation": "Relative acceleration = 3 − 1 = 2 m/s²."
+  },
+  {
+   "ref": "75",
+   "number": 75,
+   "topic": "Units & measurement",
+   "difficulty": "easy",
+   "text": "Which of the following represents the dimensional formula for Force?",
+   "options": [
+    "MLT⁻¹",
+    "MLT⁻²",
+    "ML²T⁻²",
+    "ML⁻¹T⁻²"
+   ],
+   "correct": 1,
+   "explanation": "F = ma, so its dimensions are M × LT⁻² = MLT⁻²."
+  },
+  {
+   "ref": "76",
+   "number": 76,
+   "topic": "Relative motion & reference frames",
+   "difficulty": "easy",
+   "text": "If body P is moving at 15 m/s and body Q is moving at 20 m/s in the same direction, what is the velocity of Q relative to P?",
+   "options": [
+    "35 m/s",
+    "5 m/s",
+    "-5 m/s",
+    "20 m/s"
+   ],
+   "correct": 1,
+   "explanation": "Velocity of Q relative to P = 20 − 15 = 5 m/s."
+  },
+  {
+   "ref": "77",
+   "number": 77,
+   "topic": "Relative motion & reference frames",
+   "difficulty": "easy",
+   "text": "Body A moves at 40 m/s East and Body B moves at 30 m/s West. Find the velocity of A with respect to B?",
+   "options": [
+    "10 m/s East",
+    "10 m/s West",
+    "70 m/s East",
+    "70 m/s West"
+   ],
+   "correct": 2,
+   "explanation": "Take east as positive: 40 − (−30) = 70 m/s east."
+  },
+  {
+   "ref": "78",
+   "number": 78,
+   "topic": "Motion",
+   "difficulty": "easy",
+   "text": "The position of a particle is given by $x = 2t^2 + 4$. Find the acceleration of the particle when t = 3 seconds.",
+   "options": [
+    "4 m/s²",
+    "12 m/s²",
+    "16 m/s²",
+    "0 m/s²"
+   ],
+   "correct": 0,
+   "explanation": "v = dx/dt = 4t and a = dv/dt = 4 m/s², which is constant."
+  },
+  {
+   "ref": "80",
+   "number": 80,
+   "topic": "Forces",
+   "difficulty": "medium",
+   "text": "Which of the following statements regarding physical quantities and their relationships is incorrect?",
+   "options": [
+    "Force is the rate of change of momentum",
+    "Acceleration is the rate of change of momentum",
+    "Impulse is the change in momentum",
+    "Power is the rate of doing work"
+   ],
+   "correct": 1,
+   "explanation": "The rate of change of momentum is force. Acceleration is the rate of change of velocity."
+  },
+  {
+   "ref": "82",
+   "number": 82,
+   "topic": "Momentum & collisions",
+   "difficulty": "medium",
+   "text": "A 15 kg mass moves with a velocity of 8 m/s East and collides with a 5 kg mass moving in the opposite direction at 4 m/s. If the collision is perfectly inelastic, calculate the value of the kinetic energy lost?",
+   "options": [
+    "120.0 J",
+    "150.0 J",
+    "270.0 J",
+    "300.0 J"
+   ],
+   "correct": 2,
+   "explanation": "Common velocity = (15×8 − 5×4)/20 = 5 m/s. KE: 480 + 40 = 520 J before, ½ × 20 × 25 = 250 J after. Lost: 270 J."
+  },
+  {
+   "ref": "85",
+   "number": 85,
+   "topic": "Vectors",
+   "difficulty": "hard",
+   "text": "Given the vectors $\\vec{D}_1 = 3\\hat{i} - 2\\hat{j} + 4\\hat{k}$ and $\\vec{D}_2 = 5\\hat{i} + 3\\hat{j} - \\hat{k}$, find $\\vec{D}_1\\times 4\\vec{D}_2$.",
+   "options": [
+    "$-40\\hat{i} + 92\\hat{j} + 76\\hat{k}$",
+    "$-10\\hat{i} + 23\\hat{j} + 19\\hat{k}$",
+    "$40\\hat{i} - 92\\hat{j} - 76\\hat{k}$",
+    "$8\\hat{i} + 12\\hat{j} + 16\\hat{k}$"
+   ],
+   "correct": 0,
+   "explanation": "$\\vec{D}_1\\times\\vec{D}_2 = -10\\hat{i} + 23\\hat{j} + 19\\hat{k}$. Multiply by 4 to get $-40\\hat{i} + 92\\hat{j} + 76\\hat{k}$."
+  },
+  {
+   "ref": "86",
+   "number": 86,
+   "topic": "Momentum & collisions",
+   "difficulty": "easy",
+   "text": "If a collision is described as perfectly inelastic, it implies that?",
+   "options": [
+    "The two bodies bounce off each other with no energy loss",
+    "The two bodies stick together and move with a common velocity",
+    "Kinetic energy is conserved but momentum is lost",
+    "The final velocity of the system is always zero"
+   ],
+   "correct": 1,
+   "explanation": "In a perfectly inelastic collision the bodies stick together and share one velocity."
+  },
+  {
+   "ref": "88",
+   "number": 88,
+   "topic": "Momentum & collisions",
+   "difficulty": "hard",
+   "text": "A body of mass 16 kg travelling at 8 m/s collides perfectly inelastically with a mass of 7 kg travelling in the same direction at 4 m/s. Calculate the magnitude of the impulse on the 16 kg mass.",
+   "options": [
+    "11.2 Ns",
+    "19.5 Ns",
+    "28.0 Ns",
+    "35.6 Ns"
+   ],
+   "correct": 1,
+   "explanation": "Common velocity is 6.78 m/s. Impulse = 16 × (6.78 − 8) = −19.5, so its magnitude is 19.5 Ns."
+  },
+  {
+   "ref": "92",
+   "number": 92,
+   "topic": "Momentum & collisions",
+   "difficulty": "easy",
+   "text": "If a force is applied to a body for a very short period of time, the product of the force and the time interval is defined as?",
+   "options": [
+    "Work",
+    "Power",
+    "Impulse",
+    "Inertia"
+   ],
+   "correct": 2,
+   "explanation": "Impulse = force × time."
+  },
+  {
+   "ref": "93",
+   "number": 93,
+   "topic": "Units & measurement",
+   "difficulty": "medium",
+   "text": "Which of these is NOT usually a vector quantity?",
+   "options": [
+    "Velocity",
+    "Displacement",
+    "Electric current",
+    "Electric field"
+   ],
+   "correct": 2,
+   "explanation": "Electric current has a direction of flow but does not add like a vector, so it is a scalar."
+  },
+  {
+   "ref": "94",
+   "number": 94,
+   "topic": "Units & measurement",
+   "difficulty": "easy",
+   "text": "The unit of pressure is?",
+   "options": [
+    "Newton",
+    "Pascal",
+    "Joule",
+    "Watt"
+   ],
+   "correct": 1,
+   "explanation": "Pressure is measured in pascals (N/m²)."
+  },
+  {
+   "ref": "95",
+   "number": 95,
+   "topic": "Motion",
+   "difficulty": "medium",
+   "text": "A vehicle changes speed from 25 km/h to 90 km/h in 5.6 seconds. Find the acceleration.",
+   "options": [
+    "2.5 m/s²",
+    "3.2 m/s²",
+    "5.1 m/s²",
+    "6.8 m/s²"
+   ],
+   "correct": 1,
+   "explanation": "Δv = 65 km/h = 18.06 m/s. a = 18.06/5.6 = 3.2 m/s²."
+  },
+  {
+   "ref": "96",
+   "number": 96,
+   "topic": "Relative motion & reference frames",
+   "difficulty": "medium",
+   "text": "The use of relative motion includes the following except?",
+   "options": [
+    "Predicting a solar eclipse",
+    "Predicting a lunar eclipse",
+    "Predicting the coming of a new moon",
+    "Calculating rain droplets"
+   ],
+   "correct": 3,
+   "explanation": "Eclipses and new moons are predicted from the relative motion of the earth, moon and sun."
+  },
+  {
+   "ref": "97",
+   "number": 97,
+   "topic": "Units & measurement",
+   "difficulty": "medium",
+   "text": "Which of the following consists wholly of fundamental quantities?",
+   "options": [
+    "Length, area, current, time, temperature, mass",
+    "Length, velocity, current, time, temperature, mass",
+    "Length, current, time, temperature, mass",
+    "Length, area, current, volume, temperature, mass"
+   ],
+   "correct": 2,
+   "explanation": "Length, current, time, temperature and mass are all fundamental. Area, volume and velocity are derived."
+  },
+  {
+   "ref": "98",
+   "number": 98,
+   "topic": "Motion",
+   "difficulty": "easy",
+   "text": "Which of the following best describes a particle?",
+   "options": [
+    "No mass, no size",
+    "No mass, has size",
+    "Has mass, no size",
+    "Has mass and size"
+   ],
+   "correct": 2,
+   "explanation": "A particle is an idealised body with mass but no size."
+  },
+  {
+   "ref": "99",
+   "number": 99,
+   "topic": "Motion",
+   "difficulty": "medium",
+   "text": "A particle has instantaneous position $x = 11t^2 - 2t^3$, where t is in seconds and x in metres. Obtain its velocity after 2 s.",
+   "options": [
+    "44 m/s",
+    "2 m/s",
+    "72 m/s",
+    "20 m/s"
+   ],
+   "correct": 3,
+   "explanation": "$v = \\frac{dx}{dt} = 22t - 6t^2$. At t = 2 s, v = 44 − 24 = 20 m/s."
+  },
+  {
+   "ref": "100",
+   "number": 100,
+   "topic": "Forces",
+   "difficulty": "medium",
+   "text": "If an elevator is accelerating upwards at 3 m/s² while a body of mass 40 kg is on its floor, what is the normal reaction force on the body? (Take g = 9.8 m/s²)",
+   "options": [
+    "512 N",
+    "312 N",
+    "292 N",
+    "400 N"
+   ],
+   "correct": 0,
+   "explanation": "N = m(g + a) = 40 × (9.8 + 3) = 512 N."
+  },
+  {
+   "ref": "101",
+   "number": 101,
+   "topic": "Relative motion & reference frames",
+   "difficulty": "easy",
+   "text": "Two bodies A and B are moving on the x-axis with velocities of 5 m/s and 20 m/s, respectively. Find the velocity of A with respect to B?",
+   "options": [
+    "15 m/s",
+    "−15 m/s",
+    "25 m/s",
+    "−25 m/s"
+   ],
+   "correct": 1,
+   "explanation": "Velocity of A relative to B = 5 − 20 = −15 m/s."
+  },
+  {
+   "ref": "42a",
+   "number": 42,
+   "topic": "Motion",
+   "difficulty": "medium",
+   "text": "A particle starts at position $\\vec{r}_0 = (2\\hat{i} + 3\\hat{j})$ m with initial velocity $\\vec{v}_0 = (4\\hat{i} + 6\\hat{j})$ m/s and a constant acceleration $\\vec{a} = (\\hat{i} + 2\\hat{j})$ m/s². Find the velocity after 5 seconds.",
+   "options": [
+    "$9\\hat{i} + 16\\hat{j}$ m/s",
+    "$5\\hat{i} + 10\\hat{j}$ m/s",
+    "$9\\hat{i} + 10\\hat{j}$ m/s",
+    "$4\\hat{i} + 16\\hat{j}$ m/s"
+   ],
+   "correct": 0,
+   "explanation": "$\\vec{v} = \\vec{v}_0 + \\vec{a}t = (4 + 5)\\hat{i} + (6 + 10)\\hat{j} = 9\\hat{i} + 16\\hat{j}$ m/s."
+  },
+  {
+   "ref": "42c",
+   "number": 42,
+   "topic": "Motion",
+   "difficulty": "hard",
+   "text": "A particle starts at position $\\vec{r}_0 = (2\\hat{i} + 3\\hat{j})$ m with initial velocity $\\vec{v}_0 = (4\\hat{i} + 6\\hat{j})$ m/s and a constant acceleration $\\vec{a} = (\\hat{i} + 2\\hat{j})$ m/s². Find the position after 5 seconds.",
+   "options": [
+    "$32.5\\hat{i} + 55\\hat{j}$ m",
+    "$34.5\\hat{i} + 58\\hat{j}$ m",
+    "$22\\hat{i} + 33\\hat{j}$ m",
+    "$47\\hat{i} + 83\\hat{j}$ m"
+   ],
+   "correct": 1,
+   "explanation": "$\\vec{r} = \\vec{r}_0 + \\vec{v}_0t + \\frac{1}{2}\\vec{a}t^2 = (2 + 20 + 12.5)\\hat{i} + (3 + 30 + 25)\\hat{j} = 34.5\\hat{i} + 58\\hat{j}$ m."
+  },
+  {
+   "ref": "43a",
+   "number": 43,
+   "topic": "Motion",
+   "difficulty": "medium",
+   "text": "A ball is kicked from the ground at 20 m/s at 37° above the horizontal. Take sin 37° = 0.6, cos 37° = 0.8 and g = 10 m/s². Find the time of flight.",
+   "options": [
+    "1.2 s",
+    "1.6 s",
+    "2.4 s",
+    "3.2 s"
+   ],
+   "correct": 2,
+   "explanation": "$T = \\frac{2v_0\\sin\\theta}{g} = \\frac{2 \\times 20 \\times 0.6}{10} = 2.4$ s."
+  },
+  {
+   "ref": "43c",
+   "number": 43,
+   "topic": "Motion",
+   "difficulty": "medium",
+   "text": "A ball is kicked from the ground at 20 m/s at 37° above the horizontal. Take sin 37° = 0.6, cos 37° = 0.8 and g = 10 m/s². Find the maximum height.",
+   "options": [
+    "7.2 m",
+    "12.8 m",
+    "14.4 m",
+    "20 m"
+   ],
+   "correct": 0,
+   "explanation": "$H = \\frac{v_0^2\\sin^2\\theta}{2g} = \\frac{400 \\times 0.36}{20} = 7.2$ m."
+  },
+  {
+   "ref": "43d",
+   "number": 43,
+   "topic": "Motion",
+   "difficulty": "medium",
+   "text": "A ball is kicked from the ground at 20 m/s at 37° above the horizontal. Take sin 37° = 0.6, cos 37° = 0.8 and g = 10 m/s². Find the horizontal range.",
+   "options": [
+    "19.2 m",
+    "24 m",
+    "28.8 m",
+    "38.4 m"
+   ],
+   "correct": 3,
+   "explanation": "$R = v_0\\cos\\theta \\times T = 16 \\times 2.4 = 38.4$ m."
+  },
+  {
+   "ref": "44a",
+   "number": 44,
+   "topic": "Motion",
+   "difficulty": "easy",
+   "text": "A student walks 80 m from the hostel to the library in 60 s, then runs back 40 m towards the hostel in 15 s. What is the total distance travelled?",
+   "options": [
+    "40 m",
+    "120 m",
+    "80 m",
+    "160 m"
+   ],
+   "correct": 1,
+   "explanation": "Distance adds every part of the path: 80 + 40 = 120 m."
+  },
+  {
+   "ref": "44c",
+   "number": 44,
+   "topic": "Motion",
+   "difficulty": "easy",
+   "text": "A student walks 80 m from the hostel to the library in 60 s, then runs back 40 m towards the hostel in 15 s. What is the total displacement from the hostel?",
+   "options": [
+    "40 m",
+    "120 m",
+    "80 m",
+    "0 m"
+   ],
+   "correct": 0,
+   "explanation": "The student ends 80 − 40 = 40 m from the hostel, on the library side."
+  },
+  {
+   "ref": "44d",
+   "number": 44,
+   "topic": "Motion",
+   "difficulty": "medium",
+   "text": "A student walks 80 m from the hostel to the library in 60 s, then runs back 40 m towards the hostel in 15 s. What is the average speed?",
+   "options": [
+    "0.53 m/s",
+    "1.33 m/s",
+    "1.6 m/s",
+    "2.67 m/s"
+   ],
+   "correct": 2,
+   "explanation": "Average speed = total distance ÷ total time = 120 ÷ 75 = 1.6 m/s."
+  },
+  {
+   "ref": "44e",
+   "number": 44,
+   "topic": "Motion",
+   "difficulty": "medium",
+   "text": "A student walks 80 m from the hostel to the library in 60 s, then runs back 40 m towards the hostel in 15 s. What is the magnitude of the average velocity for the entire journey?",
+   "options": [
+    "0.53 m/s",
+    "1.33 m/s",
+    "1.6 m/s",
+    "2.67 m/s"
+   ],
+   "correct": 0,
+   "explanation": "Average velocity = displacement ÷ total time = 40 ÷ 75 = 0.53 m/s."
+  }
+ ],
+ "held": [
+  {
+   "ref": "79",
+   "number": 79,
+   "text": "Which of the following mathematical expressions is not a direct statement or consequence explained primarily by Newton's Three Laws of Motion?",
+   "options": [
+    "F_net = 0, then a = 0",
+    "F = Ma",
+    "F = Mg",
+    "mg = N"
+   ],
+   "reason": "Two options can be defended (F = Mg and mg = N), so the printed key D can't be confirmed"
+  }
+ ],
+ "quizzes": [
+  {
+   "ref": "q1",
+   "title": "Quiz 1 · CA 2025/2026",
+   "timeLimitMin": 25,
+   "negativeMark": 0,
+   "questions": [
+    "3",
+    "10",
+    "15",
+    "18",
+    "22",
+    "24",
+    "32",
+    "34",
+    "41",
+    "43a",
+    "44a",
+    "51",
+    "54",
+    "57",
+    "59",
+    "66",
+    "74",
+    "76",
+    "85",
+    "86",
+    "92",
+    "95",
+    "99"
+   ]
+  },
+  {
+   "ref": "q2",
+   "title": "Quiz 2 · CA 2025/2026",
+   "timeLimitMin": 25,
+   "negativeMark": 0,
+   "questions": [
+    "5",
+    "6",
+    "14",
+    "16",
+    "19",
+    "23",
+    "25",
+    "40",
+    "43d",
+    "44c",
+    "45",
+    "47",
+    "49",
+    "50",
+    "61",
+    "62",
+    "68",
+    "71",
+    "72",
+    "73",
+    "93",
+    "96",
+    "100"
+   ]
+  },
+  {
+   "ref": "q3",
+   "title": "Quiz 3 · CA 2025/2026",
+   "timeLimitMin": 25,
+   "negativeMark": 0,
+   "questions": [
+    "7",
+    "8",
+    "11",
+    "17",
+    "26",
+    "28",
+    "33",
+    "35",
+    "36",
+    "42a",
+    "43c",
+    "44d",
+    "46",
+    "53",
+    "56",
+    "63",
+    "65",
+    "69",
+    "75",
+    "77",
+    "78",
+    "82",
+    "97"
+   ]
+  },
+  {
+   "ref": "q4",
+   "title": "Quiz 4 · CA 2025/2026",
+   "timeLimitMin": 25,
+   "negativeMark": 0,
+   "questions": [
+    "4",
+    "13",
+    "20",
+    "21",
+    "27",
+    "29",
+    "37",
+    "38",
+    "39",
+    "42c",
+    "44e",
+    "48",
+    "52",
+    "58",
+    "64",
+    "67",
+    "70",
+    "80",
+    "88",
+    "94",
+    "98",
+    "101"
+   ]
+  }
+ ]
+}

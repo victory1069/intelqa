@@ -106,18 +106,21 @@ function Course() {
   }
 
   const { course, papers } = data;
+  const liveTests = tests?.quizzes.filter((q) => q.status === "live") ?? [];
+  const closedTests = tests?.quizzes.filter((q) => q.status === "closed") ?? [];
+  const doneTests = liveTests.filter((q) => q.sittings).length;
   const downloaded = !!bundle;
   const complete = !!bundle && papers.every((p) => bundle.data.papers.some((x) => x.paper.id === p.id));
   const savedCount = bundle ? papers.filter((p) => bundle.data.papers.some((x) => x.paper.id === p.id)).length : 0;
 
   // A23: added but nothing published yet.
-  if (!papers.length) {
+  if (!papers.length && !data.quizzes && !data.questions) {
     return (
       <>
         <AppBar title={course.code} sub={course.title} />
         <div className="flex-1">
-          <EmptyState glyph="file" tone="hl" title={`No ${course.code} papers yet`}>
-            Our course reps are typing them up and checking the answers. Practice opens the moment the first one goes live.
+          <EmptyState glyph="file" tone="hl" title={`Nothing in ${course.code} yet`}>
+            Our course reps are typing them up and checking the answers. Practice opens the moment the first paper or quiz goes live.
           </EmptyState>
         </div>
       </>
@@ -141,7 +144,7 @@ function Course() {
   }
 
   const modes: { glyph: Glyph; title: string; sub: string; ranked?: boolean; onClick: () => void; disabled?: boolean }[] = [
-    { glyph: "timer", title: "Exam simulation", sub: "Full paper, real time limit", ranked: true, onClick: () => setExamPaper(papers[0]) },
+    ...(papers.length ? [{ glyph: "timer" as const, title: "Exam simulation", sub: "Full paper, real time limit", ranked: true, onClick: () => setExamPaper(papers[0]) }] : []),
     { glyph: "bolt", title: "Quick drill", sub: "10 or 20 random, short timer", ranked: true, onClick: () => setDrillOpen(true) },
     { glyph: "list", title: "Topic practice", sub: "Untimed, feedback after each answer", onClick: () => router.push(`/course?id=${id}&view=topics`) },
     {
@@ -156,14 +159,14 @@ function Course() {
   return (
     <>
       <AppBar title={course.code} sub={course.title}>
-        <button
+        {papers.length > 0 && <button
           aria-label={complete ? "Saved for offline. Download again to update" : downloaded ? "Finish saving for offline" : "Download for offline"}
           disabled={!online || !!progress}
           onClick={startDownload}
           className="flex h-11 w-11 items-center justify-center"
         >
           {progress ? <Spinner size={20} color="var(--accent)" /> : <Icon name={complete ? "check" : "download"} size={22} color={complete ? "var(--ok-text)" : "var(--ink)"} />}
-        </button>
+        </button>}
       </AppBar>
       <main className="flex flex-col gap-5 px-5 pb-4">
         {!online && <Banner icon="offline">Offline. {downloaded ? `This course is saved${complete ? "" : ` (${savedCount} of ${papers.length} papers)`}, so exams and drills work. Results sync later.` : "This course isn't saved on this phone."}</Banner>}
@@ -186,6 +189,18 @@ function Course() {
         </div>
         {data.rankedAttempts < 3 && <span className="text-xs text-ink3">{3 - data.rankedAttempts} more exam or drill{3 - data.rankedAttempts === 1 ? "" : "s"} to get ranked.</span>}
 
+        {liveTests.length > 0 && (
+          <>
+            <div className="flex items-center justify-between pt-1">
+              <span className="label">{liveTests.length} quiz{liveTests.length === 1 ? "" : "zes"} available</span>
+              <span className="text-[13px] text-ink2">{doneTests} done</span>
+            </div>
+            <div className="flex flex-col gap-3">
+              {liveTests.map((q) => <QuizCard key={q.id} q={q} showCourse={false} />)}
+            </div>
+          </>
+        )}
+
         <span className="label pt-1">Modes</span>
         <Card className="flex flex-col">
           {modes.map((m, i) => (
@@ -200,15 +215,16 @@ function Course() {
           ))}
         </Card>
 
-        {!!tests?.quizzes.length && (
+        {closedTests.length > 0 && (
           <>
-            <span className="label pt-1">Practice tests</span>
+            <span className="label pt-1">Closed quizzes you sat</span>
             <div className="flex flex-col gap-3">
-              {tests.quizzes.map((q) => <QuizCard key={q.id} q={q} showCourse={false} />)}
+              {closedTests.map((q) => <QuizCard key={q.id} q={q} showCourse={false} />)}
             </div>
           </>
         )}
 
+        {papers.length > 0 && <>
         <div className="flex items-center justify-between pt-1">
           <span className="label">Past papers</span>
           <span className="flex items-center gap-1 text-[11px] text-ink3"><Icon name="board" size={12} color="var(--ink3)" />= counts for rank</span>
@@ -224,9 +240,10 @@ function Course() {
             </button>
           ))}
         </Card>
+        </>}
       </main>
 
-      {!online && !downloaded && notSavedClosedFor !== id && (
+      {!online && !downloaded && papers.length > 0 && notSavedClosedFor !== id && (
         <NotSaved key={id} courseId={id} code={course.code} bytes={homeCourse?.offlineBytes ?? null} other={other ? { id: other.courseId, code: other.code } : null} onClose={() => setNotSavedClosedFor(id)} />
       )}
       <ExamSheet paper={examPaper} code={course.code} onClose={() => setExamPaper(null)} busy={busy} offline={!online} onStart={(p) => go({ mode: "exam", paperId: p.id }, { mode: "exam", paperId: p.id })} />

@@ -4,12 +4,15 @@ import { and, asc, eq, inArray, sql } from "drizzle-orm";
 import { db, schema } from "../db/client";
 import { fail, parse } from "../lib/http";
 import { courseRank } from "../services/leaderboard";
-import { mistakeIds } from "../services/sessions";
+import { liveQuestion, mistakeIds } from "../services/sessions";
 import type { AppEnv } from "../types";
 
 const { institutions, faculties, departments, courses, topics, userCourseStats, institutionRequests } = schema;
 
 export const catalogRoutes = new Hono<AppEnv>();
+
+/** Live quizzes in the course row being selected. */
+const liveQuizCount = sql<number>`(select count(*)::int from quizzes z where z.course_id = courses.id and z.status = 'live' and (z.closes_at is null or z.closes_at > now()))`;
 
 /** GET /catalog/institutions?q= — live schools first, then the waitlist. */
 catalogRoutes.get("/institutions", async (c) => {
@@ -20,7 +23,7 @@ catalogRoutes.get("/institutions", async (c) => {
       name: institutions.name,
       shortCode: institutions.shortCode,
       status: institutions.status,
-      liveCourses: sql<number>`(select count(*)::int from courses where courses.institution_id = ${institutions.id} and courses.status = 'live')`,
+      liveCourses: sql<number>`(select count(*)::int from courses where courses.institution_id = institutions.id and courses.status = 'live')`,
     })
     .from(institutions)
     .where(q ? sql`${institutions.name} ilike ${"%" + q + "%"} or ${institutions.shortCode} ilike ${"%" + q + "%"}` : undefined)
@@ -67,7 +70,8 @@ catalogRoutes.get("/courses", async (c) => {
       status: courses.status,
       optionCount: courses.optionCount,
       negativeMark: courses.negativeMark,
-      papers: sql<number>`(select count(*)::int from papers p where p.course_id = ${courses.id} and p.status = 'published')`,
+      papers: sql<number>`(select count(*)::int from papers p where p.course_id = courses.id and p.status = 'published')`,
+      quizzes: liveQuizCount,
       suggested: departmentId
         ? sql<boolean>`exists (select 1 from course_departments cd where cd.course_id = ${courses.id} and cd.department_id = ${departmentId})`
         : sql<boolean>`false`,
@@ -97,6 +101,8 @@ catalogRoutes.get("/courses/:id", async (c) => {
   const id = c.req.param("id");
   const [course] = await db.select().from(courses).where(eq(courses.id, id));
   if (!course) fail(404, "Course not found");
+  const [extra] = await db.select({ quizzes: liveQuizCount }).from(courses).where(eq(courses.id, id));
+  const questions = await db.$count(schema.questions, and(eq(schema.questions.courseId, id), liveQuestion, eq(schema.questions.answerVerified, true)));
 
   const [stat] = await db.select().from(userCourseStats).where(and(eq(userCourseStats.userId, user.id), eq(userCourseStats.courseId, id)));
   const rank = await courseRank(id, user.id);
@@ -126,6 +132,8 @@ catalogRoutes.get("/courses/:id", async (c) => {
     courseScore: stat?.courseScore ?? null,
     rankedAttempts: stat?.rankedAttempts ?? 0,
     rank,
+    quizzes: Number(extra.quizzes),
+    questions,
     mistakes: (await mistakeIds(user.id, id)).length,
     topics: Array.from(topicRows).map((t) => ({
       id: t.id,

@@ -9,7 +9,7 @@ const { questions } = schema;
 const liveQuestion = and(eq(questions.status, "approved"), eq(questions.autoHidden, false));
 export type Quiz = typeof schema.quizzes.$inferSelect;
 
-/** Questions a practice test may draw: approved, not hidden, with a checked answer. */
+/** Questions a quiz may draw: approved, not hidden, with a checked answer. */
 const drawable = and(liveQuestion, eq(questions.answerVerified, true), isNotNull(questions.correctOption));
 
 /** The draw pool for a course, optionally narrowed to some topics. */
@@ -20,7 +20,7 @@ async function poolOf(courseId: string, topicIds: string[]) {
     .where(and(eq(questions.courseId, courseId), drawable, topicIds.length ? inArray(questions.topicId, topicIds) : undefined));
 }
 
-/** How many questions each topic can give, for the "New practice test" form. Key "none" = untagged. */
+/** How many questions each topic can give, for the "New quiz" form. Key "none" = untagged. */
 export async function poolCounts(courseId: string) {
   const rows = await db
     .select({ topicId: questions.topicId, n: sql<number>`count(*)::int` })

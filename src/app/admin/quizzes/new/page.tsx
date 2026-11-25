@@ -48,7 +48,7 @@ function NewQuiz() {
   const available = !pool ? 0 : picked.length ? topics.filter((t) => picked.includes(t.id)).reduce((s, t) => s + t.available, 0) : pool.total;
   const chosen = picked.length ? topics.filter((t) => picked.includes(t.id) && t.available) : topics.filter((t) => t.available);
   const short = !!pool && available < count;
-  const fallbackTitle = course ? `${course.code} practice test` : "Practice test";
+  const fallbackTitle = course ? `${course.code} quiz` : "Quiz";
 
   const missing = [!courseId && "a course", short && "enough questions", !(time >= 1 && time <= QUIZ_MAX_MINUTES) && "a time limit"].filter(Boolean) as string[];
 
@@ -83,7 +83,7 @@ function NewQuiz() {
 
   return (
     <>
-      <Header eyebrow="Practice tests" title="New practice test" />
+      <Header eyebrow="Quizzes" title="New quiz" />
       <main className="grid items-start gap-8 px-5 py-8 sm:px-8 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-12 lg:px-12 lg:py-12">
         <Panel className="flex min-w-0 flex-col gap-9 p-6 sm:p-8 lg:p-10">
           <Field label="Course">

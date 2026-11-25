@@ -6,6 +6,7 @@ import { useAuth } from "@/lib/auth";
 import { takeNext } from "@/lib/next-url";
 import { useApi } from "@/lib/use-api";
 import { AppBar, Bar, EmptyState, Screen, Skeleton, Avatar } from "@/components/ui/kit";
+import { contentLine } from "@/components/quiz-card";
 import { Button } from "@/components/ui/button";
 import { Icon, Spinner } from "@/components/ui/icon";
 import { Splash } from "@/components/gate";
@@ -13,7 +14,7 @@ import type { Me } from "@/lib/types";
 
 type Inst = { id: string; name: string; shortCode: string; status: "live" | "draft"; liveCourses: number };
 type Faculty = { id: string; name: string; departments: { id: string; name: string }[] };
-type Course = { id: string; code: string; title: string; status: string; papers: number; suggested: boolean };
+type Course = { id: string; code: string; title: string; status: string; papers: number; quizzes: number; suggested: boolean };
 
 const STEPS = ["Your school", "Faculty & department", "This semester's courses", "Your name"];
 
@@ -268,8 +269,8 @@ function CourseStep({ courses, value, onChange }: { courses: Course[] | null; va
               <span className="font-mono text-[13px] font-bold">{c.code}</span>
               <span className="text-[13px] text-ink2">{c.title}</span>
             </span>
-            {c.papers > 0 ? (
-              <span className="text-xs text-ink2">{c.papers} paper{c.papers === 1 ? "" : "s"}</span>
+            {contentLine(c) ? (
+              <span className="text-right text-xs text-ink2">{contentLine(c)}</span>
             ) : (
               <span className="rounded-md bg-flag-tint px-1.5 py-0.5 font-mono text-[11px] font-bold text-flag-text">SOON</span>
             )}

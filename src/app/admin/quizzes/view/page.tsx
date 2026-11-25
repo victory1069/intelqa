@@ -90,7 +90,7 @@ function QuizView() {
   if (!data) {
     return (
       <>
-        <Header eyebrow="Practice tests" title="Practice test" />
+        <Header eyebrow="Quizzes" title="Quiz" />
         <main className="flex flex-col gap-6 px-5 py-8 sm:px-8 lg:px-12">
           {error ? <Banner tone="bad" icon="alert">{error.message}</Banner> : <><Skeleton className="h-32 rounded-[18px]" /><Skeleton className="h-96 rounded-[18px]" /></>}
         </main>
@@ -112,7 +112,7 @@ function QuizView() {
 
   return (
     <>
-      <Header eyebrow={<Link href="/admin/quizzes" className="hover:underline">Practice tests · {course.code}</Link>} title={quiz.title}>
+      <Header eyebrow={<Link href="/admin/quizzes" className="hover:underline">Quizzes · {course.code}</Link>} title={quiz.title}>
         {actions}
       </Header>
 
@@ -246,7 +246,7 @@ function QuizView() {
         </div>
       </main>
 
-      <Dialog open={confirmDelete} onClose={() => setConfirmDelete(false)} label="Delete practice test">
+      <Dialog open={confirmDelete} onClose={() => setConfirmDelete(false)} label="Delete quiz">
         <strong className="font-display text-2xl">Delete “{quiz.title}”?</strong>
         <span className="text-sm leading-relaxed text-ink2">The questions stay in the bank. Students who haven&apos;t finished it will lose their sitting.</span>
         <div className="flex gap-3 pt-2">
