@@ -1,0 +1,28 @@
+{
+  "institution": "UNILORIN",
+  "renames": {
+    "Agricultural Economics": "Agricultural Economics & Farm Management",
+    "Electrical Engineering": "Electrical & Electronics Engineering"
+  },
+  "faculties": {
+    "Agriculture": ["Agricultural Economics & Farm Management", "Agricultural Extension & Rural Development", "Agronomy", "Animal Production", "Aquaculture & Fisheries", "Crop Protection", "Forest Resources Management", "Home Economics & Food Science"],
+    "Arts": ["Arabic", "English", "French", "History & International Studies", "Linguistics & Nigerian Languages", "Religions", "Performing Arts"],
+    "Basic Medical Sciences": ["Anatomy", "Medical Biochemistry", "Physiology"],
+    "Basic Clinical Sciences": ["Medical Laboratory Science", "Physiotherapy", "Radiography"],
+    "Clinical Sciences": ["Medicine & Surgery (MBBS)", "Nursing Science"],
+    "Communication & Information Sciences": ["Computer Science", "Information Technology", "Library & Information Science", "Mass Communication", "Telecommunication Science"],
+    "Education": ["Adult & Primary Education", "Arts Education", "Educational Guidance & Counselling", "Educational Management", "Educational Technology", "Health Promotion & Environmental Health Education", "Human Kinetics & Health Education", "Science Education", "Social Sciences Education"],
+    "Engineering & Technology": ["Agricultural & Biosystems Engineering", "Biomedical Engineering", "Chemical Engineering", "Civil Engineering", "Computer Engineering", "Electrical & Electronics Engineering", "Food & Bioprocess Engineering", "Materials & Metallurgical Engineering", "Mechanical Engineering", "Water Resources & Environmental Engineering"],
+    "Environmental Sciences": ["Architecture", "Estate Management", "Quantity Surveying", "Surveying & Geo-Informatics", "Urban & Regional Planning"],
+    "Law": ["Jurisprudence & International Law", "Business Law", "Islamic Law", "Public Law", "Private & Property Law"],
+    "Life Sciences": ["Biochemistry", "Microbiology", "Optometry & Vision Science", "Plant Biology", "Zoology"],
+    "Management Sciences": ["Accounting", "Business Administration", "Finance", "Industrial Relations & Personnel Management", "Marketing", "Public Administration"],
+    "Pharmaceutical Sciences": ["Clinical Pharmacy & Pharmacy Practice", "Pharmacognosy & Drug Development", "Pharmaceutical & Medicinal Chemistry", "Pharmacology", "Pharmaceutical Microbiology & Biotechnology", "Pharmaceutics & Industrial Pharmacy"],
+    "Physical Sciences": ["Chemistry", "Geology & Mineral Science", "Geophysics", "Industrial Chemistry", "Mathematics", "Physics", "Statistics"],
+    "Social Sciences": ["Criminology & Security Studies", "Economics", "Geography & Environmental Management", "Political Science", "Psychology", "Social Work", "Sociology"],
+    "Veterinary Medicine": ["Veterinary Anatomy", "Veterinary Medicine", "Veterinary Microbiology", "Veterinary Parasitology & Entomology", "Veterinary Pathology", "Veterinary Pharmacology & Toxicology", "Veterinary Physiology & Biochemistry", "Veterinary Public Health & Preventive Medicine", "Veterinary Surgery & Radiology", "Theriogenology & Production"]
+  },
+  "courseDepartments": {
+    "Medicine & Surgery (MBBS)": ["BIO 101", "CHM 101", "COS 101", "MTH 101", "PHY 101"]
+  }
+}
